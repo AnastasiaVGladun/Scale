@@ -17,14 +17,16 @@ Recreational Fishing App - collecting data for good
 ## Views (Client Side)
   | Homepage | 
   | Fish info | General info of fish for users to help them with ID
-  | Statistics | N
+  | Statistics | Show collective data of fish caught by region / time
+  | Rules | Link to different MPI pages based on region / species selected
   | Login | View for user to enter their login credentials |
   | Register | View for user to sign up for the App |
+  | Diary | Show users own data of fish caught by region / time
+  | Achievements | Gamefication - show user badges based on their own stats
 
 ## Reducers (Client Side)
 
-  | name | purpose |
-  | --- | --- |
+  | fish info |
   | auth | Store information regarding user logins, auth status and auth errors |
 
 

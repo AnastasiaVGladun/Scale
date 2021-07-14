@@ -1,25 +1,23 @@
 # Scale
-Team: Club Penguin - 
+Team: Scale
 Karen, Anastasia, Silvia, James, Saula, Yousuf
 
-##Long Group project
+Recreational Fishing App - collecting data for good
 
 
 ## The Tech
-
-A Boilerplate is already set up for you (Thanks Harrison!) with everything you will need to get started. This boilerplate is set up to use:
-
 * [React](https://reactjs.org/docs/getting-started.html)
 * [Redux](https://redux.js.org/)
 * [Express](https://expressjs.com/en/api.html)
 * [Knex.js (SQL)](https://knexjs.org/)
 * [JWT Auth (Local)](https://jwt.io/)
 
-The Migration and seeds for the users table, and all login functionality is set up!
+
 
 ## Views (Client Side)
-  | name | purpose |
-  | --- | --- |
+  | Homepage | 
+  | Fish info | General info of fish for users to help them with ID
+  | Statistics | N
   | Login | View for user to enter their login credentials |
   | Register | View for user to sign up for the App |
 

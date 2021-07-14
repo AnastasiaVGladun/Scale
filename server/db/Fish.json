@@ -1,0 +1,217 @@
+[
+  {
+    "id": "blueCod",
+    "name": "Blue Cod",
+    "image": "fish_blueCod"
+  },
+  {
+    "id": "blueMoki",
+    "name": "Blue Moki",
+    "image": "fish_blueMoki"
+  },
+  {
+    "id": "butterfish",
+    "name": "Butterfish",
+    "image": "fish_butterfish"
+  },
+  {
+    "id": "cockles",
+    "name": "Cockles",
+    "image": "fish_cockles"
+  },
+  {
+    "id": "crayfish",
+    "name": "Crayfish",
+    "image": "fish_crayfish"
+  },
+  {
+    "id": "eel",
+    "name": "Eel",
+    "image": "fish_eel"
+  },
+  {
+    "id": "groper",
+    "name": "Groper",
+    "image": "fish_groper"
+  },
+  {
+    "id": "johnDory",
+    "name": "John Dory",
+    "image": "fish_johnDory"
+  },
+  {
+    "id": "kahawai",
+    "name": "Kahawai",
+    "image": "fish_kahawai"
+  },
+  {
+    "id": "kina",
+    "name": "Kina",
+    "image": "fish_kina"
+  },
+  {
+    "id": "kingfish",
+    "name": "Kingfish",
+    "image": "fish_kingfish"
+  },
+  {
+    "id": "paua",
+    "name": "Paua",
+    "image": "fish_paua"
+  },
+  {
+    "id": "pipi",
+    "name": "Pipi",
+    "image": "fish_pipi"
+  },
+  {
+    "id": "redCod",
+    "name": "Red Cod",
+    "image": "fish_redCod"
+  },
+  {
+    "id": "redGurnard",
+    "name": "Red Gurnard",
+    "image": "fish_redGurnard"
+  },
+  {
+    "id": "redMoki",
+    "name": "Red Moki",
+    "image": "fish_redMoki"
+  },
+  {
+    "id": "salmon",
+    "name": "Salmon",
+    "image": "fish_salmon"
+  },
+  {
+    "id": "sandFlounder",
+    "name": "Sand Flounder",
+    "image": "fish_sandFlounder"
+  },
+  {
+    "id": "scallops",
+    "name": "Scallops",
+    "image": "fish_scallops"
+  },
+  {
+    "id": "seaPerch",
+    "name": "Sea Perch",
+    "image": "fish_seaPerch"
+  },
+  {
+    "id": "snapper",
+    "name": "Snapper",
+    "image": "fish_snapper"
+  },
+  {
+    "id": "tarakihi",
+    "name": "Tarakihi",
+    "image": "fish_tarakihi"
+  },
+  {
+    "id": "trevalley",
+    "name": "Trevalley",
+    "image": "fish_trevalley"
+  },
+  {
+    "id": "trumpeter",
+    "name": "Trumpeter",
+    "image": "fish_trumpeter"
+  },
+  {
+    "id": "albacoreTuna",
+    "name": "Albacore Tuna",
+    "image": "fish_albacoreTuna"
+  },
+  {
+    "id": "barracuda",
+    "name": "Barracouta",
+    "image": "fish_barracuda"
+  },
+  {
+    "id": "bigEyeTuna",
+    "name": "Big Eye Tuna",
+    "image": "fish_bigeyeTuna"
+  },
+  {
+    "id": "bluefinTuna",
+    "name": "Bluefin Tuna",
+    "image": "fish_bluefin"
+  },
+  {
+    "id": "bluenose",
+    "name": "Bluenose",
+    "image": "fish_bluenose"
+  },
+  {
+    "id": "swordfish",
+    "name": "Swordfish",
+    "image": "fish_broadbillSwordfish"
+  },
+  {
+    "id": "congerEel",
+    "name": "Conger Eel",
+    "image": "fish_congerEel"
+  },
+  {
+    "id": "gemfish",
+    "name": "Gemfish",
+    "image": "fish_gemfish"
+  },
+  {
+    "id": "greyboyShark",
+    "name": "Greyboy Shark",
+    "image": "fish_greyboyShark"
+  },
+  {
+    "id": "hapukaBass",
+    "name": "Hapuka Bass",
+    "image": "fish_hapuka"
+  },
+  {
+    "id": "leatherJacket",
+    "name": "Leather Jacket",
+    "image": "fish_leatherJacket"
+  },
+  {
+    "id": "redRockCod",
+    "name": "Red Rock Cod",
+    "image": "fish_redRockCod"
+  },
+  {
+    "id": "rig",
+    "name": "Rig",
+    "image": "fish_rig"
+  },
+  {
+    "id": "spinyDogfish",
+    "name": "Spiny Dogfish",
+    "image": "fish_spinydogfish"
+  },
+  {
+    "id": "yellowfinTuna",
+    "name": "Yellowfin Tuna",
+    "image": "fish_yellowfinTuna"
+  },
+  {
+    "id": "rainbowTrout",
+    "name": "Rainbow Trout",
+    "image": "fish_rainbowTrout"
+  },
+  {
+    "id": "brownTrout",
+    "name": "Brown Trout",
+    "image": "fish_brownTrout"
+  },
+  {
+    "id": "marlin",
+    "name": "Marlin",
+    "image": "fish_marlin"
+  },
+  {
+    "id": "mussels",
+    "name": "Mussels",
+    "image": "fish_mussels"
+  }
+]

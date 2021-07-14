@@ -1,5 +1,5 @@
 # Scale
-Team: Club Pinguin
+Team: Club Penguin - 
 Karen, Anastasia, Silvia, James, Saula, Yousuf
 
 ##Long Group project

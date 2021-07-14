@@ -1,12 +1,6 @@
-# Lost and Found
+# Scale
 
-## Week 7 Large group project
-
-The focus of this app is to practice using the Full Stack we teach, (with auth) in a large scale app.
-
-The idea of the app is to create a "billboard" style site for people to post about their animals that have gone missing, and for people who have found stray animals to post about them.
-
-The hope is that within a small community this could be a great go to for making sure those run-away floofs make it home safely.
+##Long Group project
 
 
 ## The Tech
@@ -17,12 +11,9 @@ A Boilerplate is already set up for you (Thanks Harrison!) with everything you w
 * [Redux](https://redux.js.org/)
 * [Express](https://expressjs.com/en/api.html)
 * [Knex.js (SQL)](https://knexjs.org/)
-* [Bulma (CSS framework)](https://bulma.io/documentation/)
 * [JWT Auth (Local)](https://jwt.io/)
 
-The Migration and seeds for the users table, and all login functionality is already set up!
-
-The mobile responsiveness is also being handled by some neat JS and Bulma classes, be sure to incorporate that view in your project goals!
+The Migration and seeds for the users table, and all login functionality is set up!
 
 ## User Stories
 

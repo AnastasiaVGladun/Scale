@@ -4,12 +4,20 @@ const db = require('../db/stats')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
+router.get('/:location/:start/:end', (req, res) => {
    
-    return db.getStatsByLocation()
+    const location_id = req.params.location;
+    const start = req.params.start;
+    const end = req.params.end;
+    return db.getStatsByLocation(location_id, start, end)
     .then(everything => {
+        console.log(everything);
+        res.json(everything);
+        return;
+        
+        
         let pairsLocCatch = everything.map (item => {
-            return item.region_id + "," + item.fish_id  + "," +  item.location
+            return item.region_id + "," + item.fish_id  + "," +  item.location 
         })
         pairsLocCatch = [...new Set(pairsLocCatch)]
         console.log(pairsLocCatch)
@@ -18,6 +26,7 @@ router.get('/', (req, res) => {
              const r_id = splitPair[0]
              const f_id = splitPair[1]
              const location = splitPair[2]
+             
             return db.getFishTotalByLoc (f_id, r_id)
                 .then(quantity => {
                     return {

@@ -9,9 +9,10 @@ const setStats = (stats) => {
  }
 }
 
-export const getStats = () => {
+//thunk
+export const getStats = (location) => {
     return dispatch => {
-      return fetchStats()
+      return fetchStats(location)
         .then(stat => {
           return dispatch(setStats(stat))
         })

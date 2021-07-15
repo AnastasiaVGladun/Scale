@@ -2,7 +2,7 @@
 exports.up = function(knex) {
     return knex.schema.createTable('location', table => {
       table.increments('id')
-      table.string('region')
+      table.string('location')
     })
   };
   

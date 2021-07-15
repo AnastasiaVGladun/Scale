@@ -9,7 +9,10 @@ const connection = require('./connection')
 // Add a catch 
 function addCatch(catch, db = connection) {
   return db('catch')
-    .insert()
+    .insert(catch)
 }
 
 
+module.exports ={
+  addCatch
+}

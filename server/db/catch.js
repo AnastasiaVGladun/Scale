@@ -1,13 +1,5 @@
 const connection = require('./connection') 
 
-// // Get all catch 
-// function getCatch() {
-
-// }
-const getCatchAll = (db = connection) => {
-  return db('catch')
-}
-
 const getCatchById = (id, db = connection) => {
   return db('catch')
     .where('id', id)
@@ -16,17 +8,15 @@ const getCatchById = (id, db = connection) => {
 
 
 
-// const addCatch = (catch, db = connection) => {
-//   return db('catch')
-//     .insert(catch)
-//     .then(ids => {
-//       return getCatchById(ids[0])
-//     })
-// }
+const addCatch = (fishcatch, db = connection) => {
+  return db('catch')
+    .insert(fishcatch)
+    .then(ids => {
+      return getCatchById(ids[0])
+    })
+}
 
 
 module.exports ={
-  // addCatch,
-  getCatchAll,
-  getCatchById
+  addCatch
 }

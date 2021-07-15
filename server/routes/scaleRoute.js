@@ -8,8 +8,8 @@ const router = express.Router()
 // Add a Post
 router.post('/', (req, res) => {
   return db.addCatch(req.body)
-  .then((catch) => {
-    res.json(catch)
+  .then((fishcatch) => {
+    res.json(fishcatch)
   })
   .catch(err => {
     console.log(err.message)

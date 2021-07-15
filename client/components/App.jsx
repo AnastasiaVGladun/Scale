@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+import Home from './home'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
@@ -18,7 +19,9 @@ function App (props) {
 
   return (
     <Router>
-      <div className="container has-text-centered">
+
+      <Nav/>
+{/* <div className="container has-text-centered">
 
         <div className="hero is-small is-primary">
           <div className="hero-body has-text-centered">
@@ -29,7 +32,7 @@ function App (props) {
           </div>
         </div>
 
-        <div className=''>
+        <div className='      '>
           {!auth.isAuthenticated &&
             <Route exact path="/" component={Login} />
           }
@@ -37,7 +40,7 @@ function App (props) {
           <Route path="/register" component={Register} />
         </div>
 
-      </div>
+      </div> */}
     </Router>
   )
 }

@@ -1,9 +1,11 @@
 const connection = require('./connection') 
 
-// // Get all catch 
-// function getCatch() {
-
-// }
+// Get all catch 
+function getCatchById(id, db = connection) {
+  return db('catch')
+    .select()
+    .join('fish','catch.fish_id', 'fish.id')
+}
 
 
 // Add a catch 
@@ -14,5 +16,6 @@ function addCatch(fishcatch, db = connection) {
 
 
 module.exports ={
-  addCatch
+  addCatch,
+  getCatchById
 }

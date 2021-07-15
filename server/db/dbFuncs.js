@@ -7,9 +7,9 @@ const connection = require('./connection')
 
 
 // Add a catch 
-function addCatch(catch, db = connection) {
+function addCatch(fishcatch, db = connection) {
   return db('catch')
-    .insert(catch)
+    .insert(fishcatch)
 }
 
 

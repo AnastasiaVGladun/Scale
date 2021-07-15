@@ -1,11 +1,9 @@
 const express = require('express')
+const router = express.Router()
 
 const db = require('../db/dbFuncs')
 
-const router = express.Router()
-
-
-// Add a Post
+// Add a Catch
 router.post('/', (req, res) => {
   return db.addCatch(req.body)
   .then((fishcatch) => {
@@ -15,3 +13,5 @@ router.post('/', (req, res) => {
     console.log(err.message)
   })
 })
+
+module.exports = router

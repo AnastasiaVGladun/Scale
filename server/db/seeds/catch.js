@@ -12,6 +12,7 @@ exports.seed = function(knex) {
         {id: 5, user_id: '4',fish_id:'20',region_id:'2',method_id:'2', quantity:'8', photo:'5.png',weight:'6',time:''},
         {id: 6, user_id: '2',fish_id:'11',region_id:'14',method_id:'1', quantity:'9', photo:'6.png',weight:'9',time:''},
         {id: 7, user_id: '3',fish_id:'9',region_id:'1',method_id:'4', quantity:'7', photo:'7.png',weight:'2',time:''},
+        {id: 8, user_id: '3',fish_id:'9',region_id:'14',method_id:'4', quantity:'7', photo:'7.png',weight:'2',time:''},
       ]);
     });
 };

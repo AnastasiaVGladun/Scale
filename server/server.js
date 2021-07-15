@@ -3,7 +3,7 @@ const path = require('path')
 
 const authRoutes = require('./routes/auth')
 const catchRoutes = require('./routes/catch')
-const statRoutes = require('./routes/stat')
+const statRoutes = require('./routes/stats')
 
 const server = express()
 server.use(express.json())

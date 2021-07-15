@@ -10,7 +10,7 @@ function Register (props) {
     username: '',
     contact_details: '',
     email_address: '',
-    password: '',
+    password: '', 
     confirm_password: ''
   })
 

@@ -3,53 +3,49 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logoutUser} from '../actions/auth'
 
-function Nav (props) {
-  const { auth, dispatch } = props
+function Nav () {
+  
 
-  const [burgerVisible, setBurgerVisible] = useState(false)
 
-  const toggleBurger = () => {
-    setBurgerVisible((prevBurgerState) => {
-      return !prevBurgerState
-    })
-  }
+  return (
 
-  const logout = () => {
-    const confirmSuccess = () => props.history.push('/')
-    dispatch(logoutUser(confirmSuccess))
-  }
+    <div id="nav" >
 
-  return <nav className="navbar">
-      <div className="container">
-        <div className="navbar-brand">
-          <span onClick={toggleBurger} className={`navbar-burger burger ${burgerVisible ? 'is-active' : ''}`} data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-        <div id="navbarMenuHeroA" className={`navbar-menu ${burgerVisible ? "is-active" : ''}`}>
-          <div className="navbar-end">
-            { auth.isAuthenticated
-              ? (
-                  <Link to='/' className="navbar-item is-large" onClick={() => logout()}>Logout</Link>
-                )
-              : (
-                <>
-                  <Link onClick={toggleBurger} className="navbar-item is-large" to='/login'>Login</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/register'>Register</Link>
-                </>
-              )
-            }
-          </div>
-        </div>
+      <div>
+        <img id="logo-img" src="/images/Logo/logo_1.png" /> 
       </div>
-    </nav>
-  }
+
+      
+      <div>
+        <ul id="vertical-list">
+                    <li> <p>LOG MY CATCH</p> </li>
+                    <li> <p>DIARY</p> </li>
+                    <li> <p>ACHIVEMENT</p> </li>
+                    <li> <p>REMINDERS</p> </li>
+                    <li> <p>FISH INFO</p> </li>
+                    <li> <p>STATISTICS</p> </li>
+                    <li> <p>RULES</p> </li>
+                    <li> <p>LOG OUT</p> </li>
+                    </ul>
+        </div>  
+
+
+      
+
+
+
+
+    </div>
+
+
+
+
+  )
+}
 
 const mapStateToProps = (globalState) => {
   return {
-    auth: globalState.auth
+    fish: globalState.fish
   }
 }
 

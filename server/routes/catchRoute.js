@@ -14,10 +14,10 @@ router.post('/', (req, res) => {
   })
 })
 
-// First get all catch 
-// Get a catch log with users ID
+
 router.get('/:id', (req, res) => {
   const id = req.params.id 
+
   return db.getCatchById(id)
   .then((response) => {
     res.json(response)

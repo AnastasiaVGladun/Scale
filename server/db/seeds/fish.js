@@ -81,7 +81,7 @@ exports.seed = function(knex) {
     description:"Pāua are large sea snails that are highly valued by Māori, recreational fishers and the commercial fishing industry. Pāua have always been a food source for Māori, and play a significant role in manaakitanga ki ngā manuhiri (hosting of visitors). Black-foot pāua (Haliotis iris) make up most of the pāua fishery while yellow-foot pāua (Haliotis australis) are only caught in small numbers. Pāua: live in shallow waters (generally less than 10m) off the coastline of New Zealand have a very small home range and can form large groups in suitable areas reproduce by releasing large amounts of spawn that are carried by ocean currents to new settlement sites. Successful spawning is related to the number and size of groups, so it's important to leave some pāua to breed for the next generation. Habitat such as reefs and seaweed are important for settlement of their larvae."
   },
   {
-    id: 12,
+    id: 43,
     name: "Pipi",
    image: "fish_pipi",
     description:""

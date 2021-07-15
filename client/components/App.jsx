@@ -8,6 +8,7 @@ import Register from './Register'
 import Nav from './Nav'
 
 import { checkAuth } from '../actions/auth'
+import Statistic from './Statistic'
 
 function App (props) {
   const { auth, dispatch } = props
@@ -41,6 +42,7 @@ function App (props) {
         </div>
 
       </div> */}
+      <Route path="/stats" component={Statistic} />
     </Router>
   )
 }

@@ -17,7 +17,7 @@ function addCatch(fishcatch, db = connection) {
 }
 
 
-module.exports ={
+module.exports = {
   addCatch,
   getCatchById
 }

@@ -5,6 +5,8 @@ const authRoutes = require('./routes/auth')
 const catchRoutes = require('./routes/catch')
 const statRoutes = require('./routes/stats')
 const diaryRoutes = require('./routes/diaryRoutes')
+const locationsRoutes = require('./routes/locations')
+
 
 const server = express()
 server.use(express.json())
@@ -15,5 +17,6 @@ server.use('/api/v1', authRoutes)
 server.use('/api/v1/statistics', statRoutes)
 server.use('/api/v1/catch', catchRoutes)
 server.use('/api/v1/diary', diaryRoutes)
+server.use ('/api/v1/locations', locationsRoutes)
 
 module.exports = server

@@ -4,7 +4,7 @@ const connection = require('./connection')
 function getCatchById(id, db = connection) {
   return db('catch')
     .select()
-    .where('id', id)
+    .where('user_id', id)
     .join('fish','catch.fish_id', 'fish.id')
     .join('location', 'catch.region_id', 'location.id')
 }

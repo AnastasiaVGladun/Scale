@@ -4,7 +4,7 @@ exports.seed = function(knex) {
   return knex('fish').del()
     .then(function () {
       // Inserts seed entries
-      return knex('fish').insert([
+      return knex('fish').insert(
 
 [
   {
@@ -266,6 +266,6 @@ exports.seed = function(knex) {
    image: "fish_mussels",
     description:""
   }
-]]);
+]);
 });
 };

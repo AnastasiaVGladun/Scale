@@ -1,13 +1,13 @@
-import { SET_FISH } from '../actions/fish'
+// import { SET_FISH } from '../actions/fish'
 
-const intialState = []
+// const intialState = []
 
-const reducer = (state = intialState, action) => {
-  switch (action.type) {
-    case SET_FISH:
-      return action.fish
-      }}
-    default:
-      return state
-  }
-export default reducer
+// const reducer = (state = intialState, action) => {
+// //   switch (action.type) {
+// //     case SET_FISH:
+// //       return action.fish
+// //       }}
+// //     default:
+// //       return state
+// //   }
+// export default reducer

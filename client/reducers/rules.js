@@ -1,14 +1,14 @@
-import SET_RULES from '../actions/rules'
+// import SET_RULES from '../actions/rules'
 
-const intialState = []
+// const intialState = []
 
-const reducer = (state = intialState, action) => {
-  switch (action.type) {
-    case SET_RULES:
-      return action.rules}
+// const reducer = (state = intialState, action) => {
+//   switch (action.type) {
+//     case SET_RULES:
+//       return action.rules}
   
-default: return state
+// default: return state
   
 
 
-export default reducer
+// export default reducer

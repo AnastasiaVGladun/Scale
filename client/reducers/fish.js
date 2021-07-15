@@ -1,13 +1,13 @@
-import SET_FISH from '../actions/fish'
+// import SET_FISH from '../actions/fish'
 
-const intialState = []
+// const intialState = []
 
-const reducer = (state = intialState, action) => {
-  switch (action.type) {
-    case SET_RULES:
-      return action.fish}
+// const reducer = (state = intialState, action) => {
+//   switch (action.type) {
+//     case SET_RULES:
+//       return action.fish}
   
-default: return state
+// default: return state
   
-export default reducer
+// export default reducer
 

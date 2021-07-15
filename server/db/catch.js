@@ -16,17 +16,17 @@ const getCatchById = (id, db = connection) => {
 
 
 
-const addCatch = (catch, db = connection) => {
-  return db('catch')
-    .insert(catch)
-    .then(ids => {
-      return getCatchById(ids[0])
-    })
-}
+// const addCatch = (catch, db = connection) => {
+//   return db('catch')
+//     .insert(catch)
+//     .then(ids => {
+//       return getCatchById(ids[0])
+//     })
+// }
 
 
 module.exports ={
-  addCatch,
+  // addCatch,
   getCatchAll,
   getCatchById
 }

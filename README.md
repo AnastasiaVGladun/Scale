@@ -1,5 +1,5 @@
 # Scale
-Team: Scale
+Team: Scale  
 Karen, Anastasia, Silvia, James, Saula, Yousuf
 
 Recreational Fishing App - collecting data for good!

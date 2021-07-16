@@ -1,13 +1,17 @@
 import {combineReducers} from 'redux'
 
-// import currentPage from './current-page'
 import auth from './auth'
 import fish from './fish'
 import rules from './rules'
+import stats from './stats'
+import locations from './locations'
+import diary from './diary'
 
 export default combineReducers({
-  // currentPage,
   auth,
   fish,
-  rules
+  rules,
+  stats,
+  locations,
+  diary
 })

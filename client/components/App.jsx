@@ -11,6 +11,8 @@ import Nav from './Nav'
 import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
 import FishInfo from './FishInfo'
+import RulesInfo from './RulesInfo'
+
 
 function App (props) {
   const { auth, dispatch } = props
@@ -32,6 +34,8 @@ function App (props) {
           <Route path="/" component={Nav} />
           <Route path="/stats" component={Statistic} />
           <Route path="/fish" component={FishInfo} />
+          <Route path="/rules" component={RulesInfo} />
+
         </div>
       </div>
 

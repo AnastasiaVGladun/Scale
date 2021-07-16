@@ -8,7 +8,7 @@ Recreational Fishing App - collecting data for good!
 * Scrum and Vibes Lead - Silvia
 * Git Lead - Yousuf
 * Product Owner - Karen
-* Tech Lead - shared team approach due to our small team.
+* Tech Lead - agile/shared team approach due to our small team.
 
 ## Project Management
 
@@ -32,20 +32,20 @@ Recreational Fishing App - collecting data for good!
 **Morning**
 * Mindfulness - 5 mins
 * Team check-ins - how are you feeling today
-* Standup - what you will do, what you did (if done anything in the evening), what blockages
+* Standup - what you did (if done anything in the evening), what you will do, what blockages
 
 **Afternoon**
-* Standup - what you will do, what you did, what blockages
+* Standup - what you did, what you will do, what blockages
 
 **Evening**
-* Standup - what you will do, what you did, what blockages
-* Retro/check ins - what you learned, what when well today, what didnt go well, what would make tomorrow better
+* Standup - what you did, what you will do, what blockages
+* Retro/check ins - what you learned, what went well today, what didnt go well, what would make tomorrow better
 
 **Approach to work**
+* People over product
 * Pick of kanban board
 * Pair as needed / review when solo
-* If stuck - leave no longer than 15 mins
-* People over product
+* If stuck - leave no longer than 15 mins - Ask for help
 * Check in on each other as needed - if recognised group is stressed - all just go out for a walk/coffee
 
 **Stress**

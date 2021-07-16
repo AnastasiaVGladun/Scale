@@ -11,25 +11,25 @@ const setDiary = (diary) => {
    }
    
    //thunk
-   export const getDiary = (catchInfo) => {
+   export const getDiary = () => {
        return dispatch => {
-         return fetchDiary(catchInfo)
+         return fetchDiary()
            .then(data => {
              return dispatch(setDiary(data))
            })
        }
      }
 
-     const addCatchToStore = (Fcatch) => {
+     const addCatchToStore = (fishcatch) => {
         return {
           type: ADD_CATCH,
-          Fcatch
+          fishcatch
         }
       }
       
-      export const createCatch = (Fcatch) => { 
+      export const createCatch = (fishcatch) => { 
         return dispatch => {
-          return postCatch(Fcatch)
+          return postCatch(fishcatch)
             .then(newCatch => { 
               return dispatch(addCatchToStore(newCatch))
             })

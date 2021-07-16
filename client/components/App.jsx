@@ -20,16 +20,15 @@ function App (props) {
 
   return (
     <Router>
-
-      <Nav/>
-{/* <div className="container has-text-centered">
+<div className="container has-text-centered">
 
         <div className="hero is-small is-primary">
           <div className="hero-body has-text-centered">
             <Link to='/' className="">
-              <h1 className="title is-1">Lost and Found</h1>
+              <h1 className="title is-1">Scale</h1>
             </Link>
             <Route path="/" component={Nav} />
+            <Route path="/stats" component={Statistic} />
           </div>
         </div>
 
@@ -41,8 +40,8 @@ function App (props) {
           <Route path="/register" component={Register} />
         </div>
 
-      </div> */}
-      <Route path="/stats" component={Statistic} />
+      </div>
+      
     </Router>
   )
 }

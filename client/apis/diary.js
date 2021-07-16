@@ -12,3 +12,13 @@ export const postCatch = (catchInfo) => {
       console.log(err.message)
     })
 }
+
+export const fetchDiary = (catchInfo) => {
+  return request.get(baseUrl)
+  .then(response => {
+    return response.body
+  })
+  .catch(err => {
+    console.log(err.message)
+  })
+}

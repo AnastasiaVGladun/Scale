@@ -23,8 +23,28 @@ function App (props) {
 
   return (
     <Router>
+      <div className="container has-text-centered">
 
-      
+      <div className="hero is-small is-primary">
+        <div className="hero-body has-text-centered">
+          <Link to='/' className="">
+            <h1 className="title is-1">Scale</h1>
+          </Link>
+          <Route path="/" component={Nav} />
+          <Route path="/stats" component={Statistic} />
+        </div>
+      </div>
+
+      <div className='      '>
+        {!auth.isAuthenticated &&
+          <Route exact path="/" component={Login} />
+        }
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+      </div>
+
+      </div>
+
     </Router>
   )
 }

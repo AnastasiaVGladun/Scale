@@ -13,11 +13,10 @@ import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
 import Diary from './Diary'
 import FishInfo from './FishInfo'
-
+import RulesInfo from './RulesInfo'
 
 function App (props) {
   const { auth, dispatch } = props
-
 
   useEffect(() =>{
     const confirmSuccess = () => { }
@@ -27,16 +26,18 @@ function App (props) {
 
   return (
     <Router>
-<div className="container has-text-centered">
+      <div className="container has-text-centered">
 
-        <div className="hero is-small is-primary">
-          <div className="hero-body has-text-centered">
-            <Link to='/' className="">
-              <h1 className="title is-1">Scale</h1>
-            </Link>
-            <Route path="/" component={Nav} />
-            
-          </div>
+      <div className="hero is-small is-primary">
+        <div className="hero-body has-text-centered">
+          <Link to='/' className="">
+            <h1 className="title is-1">Scale</h1>
+          </Link>
+          <Route path="/" component={Nav} />
+          <Route path="/stats" component={Statistic} />
+          <Route path="/fish" component={FishInfo} />
+          <Route path="/rules" component={RulesInfo} />
+
         </div>
       </div>
 
@@ -56,13 +57,14 @@ function App (props) {
          <Route path="/stats" component={Statistic} />
           </>
         } 
-
+        </div>
     </Router>
   )
 }
 
 const mapStateToProps = (globalState) => {
   return {
+
     auth: globalState.auth
   }
 }

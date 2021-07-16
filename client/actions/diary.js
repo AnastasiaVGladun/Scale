@@ -9,7 +9,7 @@ const setDiary = (diary) => {
         diary
     }
    }
-   
+
    //thunk
    export const getDiary = (catchInfo) => {
        return dispatch => {

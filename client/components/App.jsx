@@ -8,8 +8,10 @@ import Register from './Register'
 import Nav from './Nav'
 import Catch from './Catch'
 
+
 import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
+import FishInfo from './FishInfo'
 
 function App (props) {
   const { auth, dispatch } = props
@@ -20,10 +22,10 @@ function App (props) {
   }, [])
 
   return (
-      <Router>
+    <Router>
 
         <Catch/>
-          <div className="container has-text-centered">
+      <div className="container has-text-centered">
 
       
 
@@ -35,19 +37,20 @@ function App (props) {
             <Route path="/" component={Nav} />
             <Route path="/stats" component={Statistic} />
           </div>
-        </div>
+          </div>
+          </div>
 
         <div className='      '>
-          {!auth.isAuthenticated &&
-            <Route exact path="/" component={Login} />
-          }
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
+        {!auth.isAuthenticated &&
+          <Route exact path="/" component={Login} />
+        }
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
         </div>
 
-      </div>
       
-     </Router>
+      
+    </Router>
   )
 }
 

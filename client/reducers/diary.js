@@ -5,9 +5,9 @@ const intialState = []
 const reducer = (state = intialState, action) => {
   switch (action.type) {
     case SET_DIARY:
-      return action.stats
+      return action.diary
     case ADD_CATCH:
-        return [...state, action.catch]
+        return [...state, action.fishcatch]
       default:
       return state
   }

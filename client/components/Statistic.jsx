@@ -26,7 +26,7 @@ function Stats (props) {
             <select onChange={onSelect}>
                 <option value="All">All</option>
                 {props.locations.map (location => {
-                    return <option value={location.id}>{location.location}</option> 
+                    return <option key = {location.id} value={location.id}>{location.location}</option> 
                     })
                 }               
                  </select>
@@ -34,7 +34,8 @@ function Stats (props) {
             
             Hello from stats page
             {props.stats.map((stat) => {
-                return <div>{stat.name} - {stat.quantity}</div>
+                console.log (stat)
+                return <div key ={stat.id}> <img src={`/images/Fish/${stat.image}@2x.png`}/>{stat.name} - {stat.quantity}</div>
             })}
             {/* {JSON.stringify(props.stats)} */}
 

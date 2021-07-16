@@ -139,7 +139,7 @@ Recreational Fishing App - collecting data for good!
                        * - ADD_PHOTO - photo - to add photo  
   * Boat Uber (form)  - SET_UBER - uber - to get all the info to render information for users
                        * - ADD_UBER - uber - to add info from users
-  * Seabirds Handling Info - SET_RULESINFO - seabirds - to get all seabirds info to render seabirds handling info
+  * Seabirds Handling Info - SET_SEABIRDS - seabirds - to get all seabirds info to render seabirds handling info
 
 
 

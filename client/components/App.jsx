@@ -6,8 +6,10 @@ import Home from './home'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
+import Catch from './Catch'
 
 import { checkAuth } from '../actions/auth'
+import Statistic from './Statistic'
 
 function App (props) {
   const { auth, dispatch } = props
@@ -18,17 +20,20 @@ function App (props) {
   }, [])
 
   return (
-    <Router>
+      <Router>
 
-      <Nav/>
-{/* <div className="container has-text-centered">
+        <Catch/>
+          <div className="container has-text-centered">
+
+      
 
         <div className="hero is-small is-primary">
           <div className="hero-body has-text-centered">
             <Link to='/' className="">
-              <h1 className="title is-1">Lost and Found</h1>
+              <h1 className="title is-1">Scale</h1>
             </Link>
             <Route path="/" component={Nav} />
+            <Route path="/stats" component={Statistic} />
           </div>
         </div>
 
@@ -40,8 +45,9 @@ function App (props) {
           <Route path="/register" component={Register} />
         </div>
 
-      </div> */}
-    </Router>
+      </div>
+      
+     </Router>
   )
 }
 

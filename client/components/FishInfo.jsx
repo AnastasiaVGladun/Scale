@@ -17,9 +17,10 @@ function FishInfo (props) {
                     <ul id="horizontal-list">
                         {fish.map(fishinfo => {
                             return <div className="fish-info" key={fishinfo.id}>
-                                <li><p>Fish Name: {fishinfo.name}</p></li>
-                                <li> <p>Image: {fishinfo.image} </p></li>
-                                <li> <p>Description: {fishinfo.description}</p></li>
+                                <li><p> {fishinfo.name}</p></li>
+                                <li> <p><img className= 'fish-image' src={`/images/Fish/${fishinfo.image}@2x.png`}/>
+</p></li>
+                                <li>{fishinfo.description}</li>
                             </div>
                         })}
                     </ul>

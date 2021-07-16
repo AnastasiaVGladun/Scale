@@ -1,4 +1,4 @@
-import { GET_FISH} from '../actions/fish'
+import { GET_FISH } from '../actions/fish'
 
 const initialState = []
 

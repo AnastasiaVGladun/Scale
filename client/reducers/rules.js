@@ -13,3 +13,4 @@ const rules = (state = initialState, action) => {
 }
 
 export default rules
+

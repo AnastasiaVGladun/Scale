@@ -1,15 +1,14 @@
 const express = require('express')
 
-const db = require('../db/diary')
+const db = require('../db/achievements')
 
 const router = express.Router()
 
-
-// Achivements
+// Achievements
 router.get('/:id', (req, res) => {
   const id = req.params.id 
 
-  return db.getAllCatchById(id)
+  return db.getAchievements(id)
   .then((response) => {
     res.json(response)
   })
@@ -18,16 +17,4 @@ router.get('/:id', (req, res) => {
   })
 })
 
-router.post('/', (req, res) => {
-    return db.addCatch(req.body)
-    .then((fishcatch) => {
-      res.json(fishcatch)
-    })
-    .catch(err => {
-      console.log(err.message)
-    })
-  })
-
-
-  
-  module.exports = router
+module.exports = router

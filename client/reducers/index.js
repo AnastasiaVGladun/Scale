@@ -6,6 +6,7 @@ import rules from './rules'
 import stats from './stats'
 import locations from './locations'
 import diary from './diary'
+import achievements from './achievements'
 
 export default combineReducers({
   auth,
@@ -13,5 +14,6 @@ export default combineReducers({
   rules,
   stats,
   locations,
-  diary
+  diary,
+  achievements
 })

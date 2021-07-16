@@ -15,6 +15,7 @@ const setDiary = (diary) => {
        return dispatch => {
          return fetchDiary()
            .then(data => {
+             console.log(data)
              return dispatch(setDiary(data))
            })
        }
@@ -35,3 +36,4 @@ const setDiary = (diary) => {
             })
         }
       }
+      

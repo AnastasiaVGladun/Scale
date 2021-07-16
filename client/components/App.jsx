@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { getDiary, createCatch } from '../actions/diary'
 
 import Home from './home'
 import Login from './Login'
@@ -10,17 +11,18 @@ import Nav from './Nav'
 
 import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
+import Diary from './Diary'
 import FishInfo from './FishInfo'
 import RulesInfo from './RulesInfo'
-
 
 function App (props) {
   const { auth, dispatch } = props
 
-  useEffect(() => {
+  useEffect(() =>{
     const confirmSuccess = () => { }
     dispatch(checkAuth(confirmSuccess))
-  }, [])
+    dispatch(getDiary())
+}, [])
 
   return (
     <Router>
@@ -39,22 +41,30 @@ function App (props) {
         </div>
       </div>
 
-      <div className='      '>
-        {!auth.isAuthenticated &&
-          <Route exact path="/" component={Login} />
-        }
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-      </div>
+        <div className='      '>
+          {!auth.isAuthenticated &&
+            <Route exact path="/" component={Login} />
+          }
 
-      </div>
-
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          {/* <Route path="/diary" component={Diary} /> */}
+          
+        </div>
+        {auth.isAuthenticated &&
+         <>
+         <Route path="/diary" component={Diary} />
+         <Route path="/stats" component={Statistic} />
+          </>
+        } 
+        </div>
     </Router>
   )
 }
 
 const mapStateToProps = (globalState) => {
   return {
+
     auth: globalState.auth
   }
 }

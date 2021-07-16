@@ -34,7 +34,7 @@ function Nav (props) {
         </div>
         <div id="navbarMenuHeroA" className={`navbar-menu ${burgerVisible ? "is-active" : ''}`}>
           <div className="navbar-end">
-            { auth.isAuthenticated
+            { !auth.isAuthenticated
               ? (
                 <>
                   <Link onClick={toggleBurger} className="navbar-item" to='/'>HOME</Link>
@@ -53,10 +53,10 @@ function Nav (props) {
                   <Link onClick={toggleBurger} className="navbar-item" to='/register'>REGISTER</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
+
                   <Link onClick={toggleBurger} className="navbar-item" to='/diary'>DIARY</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/achievement'>ACHIEVEMENT</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/rules'>RULES</Link>
-
 
                 </>
               )

@@ -12,7 +12,7 @@ if (location_id === 'All'){
     
     .sum('catch.quantity as quantity')
     .groupBy('fish.name')
-    .select('fish.name')
+    .select('fish.name', 'fish.image')
 }
 
 else{
@@ -25,7 +25,7 @@ else{
     
     .sum('catch.quantity as quantity')
     .groupBy('fish.name')
-    .select('fish.name')
+    .select('fish.name', 'fish.image')
     //.select();
     // .select('catch.id', 'catch.region_id', 'catch.fish_id', 'catch.quantity', 
     // 'location.location as location_name', 'fish.name as fish_name', 'method.method as method_type')

@@ -8,9 +8,12 @@ import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
 
+
 import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
 import Diary from './Diary'
+import FishInfo from './FishInfo'
+
 
 function App (props) {
   const { auth, dispatch } = props
@@ -35,6 +38,7 @@ function App (props) {
             
           </div>
         </div>
+      </div>
 
         <div className='      '>
           {!auth.isAuthenticated &&
@@ -52,8 +56,7 @@ function App (props) {
          <Route path="/stats" component={Statistic} />
           </>
         } 
-      </div>
-      
+
     </Router>
   )
 }

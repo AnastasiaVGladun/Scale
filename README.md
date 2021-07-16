@@ -53,25 +53,25 @@ Recreational Fishing App - collecting data for good!
 
 
 ## Views (Client Side)
-**MVP**
-  All users
+**MVP** 
+  * All users
   * Homepage  
   * Fish info - General info of fish for users to help them with ID 
   * Statistics - Show collective data of fish caught by location
   * Login - View for user to enter their login credentials 
   * Register - View for user to sign up for the App 
    
-  Registered User 
+  * Registered User 
   * User Page - a snippet / landing page for users
   * Log Catch (Form) - ability for users to log catch to populate own diary
   * Diary - Show users own data of fish caught
  
-**STRETCH**
-  All users
+**STRETCH** 
+  * All users
   * Rules - Link to different MPI pages based on region 
   * Statistics - Add view by time 
 
-  Registered User 
+  * Registered User 
   * Diary - add filter by location and time
   * User statistics - show users stats based on their diary info
   * Achievements - Gamefication - show user badges based on their own stats
@@ -85,7 +85,7 @@ Recreational Fishing App - collecting data for good!
 
 
 ## Reducers (Client Side)
-**MVP**
+**MVP** 
   * FishInfo - Store images of fish with their description 
   * RulesInfo - Store links for rules for each fishing region
   * Stats - Store information of all catch events for all users i.e location, fish name, quantity
@@ -93,7 +93,7 @@ Recreational Fishing App - collecting data for good!
   * Diary - Store information of user specific catch events
   * Users - Store information regarding user logins, auth status and auth errors
   
-**STRETCH**
+**STRETCH** 
   * RulesInfo - Store links to different MPI pages based on region
   * Achievements - Store information of indivdual user achievements
   * Weather - show weather for fishing
@@ -102,13 +102,13 @@ Recreational Fishing App - collecting data for good!
   * Seabirds Handling Info - store seabirds handling info
   * User Page - add additional stretch features as they are built 
 
-**OPTIONAL REDUCERS (may just be a post)**
+**OPTIONAL REDUCERS (may just be a post)** 
   * Pot a Poacher (form) - upload images and info and share with fish cops to help build a trend/picture of suspicious behaviour
   * Log an observation (form) - upload images and info of observed environmental events
 
 
 ## Actions (Client Side)
-**MVP**
+**MVP** 
   * FishInfo - SET_FISHINFO - fishinfo - to get all the fishinfo to render
   * RulesInfo - SET_RULESINFO - rulesinfo - to get all the rulesinfo to render
   * Stats - SET_STATS - stats - to get all the stats data to render
@@ -117,7 +117,7 @@ Recreational Fishing App - collecting data for good!
          * - ADD_CATCH - diary - to add fishcatches to user specific catch events 
   * Users - 
   
-**STRETCH**
+**STRETCH** 
   * RulesInfo - SET_RULESINFO - rulesinfo - to get all the rulesinfo to render
   * Achievements - SET_ACHIEVEMENTS - to get all information of indivdual user achievements
   * Weather - SET_WEATHER - to get all weather info to render

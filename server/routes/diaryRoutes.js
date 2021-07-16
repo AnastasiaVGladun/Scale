@@ -5,11 +5,11 @@ const db = require('../db/diary')
 const router = express.Router()
 
 
-
+// Get catch by ID
 router.get('/:id', (req, res) => {
   const id = req.params.id 
 
-  return db.getCatchById(id)
+  return db.getAllCatchById(id)
   .then((response) => {
     res.json(response)
   })
@@ -17,6 +17,19 @@ router.get('/:id', (req, res) => {
     console.log(err.message)
   })
 })
+
+
+// Add a Catch
+router.post('/', (req, res) => {
+  return db.addCatch(req.body)
+  .then((fishcatch) => {
+    res.json(fishcatch)
+  })
+  .catch(err => {
+    console.log(err.message)
+  })
+})
+
 
 
 module.exports = router

@@ -1,18 +1,21 @@
-import {getFish} from '../apis/fish'
+import { getAllFish } from '../apis/fish'
 
-export const SET_FISH = 'SET_FISH'
+export const GET_FISH = 'GET_FISH'
 
 const setFish = (fish) => {
   return {
-    type: SET_FISH,
-    rules
+    type: GET_FISH,
+    fish
   }
 }
+
 export const getFish = () => {
   return dispatch => {
-    return fetchFish()
-      .then(rules => {
+    return getAllFish()
+      .then(fish => {
         return dispatch(setFish(fish))
       })
   }
 }
+
+

@@ -6,6 +6,9 @@ import Home from './home'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
+import Rules from './rules'
+import Snapper from './Fish'
+
 
 import { checkAuth } from '../actions/auth'
 
@@ -21,6 +24,7 @@ function App (props) {
     <Router>
 
       <Nav/>
+      <Snapper/>
 {/* <div className="container has-text-centered">
 
         <div className="hero is-small is-primary">

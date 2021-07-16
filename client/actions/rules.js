@@ -1,19 +1,19 @@
-import {getRules} from '../apis/rules'
+import { getAllRules } from '../apis/rules'
 
-export const SET_RULES = 'SET_RULES'
+export const GET_RULES = 'GET_RULES'
 
 const setRules = (rules) => {
   return {
-    type: SET_RULES,
+    type: GET_RULES,
     rules
   }
 }
+
 export const getRules = () => {
   return dispatch => {
-    return fetchRules()
+    return getAllRules()
       .then(rules => {
         return dispatch(setRules(rules))
       })
   }
 }
-

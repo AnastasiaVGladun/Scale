@@ -10,36 +10,36 @@ Recreational Fishing App - collecting data for good!
 * Product Owner - Karen
 * Tech Lead - shared team approach due to our small team.
 
-Project Management
-Tool
+## Project Management
+**Tool**
 * Kanban board
 * Wireframes
 * Scrums and check-ins
 
-Daily 
-Morning
+***Daily ***  
+**Morning**
 * Mindfulness - 5 mins
 * Team check-ins - how are you feeling today
 * Standup - what you will do, what you did (if done anything in the evening), what blockages
 
-Afternoon
+**Afternoon**
 * Standup - what you will do, what you did, what blockages
 
-Evening
+**Evening**
 * Standup - what you will do, what you did, what blockages
 * Retro/check ins - what you learned, what when well today, what didnt go well, what would make tomorrow better
 
-Approach to work
+**Approach to work**
 * Pick of kanban board
 * Pair as needed / review when solo
 * If stuck - leave no longer than 15 mins
 * People over product
 * Check in on each other as needed - if recognised group is stressed - all just go out for a walk/coffee
 
-Stress
+**Stress**
 * Individual - red wine, go for a walk, exercise, talk fast
 
-Well-being/Team
+**Well-being/Team**
 * Let each other know if you need anything, if you have any issues - communicate it. There are plenty opportunities during team get togethers but also just go for it anytime int the day.
 * Shared lunch one day.
 
@@ -53,7 +53,7 @@ Well-being/Team
 
 
 ## Views (Client Side)
-MVP
+**MVP**
   All users
   * Homepage  
   * Fish info - General info of fish for users to help them with ID 
@@ -66,7 +66,7 @@ MVP
   * Log Catch (Form) - ability for users to log catch to populate own diary
   * Diary - Show users own data of fish caught
  
-STRETCH
+**STRETCH**
   All users
   * Rules - Link to different MPI pages based on region 
   * Statistics - Add view by time 
@@ -85,7 +85,7 @@ STRETCH
 
 
 ## Reducers (Client Side)
-MVP
+**MVP**
   * FishInfo - Store images of fish with their description 
   * RulesInfo - Store links for rules for each fishing region
   * Stats - Store information of all catch events for all users i.e location, fish name, quantity
@@ -93,7 +93,7 @@ MVP
   * Diary - Store information of user specific catch events
   * Users - Store information regarding user logins, auth status and auth errors
   
-STRETCH
+**STRETCH**
   * RulesInfo - Store links to different MPI pages based on region
   * Achievements - Store information of indivdual user achievements
   * Weather - show weather for fishing
@@ -102,13 +102,13 @@ STRETCH
   * Seabirds Handling Info - store seabirds handling info
   * User Page - add additional stretch features as they are built 
 
-OPTIONAL REDUCERS (may just be a post)
+**OPTIONAL REDUCERS (may just be a post)**
   * Pot a Poacher (form) - upload images and info and share with fish cops to help build a trend/picture of suspicious behaviour
   * Log an observation (form) - upload images and info of observed environmental events
 
 
 ## Actions (Client Side)
-MVP
+**MVP**
   * FishInfo - SET_FISHINFO - fishinfo - to get all the fishinfo to render
   * RulesInfo - SET_RULESINFO - rulesinfo - to get all the rulesinfo to render
   * Stats - SET_STATS - stats - to get all the stats data to render
@@ -117,7 +117,7 @@ MVP
          * - ADD_CATCH - diary - to add fishcatches to user specific catch events 
   * Users - 
   
-STRETCH
+**STRETCH**
   * RulesInfo - SET_RULESINFO - rulesinfo - to get all the rulesinfo to render
   * Achievements - SET_ACHIEVEMENTS - to get all information of indivdual user achievements
   * Weather - SET_WEATHER - to get all weather info to render
@@ -128,11 +128,7 @@ STRETCH
   * Boat Uber (form)  - SET_UBER - uber - to get all the info to render information for users
                        * - ADD_UBER - uber - to add info from users
   * Seabirds Handling Info - SET_RULESINFO - seabirds - to get all seabirds info to render seabirds handling info
-  
 
-OPTIONAL REDUCERS (may just be a post)
-  * Pot a Poacher (form) - upload images and info and share with fish cops to help build a trend/picture of suspicious behaviour
-  * Log an environment (form) - upload images and info of observed environmental events
 
 
 ## API (Client - Server)

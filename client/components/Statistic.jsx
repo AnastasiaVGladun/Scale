@@ -35,7 +35,7 @@ function Stats (props) {
             {props.stats.map((stat) => {
                 return <div>{stat.name} - {stat.quantity}</div>
             })}
-            {JSON.stringify(props.stats)}
+            {/* {JSON.stringify(props.stats)} */}
 
         </>
     )

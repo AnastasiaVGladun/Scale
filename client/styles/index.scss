@@ -16,3 +16,19 @@
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/layout/hero.sass";
 @import "bulma/sass/layout/section.sass";
+
+
+.fish-info {
+    margin: 10px;
+    padding: 20px;
+}
+
+.fish-info p {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.fish-image {
+    width: 150px;
+    
+}

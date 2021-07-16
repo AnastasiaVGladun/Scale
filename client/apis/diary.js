@@ -13,7 +13,7 @@ export const postCatch = (catchInfo) => {
     })
 }
 
-export const fetchDiary = (catchInfo) => {
+export const fetchDiary = () => {
   return request.get(baseUrl)
   .then(response => {
     return response.body

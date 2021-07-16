@@ -9,7 +9,7 @@ const router = express.Router()
 router.get('/:id', (req, res) => {
   const id = req.params.id 
 
-  return db.getCatchById(id)
+  return db.getAllCatchById(id)
   .then((response) => {
     res.json(response)
   })
@@ -17,6 +17,7 @@ router.get('/:id', (req, res) => {
     console.log(err.message)
   })
 })
+
 
 // Add a Catch
 router.post('/', (req, res) => {

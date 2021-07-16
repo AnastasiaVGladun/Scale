@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { getDiary, createCatch } from '../actions/diary'
 
 import Home from './home'
 import Login from './Login'
@@ -9,14 +10,17 @@ import Nav from './Nav'
 
 import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
+import Diary from './Diary'
 
 function App (props) {
   const { auth, dispatch } = props
 
-  useEffect(() => {
+
+  useEffect(() =>{
     const confirmSuccess = () => { }
     dispatch(checkAuth(confirmSuccess))
-  }, [])
+    dispatch(getDiary())
+}, [])
 
   return (
     <Router>
@@ -28,7 +32,7 @@ function App (props) {
               <h1 className="title is-1">Scale</h1>
             </Link>
             <Route path="/" component={Nav} />
-            <Route path="/stats" component={Statistic} />
+            
           </div>
         </div>
 
@@ -36,10 +40,18 @@ function App (props) {
           {!auth.isAuthenticated &&
             <Route exact path="/" component={Login} />
           }
+
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          {/* <Route path="/diary" component={Diary} /> */}
+          
         </div>
-
+        {auth.isAuthenticated &&
+         <>
+         <Route path="/diary" component={Diary} />
+         <Route path="/stats" component={Statistic} />
+          </>
+        } 
       </div>
       
     </Router>

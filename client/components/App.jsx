@@ -2,15 +2,13 @@ import React, { useEffect } from 'react'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getDiary, createCatch } from '../actions/diary'
+import { checkAuth } from '../actions/auth'
 
 import Home from './home'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
 import Footer from './Footer'
-
-
-import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
 import Diary from './Diary'
 import FishInfo from './FishInfo'
@@ -46,7 +44,6 @@ function App (props) {
           {!auth.isAuthenticated &&
 
           <>
-            <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             </>
@@ -55,17 +52,19 @@ function App (props) {
             <Route path="/stats" component={Statistic} />
             <Route path="/fish" component={FishInfo} />
             <Route path="/rules" component={RulesInfo} />
-            <Route path='/' component={Footer}/> 
+            
 
         </div>
         {auth.isAuthenticated &&
          <>
+          <Route path='/user' component={UserHome} />
           <Route path="/diary" component={Diary} />
           <Route path="/stats" component={Statistic} />
           <Route path="/achievements" component={Achievements} />
        
           </>
         } 
+        <Route path='/' component={Footer}/> 
         </div>
     </Router>
   )

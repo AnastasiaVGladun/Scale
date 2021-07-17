@@ -8,7 +8,6 @@ import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
 
-
 import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
 import Diary from './Diary'
@@ -29,21 +28,18 @@ function App (props) {
   return (
     <Router>
       <div className="container has-text-centered">
-
       <div className="hero is-small is-primary">
         <div className="hero-body has-text-centered">
           <Link to='/' className="">
             <h1 className="title is-1">Scale</h1>
           </Link>
           <Route path="/" component={Nav} />
-          <Route path="/stats" component={Statistic} />
           <Route path="/fish" component={FishInfo} />
           <Route path="/rules" component={RulesInfo} />
-
         </div>
       </div>
 
-        <div className='      '>
+       <div className='      '>
           {!auth.isAuthenticated &&
             <Route exact path="/" component={Login} />
           }
@@ -52,12 +48,13 @@ function App (props) {
           <Route path="/register" component={Register} />
           {/* <Route path="/diary" component={Diary} /> */}
           <Route path="/user-home" component={UserHome} />
+          <Route path="/stats" component={Statistic} />
           
         </div>
         {auth.isAuthenticated &&
          <>
          <Route path="/diary" component={Diary} />
-         <Route path="/stats" component={Statistic} />
+       
        
           </>
         } 

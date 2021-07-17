@@ -8,6 +8,10 @@ function RulesInfo (props) {
     console.log(rules)
  
     useEffect(() => {
+
+
+
+        
         return dispatch(getRules())
     },[])
     
@@ -17,9 +21,9 @@ function RulesInfo (props) {
                     <ul id="horizontal-list">
                         {rules.map(rulesinfo => {
                             return <div className="rules-info" key={rulesinfo.id}>
-                                <li><p> {rulesinfo.region}</p></li>
+                                <li><p> <a href={rulesinfo.link}target="_blank">{rulesinfo.region}</a></p></li>       
 
-                                <li>{rulesinfo.link}</li>
+                                {/* <li>{rulesinfo.link}</li> */}
                             </div>
                         })}
                     </ul>

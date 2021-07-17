@@ -44,24 +44,25 @@ function App (props) {
 
         <div className='      '>
           {!auth.isAuthenticated &&
-            <Route exact path="/" component={Login} />
-          }
-          <Route path="/achievements" component={Achievements} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <Route path="/stats" component={Statistic} />
-          <Route path="/fish" component={FishInfo} />
-          <Route path="/rules" component={RulesInfo} />
 
-          <div>
-          <Route path='/' component={Footer}/> 
-          </div>
+          <>
+            <Route exact path="/" component={Home} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            </>
+          }
+            <Route exact path="/" component={Home} />
+            <Route path="/stats" component={Statistic} />
+            <Route path="/fish" component={FishInfo} />
+            <Route path="/rules" component={RulesInfo} />
+            <Route path='/' component={Footer}/> 
 
         </div>
         {auth.isAuthenticated &&
          <>
-         <Route path="/diary" component={Diary} />
-         <Route path="/stats" component={Statistic} />
+          <Route path="/diary" component={Diary} />
+          <Route path="/stats" component={Statistic} />
+          <Route path="/achievements" component={Achievements} />
        
           </>
         } 

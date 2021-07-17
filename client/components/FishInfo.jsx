@@ -12,10 +12,9 @@ function FishInfo (props) {
     
     
     return (    
-            <div>
-                <h1><p>Fish Info</p></h1>
+            <div> 
                 <div>
-
+                <h1 className= "headerStyle"><p>Fish Info</p></h1>
                     <ul id="horizontal-list">
                         {fish.map(fishinfo => {
                             return <div className="fish-info" key={fishinfo.id}>

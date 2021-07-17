@@ -7,6 +7,7 @@ import Home from './home'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
+import Footer from './Footer'
 
 
 import { checkAuth } from '../actions/auth'
@@ -41,6 +42,7 @@ function App (props) {
         <div className='      '>
           {!auth.isAuthenticated &&
             <Route exact path="/" component={Home} />
+            
           }
 
           <Route path="/login" component={Login} />
@@ -48,6 +50,11 @@ function App (props) {
           <Route path="/stats" component={Statistic} />
           <Route path="/fish" component={FishInfo} />
           <Route path="/rules" component={RulesInfo} />
+
+          <div>
+          <Route path='/' component={Footer}/> 
+          </div>
+
         </div>
         
         {auth.isAuthenticated &&

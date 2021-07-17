@@ -5,9 +5,6 @@ import { checkAuth } from '../actions/auth'
 
 function Diary (props){
 
-   
-    console.log(props.diary)
-
 return (
     <div className='diary'>
         <p>Your fish</p>

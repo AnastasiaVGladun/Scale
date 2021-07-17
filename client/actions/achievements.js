@@ -1,11 +1,11 @@
 import { fetchAchievements } from "../apis/achievements";
 
-export const SET_LOCATIONS = 'SET_LOCATIONS'
+export const SET_ACHIEVEMENTS = 'SET_ACHIEVEMENTS'
 
 const setAchievements = (achievements) => {
  return {
      type: SET_ACHIEVEMENTS,
-     locations
+     diary
  }
 }
 
@@ -13,7 +13,7 @@ const setAchievements = (achievements) => {
 export const getAchievements = () => {
     return dispatch => {
       return fetchAchievements()
-        .then(locations=> {
+        .then(achievements=> {
           return dispatch(setAchievements(achievements))
         })
     }

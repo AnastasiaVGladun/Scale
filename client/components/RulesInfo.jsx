@@ -17,7 +17,8 @@ function RulesInfo (props) {
     
     return (    
             <div>
-                <div>
+                <h1 className= "headerStyle"><p>Rules</p></h1>
+            <div>
                     <ul id="horizontal-list">
                         {rules.map(rulesinfo => {
                             return <div className="rules-info" key={rulesinfo.id}>

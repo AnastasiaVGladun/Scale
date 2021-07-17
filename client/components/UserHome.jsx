@@ -13,7 +13,7 @@ const UserHome = (props) => {
 
     return (
         <>
-            <h1>Hi {latestEntry.entry} </h1>
+            
 
             <h2>My Latest Entry</h2>
             <div>

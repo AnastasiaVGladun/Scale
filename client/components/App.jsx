@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getDiary, createCatch } from '../actions/diary'
+import { getAchievements } from '../actions/achievements'
 
 import Home from './home'
 import Login from './Login'
@@ -24,6 +25,7 @@ function App (props) {
     const confirmSuccess = () => { }
     dispatch(checkAuth(confirmSuccess))
     dispatch(getDiary())
+    // dispatch(getAchievements())
 }, [])
 
   return (
@@ -53,18 +55,19 @@ function App (props) {
             <Route path="/stats" component={Statistic} />
             <Route path="/fish" component={FishInfo} />
             <Route path="/rules" component={RulesInfo} />
-            <Route path='/' component={Footer}/> 
+            
 
         </div>
         {auth.isAuthenticated &&
          <>
           <Route path="/diary" component={Diary} />
-          <Route path="/stats" component={Statistic} />
+          <Route path="/user-home" component={UserHome} />
           <Route path="/achievements" component={Achievements} />
        
           </>
         } 
         </div>
+        <Route path='/' component={Footer}/>
     </Router>
   )
 }

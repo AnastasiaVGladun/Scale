@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { getAchievements } from '../actions/achievements'
 
-function achievements (props) {
+function Achievements (props) {
     const {fish, dispatch} = props
     console.log(fish)
  
@@ -11,7 +11,7 @@ function achievements (props) {
     },[])
     
     
-    return (   <h1>hi nutsack</h1> 
+    return (   <h1>MY ACHIEVEMENTS</h1> 
             // <div>
             //     <div>
             //         <ul id="horizontal-list">
@@ -30,7 +30,7 @@ function achievements (props) {
 }
 const mapStateToProps = (globalState) => {
     return {
-      fish: globalState.fish
+      achievements: globalState.achievements
     }
   }
-  export default connect(mapStateToProps)(achievements)
+  export default connect(mapStateToProps)(Achievements)

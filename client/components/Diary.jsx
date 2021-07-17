@@ -7,7 +7,7 @@ import { checkAuth } from '../actions/auth'
 function Diary (props){
 
     // const {name, photo, weight, location } = props.diary
-    console.log(props.diary)
+    console.log('this is diary', props.diary)
 
     // useEffect(() =>{
     //     props.dispatch(getDiary())

@@ -6,7 +6,7 @@ function Home () {
 
     return (    
             <div>
-                <div>
+                {/* <div>
                     <ul id="horizontal-list">
                     <li> <p>Fish Info</p> </li>
                     <li> <p>Statictics</p> </li>
@@ -15,7 +15,7 @@ function Home () {
                     <li> <p>Login</p> </li>
                     <li> <p>Register</p> </li>
                     </ul>
-                </div>
+                </div> */}
                 <div>
                     <img id="home-image" src="/images/Pictures/cover_page.png" />
                 </div>

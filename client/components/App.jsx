@@ -40,11 +40,13 @@ function App (props) {
 
         <div className='      '>
           {!auth.isAuthenticated &&
+          <>
             <Route exact path="/" component={Home} />
-          }
-
-          <Route path="/login" component={Login} />
+            <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+            </>
+          }
+          <Route exact path="/" component={Home} />
           <Route path="/stats" component={Statistic} />
           <Route path="/fish" component={FishInfo} />
           <Route path="/rules" component={RulesInfo} />

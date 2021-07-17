@@ -38,15 +38,11 @@ function Nav (props) {
               ? (
                 <>
                   <Link onClick={toggleBurger} className="navbar-item" to='/'>HOME</Link>
-                  <Link to='/' className="navbar-item is-large" onClick={() => logout()}>LOGOUT</Link>
                   <Link onClick={toggleBurger} className="navbar-item is-large" to='/login'>LOGIN</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/register'>REGISTER</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/rules'>RULES</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/user-home'>USERHOME</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/achievements'>ACHIEVEMENTS</Link>
-
                   </>
                 )
               : (
@@ -55,8 +51,10 @@ function Nav (props) {
                   <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/rules'>RULES</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/user-home'>USERHOME</Link>
+                  <Link onClick={toggleBurger} className="navbar-item is-large" to='/diary'>DIARY</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/user'>USERHOME</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/achievements'>ACHIEVEMENTS</Link>
+                  <Link to='/' className="navbar-item is-large" onClick={() => logout()}>LOGOUT</Link>
 
 
 

@@ -30,8 +30,6 @@ function Weather(props) {
     }
   const { data, isLoading, errorMessage } = useOpenWeather({
     key: '1c98b11f52ebf715913efdc9fe648e4b',
-    // lat: '-40.62087917671673',
-    // lon: '175.1745851465492',
     lat: latitude,
     lon: longitude,
     lang: 'en',

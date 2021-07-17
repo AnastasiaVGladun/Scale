@@ -46,7 +46,6 @@ function App (props) {
           {!auth.isAuthenticated &&
 
           <>
-            <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             </>
@@ -60,12 +59,14 @@ function App (props) {
         </div>
         {auth.isAuthenticated &&
          <>
+          <Route path='/user' component={UserHome} />
           <Route path="/diary" component={Diary} />
           <Route path="/user-home" component={UserHome} />
           <Route path="/achievements" component={Achievements} />
        
           </>
         } 
+        <Route path='/' component={Footer}/> 
         </div>
         <Route path='/' component={Footer}/>
     </Router>

@@ -15,6 +15,7 @@ import Diary from './Diary'
 import FishInfo from './FishInfo'
 import RulesInfo from './RulesInfo'
 import UserHome from './UserHome'
+import Achievements from './Achievements'
 
 function App (props) {
   const { auth, dispatch } = props

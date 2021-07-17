@@ -2,13 +2,15 @@ import React, { useEffect } from 'react'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getDiary, createCatch } from '../actions/diary'
-import { checkAuth } from '../actions/auth'
+import { getAchievements } from '../actions/achievements'
 
 import Home from './home'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
 import Footer from './Footer'
+
+import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
 import Diary from './Diary'
 import FishInfo from './FishInfo'
@@ -23,12 +25,12 @@ function App (props) {
     const confirmSuccess = () => { }
     dispatch(checkAuth(confirmSuccess))
     dispatch(getDiary())
+    // dispatch(getAchievements())
 }, [])
 
   return (
     <Router>
       <div className="container has-text-centered">
-
       <div className="hero is-small is-primary">
         <div className="hero-body has-text-centered">
           <Link to='/' className="">
@@ -40,7 +42,7 @@ function App (props) {
         </div>
       </div>
 
-        <div className='      '>
+       <div className='      '>
           {!auth.isAuthenticated &&
 
           <>
@@ -59,13 +61,14 @@ function App (props) {
          <>
           <Route path='/user' component={UserHome} />
           <Route path="/diary" component={Diary} />
-          <Route path="/stats" component={Statistic} />
+          <Route path="/user-home" component={UserHome} />
           <Route path="/achievements" component={Achievements} />
        
           </>
         } 
         <Route path='/' component={Footer}/> 
         </div>
+        <Route path='/' component={Footer}/>
     </Router>
   )
 }

@@ -13,13 +13,15 @@ const UserHome = (props) => {
 
     return (
         <>
-            <h1>This is user home </h1>
+            
 
             <h2>My Latest Entry</h2>
             <div>
                 {latestEntry &&
                     <>
-                    <img src={`/images/Fish/${latestEntry.image}@2x.png`} />{latestEntry.name} - {latestEntry.quantity}
+                   <div> <img src={`/images/Fish/${latestEntry.image}@2x.png`} /></div>
+                   <div>{latestEntry.name}</div>
+                   <div>Quantity:{latestEntry.quantity}</div>
                     </>
                 }
             </div>
@@ -35,7 +37,6 @@ const UserHome = (props) => {
 const mapStateToProps = (globalState) => {
     return {
         diary: globalState.diary,
-        // stats: globalState.stats,
         auth: globalState.auth
     }
 }

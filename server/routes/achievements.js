@@ -1,14 +1,15 @@
 const express = require('express')
 
+
 const db = require('../db/achievements')
 
 const router = express.Router()
 
-// Achievements
-router.get('/:id', (req, res) => {
-  const id = req.params.id 
 
-  return db.getAchievements(id)
+// Get achievements by ID
+router.get('/', (req, res) => {
+
+  return db.getAllAchievements()
   .then((response) => {
     res.json(response)
   })
@@ -16,5 +17,9 @@ router.get('/:id', (req, res) => {
     console.log(err.message)
   })
 })
+
+
+
+
 
 module.exports = router

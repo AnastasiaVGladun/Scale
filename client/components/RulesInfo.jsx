@@ -17,6 +17,7 @@ function RulesInfo (props) {
     
     return (    
             <div>
+                <h1><p>Rules</p></h1>
                 <div>
                     <ul id="horizontal-list">
                         {rules.map(rulesinfo => {

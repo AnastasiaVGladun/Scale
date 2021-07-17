@@ -61,14 +61,13 @@ function App (props) {
          <>
           <Route path='/user' component={UserHome} />
           <Route path="/diary" component={Diary} />
-          <Route path="/user-home" component={UserHome} />
+          {/* <Route path="/user-home" component={UserHome} /> */}
           <Route path="/achievements" component={Achievements} />
        
           </>
         } 
         <Route path='/' component={Footer}/> 
         </div>
-        <Route path='/' component={Footer}/>
     </Router>
   )
 }

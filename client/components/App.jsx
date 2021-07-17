@@ -33,24 +33,26 @@ function App (props) {
         <div className="hero-body has-text-centered">
           <Link to='/' className="">
             <h1 className="title is-1">Scale</h1>
-            <Route path="/" component={Nav} />
           </Link>
-          
+          <Route path="/" component={Nav} />
+          <Route path="/stats" component={Statistic} />
+          <Route path="/fish" component={FishInfo} />
+          <Route path="/rules" component={RulesInfo} />
+
         </div>
       </div>
 
         <div className='      '>
           {!auth.isAuthenticated &&
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Login} />
           }
-
+          <Route path="/achievements" component={Achievements} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           {/* <Route path="/diary" component={Diary} /> */}
           <Route path="/user-home" component={UserHome} />
           
         </div>
-        
         {auth.isAuthenticated &&
          <>
          <Route path="/diary" component={Diary} />

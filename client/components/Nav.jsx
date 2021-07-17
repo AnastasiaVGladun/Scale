@@ -52,11 +52,9 @@ function Nav (props) {
               : (
                 <>
                   <Link onClick={toggleBurger} className="navbar-item is-large" to='/'>HOME</Link>
-           
                   <Link onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/diary'>DIARY</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/achievement'>ACHIEVEMENT</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/rules'>RULES</Link>
                  
 

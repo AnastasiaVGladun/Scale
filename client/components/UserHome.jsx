@@ -15,6 +15,15 @@ const UserHome = (props) => {
         <>
             <h1>Hi {latestEntry.entry} </h1>
 
+            <h2>Important Dates (placeholder)</h2>
+            <div>
+            <p>Boat Licence expiry date</p>
+            <p>Fish Licence expirty date</p>
+            <p>Boat WOF expiry date</p>
+            
+
+            </div>
+
             <h2>My Latest Entry</h2>
             <div>
                 {latestEntry &&
@@ -25,6 +34,8 @@ const UserHome = (props) => {
                     </>
                 }
             </div>
+
+            
 
 
 

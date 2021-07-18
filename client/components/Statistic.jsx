@@ -37,7 +37,7 @@ function Stats (props) {
                 console.log (stat)
                 return <div key ={stat.id}> <img src={`/images/Fish/${stat.image}@2x.png`}/>{stat.name} - {stat.quantity}</div>
             })}
-            {/* {JSON.stringify(props.stats)} */}
+            
 
         </>
     )

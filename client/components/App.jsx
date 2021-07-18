@@ -56,8 +56,18 @@ function App (props) {
         <Route path="/register" component={Register} />
         </div>
 
-      
-      
+        {auth.isAuthenticated &&
+         <>
+          <Route path='/user' component={UserHome} />
+          <Route path="/diary" component={Diary} />
+          {/* <Route path="/user-home" component={UserHome} /> */}
+          <Route path="/achievements" component={Achievements} />
+       
+          </>
+        } 
+        <Route path='/' component={Footer}/> 
+        </div>
+
     </Router>
   )
 }

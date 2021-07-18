@@ -38,7 +38,7 @@ function Weather(props) {
 
   return (
       <>
-    <select onChange={onSelect}>
+    <select onChange={onSelect} className='dropMenu'>
     <option value="All">Choose your region</option>
     {props.locations.map (location => {
         return <option key = {location.id}>{location.location}</option> 

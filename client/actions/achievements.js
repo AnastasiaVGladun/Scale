@@ -5,7 +5,7 @@ export const SET_ACHIEVEMENTS = 'SET_ACHIEVEMENTS'
 const setAchievements = (achievements) => {
  return {
      type: SET_ACHIEVEMENTS,
-     diary
+     achievements
  }
 }
 
@@ -13,8 +13,8 @@ const setAchievements = (achievements) => {
 export const getAchievements = () => {
     return dispatch => {
       return fetchAchievements()
-        .then(achievements=> {
-          return dispatch(setAchievements(achievements))
+        .then(achievement=> {
+          return dispatch(setAchievements(achievement))
         })
     }
   }

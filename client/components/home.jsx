@@ -9,6 +9,7 @@ function Home () {
                 {/* <div>
                     <ul id="horizontal-list">
                     <li> <p>Fish Info</p> </li>
+                    <li> <p>Bird Info</p> </li>
                     <li> <p>Statictics</p> </li>
                     <li> <p>Rules</p> </li>
                     <li> <p>Contact</p> </li>
@@ -34,5 +35,6 @@ const mapStateToProps = (globalState) => {
     fish: globalState.fish
   }
 }
+
 
 export default connect(mapStateToProps)(Home)

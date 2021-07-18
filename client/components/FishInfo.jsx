@@ -4,17 +4,14 @@ import { getFish } from '../actions/fish'
 
 function FishInfo (props) {
     const {fish, dispatch} = props
-    console.log("this is fish info", fish)
+    console.log(fish)
  
     useEffect(() => {
         return dispatch(getFish())
     },[])
-    
-    
     return (    
             <div> 
                 <div>
-                <h1 className= "headerStyle"><p>Fish Info</p></h1>
                     <ul id="horizontal-list">
                         {fish.map(fishinfo => {
                             return <div className="fish-info" key={fishinfo.id}>

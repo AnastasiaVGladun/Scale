@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom'
 function Header () {
   return (
     <>
-    <div className='headerStyle'>
+    <div className='HeaderStyle'>
       <h1 >
+
       </h1>
+     
     </div>
-  </>
+
+    </>
   )
 }
 export default Header

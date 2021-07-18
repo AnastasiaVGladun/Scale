@@ -14,6 +14,7 @@ import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
 import Diary from './Diary'
 import FishInfo from './FishInfo'
+import BirdInfo from './BirdInfo'
 import RulesInfo from './RulesInfo'
 import UserHome from './UserHome'
 import Achievements from './Achievements'
@@ -51,6 +52,7 @@ function App (props) {
           <Route path="/register" component={Register} />
           <Route path="/stats" component={Statistic} />
           <Route path="/fish" component={FishInfo} />
+          <Route path="/bird" component={BirdInfo} />
           <Route path="/rules" component={RulesInfo} />
 
           <div>

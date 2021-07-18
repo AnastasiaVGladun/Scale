@@ -1,1 +1,2 @@
 {"version":3,"sources":["webpack://lost-and-found/./client/styles/index.scss"],"names":[],"mappings":"AAAA;EACI,iCAAiC;;AAIrC;EACI,aAAa;;AAIjB;EACI,aACJ;;AAIA;EACE,yBAAyB;;AAG3B;EACE,aAAa;;AAIf;EACE,aAAa","file":"styles.css","sourcesContent":["body {\n    font-family: 'Roboto', sans-serif;\n}\n\n\n#horizontal-list {\n    display: flex;\n  }\n  \n  \n#home-image {\n    display: flex\n}\n  \n  \n  \n#nav {\n  background-color: #8EC8B2;\n}\n  \n#logo-img {\n  display: flex;\n  \n}\n  \n#vertical-list {\n  display: flex;\n  \n}"],"sourceRoot":""}
+    

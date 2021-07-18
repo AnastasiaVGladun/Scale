@@ -1,4 +1,5 @@
 const express = require('express')
+const {getTokenDecoder} = require ('authenticare/server')
 
 const db = require('../db/diary')
 
@@ -6,10 +7,10 @@ const router = express.Router()
 
 
 // Get catch by ID
-router.get('/:id', (req, res) => {
-  const id = req.params.id 
+router.get('/',getTokenDecoder(), (req, res) => {
+  const userId = (req.user.id)
 
-  return db.getAllCatchById(id)
+  return db.getAllCatchById(userId)
   .then((response) => {
     res.json(response)
   })
@@ -20,8 +21,9 @@ router.get('/:id', (req, res) => {
 
 
 // Add a Catch
-router.post('/', (req, res) => {
-  return db.addCatch(req.body)
+router.post('/', getTokenDecoder(), (req, res) => {
+  const userId = (req.user.id)
+  return db.addCatch(req.body, userId)
   .then((fishcatch) => {
     res.json(fishcatch)
   })

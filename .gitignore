@@ -6,6 +6,5 @@ bundle.js
 bundle.js.map
 .env
 coverage
-public/styles.css*
-
+server/public/styles.css*
 

@@ -1,7 +1,9 @@
 import { connect } from 'react-redux'
 import React, { useEffect, useState } from 'react'
 import { getLocations} from '../actions/locations'
-import { getFish } from '../actions/'
+import { getFish } from '../actions/fish'
+import { getMethods} from '../actions/methods'
+import { addCatch } from '../actions/diary'
 
 
 function Catch (props) {
@@ -9,16 +11,13 @@ function Catch (props) {
 
     useEffect(() =>{
         props.dispatch(getLocations())
-    }, [])
-
-    
-
-
-    useEffect(() =>{
         props.dispatch(getFish())
+        props.dispatch(getMethods())
     }, [])
-    
+ 
+    const [methods, setMethods] = useState("")
     const [location, setLocation] = useState("")
+    const [fish, setFish] = useState("")
     const [fishImg, setFishImg] = useState(null)
     const [formData, setFormData] = useState({
 
@@ -33,47 +32,65 @@ function Catch (props) {
         e.preventDefault()
         const formImage = new FormData()
         formImage.append('fish_img', fishImg)
-          props.dispatch(add(formImage, formData))
+          props.dispatch(addCatch(formImage, formData))
     }   
     const onChangeFile = (e) => {
         setFishImg(e.target.files[0])
       }
 
-      function onSelect(event) {
+      function onSelect1(event) {
         setLocation(event.target.value);}
+
+        function onSelect2(event) {
+            setFish(event.target.value);}
+
+
+        function onSelect3(event) {
+                setMethods(event.target.value);}
+
 
 
     return (
 
-    <form encType='multipart/form-data' className="form box" onSubmit={handleSubmit}>
-    <h1> Log My Catch</h1>
-    <label>
-        <select onChange={onSelect}>
-              <option value={fish}>Select one...</option>
-              {props.fish.map(fish=> {
-                return <option key={fish.id} value={fish.id}>{fish.name}</option>
-              })}
-        </select>
-    </label>
+        <h1> Log My Catch</h1>,
+    <form className="form box" encType='multipart/form-data' className="form box" onSubmit={handleSubmit}>
+    
+        <label> Fish:
+            <select onChange={onSelect1}>
+                <option value={fish}>Select Fish Species:</option>
+                {props.fish.map(fish=> {return <option key={fish.id} value={fish.id}>{fish.name}</option>})}
+            </select>
+        </label>
 
-    <label>
-                <select onChange={onSelect}>
-                <option value={location}>Region</option>
-                {props.locations.map (location => {
-                    return <option value={location.id}>{location.location}</option> 
-                    })
-                }               
-                 </select>
-    </label>
+        <label> Region:
+            <select onChange={onSelect2}>
+                <option value={location}>Select Region</option>
+                {props.locations.map (location => { return <option value={location.id}>{location.location}</option> })}               
+            </select>
+        </label>
 
-    <label className="form__label"  htmlFor= 'animal_art' placeholder='upload image'>:Upload Image:</label>
-             <input type="file" name="animal_art" id='animal_art' onChange={e => onChangeFile(e)}/>
+        <label> Method:
+            <select onChange={onSelect3}>
+                <option value={methods}>Select method</option>
+                {props.methods.map (method => { return <option value={method.id}>{method.method}</option> })}               
+            </select>
+        </label>
 
-             <input className="button is-large is-fullwidth is-success" value='add' type="submit" />
+        
 
 
-</form>
+        <label>Time:</label>
+        <input type="time" id="appt" name="appt" min="09:00" max="18:00" required></input>
 
+        <label className="form__label" htmlFor="fish_img">
+            <span className="form__label-title">Fish Image (200x200ish)</span>
+            <input type="file" name="fish_Img" onChange={onChangeFile} />
+          </label>
+
+        <button type="submit" className="btn">Submit</button>
+
+
+    </form>
 )
 
 }
@@ -81,7 +98,8 @@ function Catch (props) {
 const mapStateToProps = (globalState) => {
   return {
     fish: globalState.fish,
-    locations: globalState.locations
+    locations: globalState.locations,
+    methods: globalState.methods
     
   }
 }
@@ -90,10 +108,4 @@ export default connect(mapStateToProps)(Catch)
 
 
 
-//fish_id drop down
-//region_id drop down menu
-//method_id drop down
-//quantity number
-//photo  photo
 //weight 
-//time

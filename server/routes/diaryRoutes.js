@@ -13,14 +13,17 @@ const AWS = require('aws-sdk')
 const s3 = new AWS.S3()
 AWS.config.update(
   {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+    accessKeyId: 'AKIASMHVL5VSEXOU6XMC',
+    secretAccessKey: '5Pobu56D7GtYEli45zg+UwrH/SRuMXyOWXq5jpB'
   })
+
+
+
 
 const upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: 'lostnfoundeda',
+    bucket: 'scalepenguin',
     acl: 'public-read',
     key: function (req, file, cb) {
       cb(null, 'images/' + file.originalname)
@@ -53,6 +56,7 @@ router.post('/', (req, res) => {
     console.log(err.message)
   })
 })
+
 
 router.post('/upload', upload.single('fish_img'), function (req, res) {
   res.send(req.file.location)

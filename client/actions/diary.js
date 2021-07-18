@@ -1,4 +1,4 @@
-import { fetchDiary, postCatch } from "../apis/diary";
+import { fetchDiary, addFishImg, addCatchData } from "../apis/diary";
 
 export const SET_DIARY = 'SET_DIARY'
 export const ADD_CATCH = 'ADD_CATCH'
@@ -20,18 +20,28 @@ const setDiary = (diary) => {
        }
      }
 
-     const addCatchToStore = (fishcatch) => {
-        return {
-          type: ADD_CATCH,
-          fishcatch
-        }
+     export function pushCatch (fishCatch) {
+      return {
+        type: ADD_CATCH,
+        fishCatch: fishCatch
       }
+    }
       
-      export const createCatch = (fishcatch) => { 
+
+      export function addCatch (formImage, formData) {
         return dispatch => {
-          return postCatch(fishcatch)
-            .then(newCatch => { 
-              return dispatch(addCatchToStore(newCatch))
+          return addFishImg(formImage)
+            .then(fileUrl => {
+              formData.image = fileUrl
+              return addCatchData(formData)
+                .then(catchId => {
+                  formData.id = catchId
+                  dispatch(pushCatch(formData))
+                  return null
+                })
+            })
+            .catch(err => {
+              console.log('error in actions: ', err.message)
             })
         }
       }

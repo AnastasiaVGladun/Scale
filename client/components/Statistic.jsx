@@ -22,6 +22,7 @@ function Stats (props) {
 
     return (
         <>
+        
             <select onChange={onSelect}>
                 <option value="All">All</option>
                 {props.locations.map (location => {

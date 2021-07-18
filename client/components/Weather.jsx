@@ -30,8 +30,6 @@ function Weather(props) {
     }
   const { data, isLoading, errorMessage } = useOpenWeather({
     key: '1c98b11f52ebf715913efdc9fe648e4b',
-    // lat: '-40.62087917671673',
-    // lon: '175.1745851465492',
     lat: latitude,
     lon: longitude,
     lang: 'en',
@@ -40,7 +38,7 @@ function Weather(props) {
 
   return (
       <>
-    <select onChange={onSelect}>
+    <select onChange={onSelect} className='dropMenu'>
     <option value="All">Choose your region</option>
     {props.locations.map (location => {
         return <option key = {location.id}>{location.location}</option> 

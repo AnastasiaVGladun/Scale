@@ -1,11 +1,11 @@
 const connection = require('./connection') 
 
-const getAchievements = (id, db=connection) =>{
+const getAllAchievements =  (db = connection) => {
    return db('achievements')
-    .select()
-    .where('id', id)
+    .select()   
+    
 }
 
 module.exports = {
-    getAchievements
+    getAllAchievements
 }

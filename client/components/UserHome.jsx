@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
+import Weather from './Weather'
 
 
 
@@ -13,7 +14,10 @@ const UserHome = (props) => {
 
     return (
         <>
-            <h1>Hi {latestEntry.entry} </h1>
+        <div className='weather'>
+        <Weather/>
+        </div>
+           
 
             <h2>Important Dates (placeholder)</h2>
             <div>

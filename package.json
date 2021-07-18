@@ -1,8 +1,8 @@
 {
-  "name": "lost-and-found",
+  "name": "scale",
   "version": "0.4.0",
-  "description": "Lost and Found",
-  "repository": "https://github.com/dev-academy-challenges/lost-and-found.git",
+  "description": "Scale",
+  "repository": "https://github.com/dev-academy-challenges/scale.git",
   "main": "server/index.js",
   "scripts": {
     "dev": "run-p dev:client dev:server",
@@ -71,9 +71,13 @@
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
+
+    "aws-sdk": "^2.948.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "knex": "^0.21.17",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
     "pg": "^8.5.1",
     "react-open-weather": "^1.1.5",
     "superagent": "^6.1.0"

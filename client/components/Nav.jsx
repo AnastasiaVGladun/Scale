@@ -21,8 +21,8 @@ function Nav (props) {
   }
 
   return <nav className="navbar">
-    <div>
-        <img id="logo-img" src="/images/Logo/logo_1.png" /> 
+    <div className="navbar-contain">
+        <img className="logo-img" id="logo-img" src="/images/Logo/logo_1.png" /> 
       </div>
       <div className="container">
         <div className="vertical-list">
@@ -38,26 +38,23 @@ function Nav (props) {
               ? (
                 <>
                   <Link onClick={toggleBurger} className="navbar-item" to='/'>HOME</Link>
-                  <Link onClick={toggleBurger} className="navbar-item is-large" to='/login'>LOGIN</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/login'>LOGIN</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/register'>REGISTER</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/rules'>RULES</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
+                  <Link className= '' onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
                   </>
                 )
               : (
                 <>
-                  <Link onClick={toggleBurger} className="navbar-item is-large" to='/'>HOME</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/'>HOME</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/rules'>RULES</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
-                  <Link onClick={toggleBurger} className="navbar-item is-large" to='/diary'>DIARY</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/diary'>DIARY</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/user'>USERHOME</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/achievements'>ACHIEVEMENTS</Link>
-                  <Link to='/' className="navbar-item is-large" onClick={() => logout()}>LOGOUT</Link>
-
-
-
+                  <Link to='/' className="navbar-item" onClick={() => logout()}>LOGOUT</Link>
                 </>
               )
             }

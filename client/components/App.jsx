@@ -17,6 +17,7 @@ import FishInfo from './FishInfo'
 import RulesInfo from './RulesInfo'
 import UserHome from './UserHome'
 import Achievements from './Achievements'
+import Poacher from './Poacher'
 
 function App (props) {
   const { auth, dispatch } = props
@@ -31,11 +32,11 @@ function App (props) {
   return (
     <Router>
       <div className="container has-text-centered">
-      <div className="hero is-small is-primary">
-        <div className="hero-body has-text-centered">
-          <Link to='/' className="">
+      <div  id="navbar" className="hero is-small is-primary">
+        <div id="nav-contain" className="has-text-centered">
+          {/* <Link to='/' className="logo-text">
             <h1 className="title is-1">Scale</h1>
-          </Link>
+          </Link> */}
           <Route path="/" component={Nav} />
           
 
@@ -63,10 +64,10 @@ function App (props) {
           <Route path="/diary" component={Diary} />
           <Route path="/user-home" component={UserHome} />
           <Route path="/achievements" component={Achievements} />
-       
+          <Route path="/poacher" component={Poacher} />
           </>
         } 
-        <Route path='/' component={Footer}/> 
+        {/* <Route path='/' component={Footer}/>  */}
         </div>
         <Route path='/' component={Footer}/>
     </Router>

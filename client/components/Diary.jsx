@@ -11,7 +11,7 @@ return (
     <div className='diary'>
         <h1>My Fishing Diary</h1>
         {props.diary.map(entry => {
-            console.log(entry)
+            // console.log(entry)
             return (
                 <li className='diaryList'>
                 <h2>{entry.time}</h2>

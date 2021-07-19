@@ -34,7 +34,7 @@ function Stats (props) {
             
             Hello from stats page
             {props.stats.map((stat) => {
-                console.log (stat)
+                // console.log (stat)
                 return <div key ={stat.id}> <img src={`/images/Fish/${stat.image}@2x.png`}/>{stat.name} - {stat.quantity}</div>
             })}
             

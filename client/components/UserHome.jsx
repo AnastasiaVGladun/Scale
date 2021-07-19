@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Weather from './Weather'
 import { Link } from 'react-router-dom'
 import { getAchievements } from '../actions/achievements'
+import Boat from './Boat'
 
 
 
@@ -27,9 +28,7 @@ const UserHome = (props) => {
 
             <h2>Important Dates (placeholder)</h2>
             <div className='boatInfo'>
-                <p>Boat Licence expiry date</p>
-                <p>Fish Licence expirty date</p>
-                <p>Boat WOF expiry date</p>
+               <Boat/>
             </div>
 
             <div>

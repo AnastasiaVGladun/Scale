@@ -42,7 +42,7 @@ function App (props) {
               <h1 className="title is-1">Scale</h1>
             </Link>
             <Route path="/" component={Nav} />
-            <Route exact path="/" component={Home} />
+            
           </div>
           </div>
           </div>
@@ -51,7 +51,7 @@ function App (props) {
         {!auth.isAuthenticated &&
           <Route exact path="/" component={Login} />
         }
-        
+        <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path='/fish' component={FishInfo} />

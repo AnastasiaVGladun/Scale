@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {connect} from 'react-redux'
 import { checkAuth } from '../actions/auth'
 import Catch from './Catch'
+import { Link} from 'react-router-dom'
 
 
 function Diary (props){
@@ -24,8 +25,7 @@ return (
                 </li>
             )
         })}
-       <p> Add new catch </p>
-       <Catch/>
+                <Link to='/addCatch'><button type="button">New Catch</button></Link>
     </div>
 )
 }

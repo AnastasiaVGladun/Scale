@@ -331,10 +331,30 @@ a.navbar-item:hover {
     margin: 0px auto;
 }
 
+#logout:hover {
+    background-color: #F14668;
+}
 
 // ==========================================================================
+// Display 
 .display {
     overflow-y: scroll;
     width: 90vw;
     padding: 20px;
+    min-width: 320px;
+}
+// ==========================================================================
+
+// ========================================================================== 
+//Pot A poacher
+
+.poacher-form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 20px auto;
+}
+
+.poacher-form input{
+    width: 100%; 
 }

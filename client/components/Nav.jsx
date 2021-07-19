@@ -57,7 +57,7 @@ function Nav (props) {
                   <Link onClick={toggleBurger} className="navbar-item" to='/diary'>DIARY</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/user'>USERHOME</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/achievements'>ACHIEVEMENTS</Link>
-                  <Link to='/' className="navbar-item" onClick={() => logout()}>LOGOUT</Link>
+                  <Link to='/' id="logout" className="navbar-item" onClick={() => logout()}>LOGOUT</Link>
                 </>
               )
             }

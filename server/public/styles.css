@@ -3545,10 +3545,23 @@ a.navbar-item:hover {
 .navbar-burger.burger {
   margin: 0px auto; }
 
+#logout:hover {
+  background-color: #F14668; }
+
 .display {
   overflow-y: scroll;
   width: 90vw;
-  padding: 20px; }
+  padding: 20px;
+  min-width: 320px; }
+
+.poacher-form {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin: 20px auto; }
+
+.poacher-form input {
+  width: 100%; }
 
 
 /*# sourceMappingURL=styles.css.map*/

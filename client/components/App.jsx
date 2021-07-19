@@ -18,6 +18,10 @@ import FishInfo from './FishInfo'
 import RulesInfo from './RulesInfo'
 import UserHome from './UserHome'
 import Achievements from './Achievements'
+import Birdinfo from './Birdinfo'
+import Poacher from './Poacher'
+import Marketplace from './Marketplace'
+import AddListing from './AddListing'
 import Footer from './Footer'
 
 function App (props) {
@@ -47,8 +51,11 @@ function App (props) {
         <Route path="/stats" component={Statistic} />
         
         {auth.isAuthenticated && <Route path='/user' component={UserHome} />}
-        {auth.isAuthenticated &&<Route path="/diary" component={Diary} />}
+        {auth.isAuthenticated && <Route path="/diary" component={Diary} />}
         {auth.isAuthenticated && <Route path="/achievements" component={Achievements} />}  
+        {auth.isAuthenticated && <Route path="/poacher" component={Poacher} />}  
+        {auth.isAuthenticated && <Route path="/marketplace" component={Marketplace} />}  
+        {auth.isAuthenticated && <Route path="/addlisting" component={AddListing} />}  
         <Route path='/' component={Footer}/> 
         </div>
     </Router>
@@ -58,7 +65,6 @@ function App (props) {
 
 const mapStateToProps = (globalState) => {
   return {
-
     auth: globalState.auth
   }
 }

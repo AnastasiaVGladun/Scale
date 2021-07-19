@@ -21,12 +21,21 @@ function Catch (props) {
     const [fishImg, setFishImg] = useState(null)
     const [formData, setFormData] = useState({
 
-        fish: 'Snapper',
-        Region: 'Hakwes Bay',
-        Method: 'rod',
-        time: '12:00am'
+        name: 'Snapper',
+        location: 'Hakwes Bay',
+        method: 'rod',
+        time: '12:00am',
+        weight: '50'
 
     })
+
+
+    const  changeHandler = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name] : e.target.value
+        })
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -34,7 +43,7 @@ function Catch (props) {
         formImage.append('fish_img', fishImg)
           props.dispatch(addCatch(formImage, formData))
     }   
-    
+
     const onChangeFile = (e) => {
         setFishImg(e.target.files[0])
     }
@@ -42,46 +51,54 @@ function Catch (props) {
     function onSelect(event) {
         setMethods(event.target.value);
         setFish(event.target.value);
-        setFormData(event.target.value);
         setLocation(event.target.value);
     }
 
 
     return (
 
-        <h1> Log My Catch</h1>,
-    <form className="form box" encType='multipart/form-data' className="form box" onSubmit={handleSubmit}>
+      
+    <form className="form box" className="form box" encType='multipart/form-data' className="form box" onSubmit={handleSubmit}>
     
-        <label> Fish:
-            <select onChange={onSelect}>
+            <h1> Log My Catch</h1>
+
+
+        <label className="label is-large has-text-centered"> Fish:
+            <select name="name" value={formData.name} onChange={(e) => changeHandler(e)} onChange={onSelect}>
                 <option value={fish}>Select Fish Species:</option>
                 {props.fish.map(fish=> {return <option key={fish.id} value={fish.id}>{fish.name}</option>})}
             </select>
         </label>
 
-        <label> Region:
-            <select onChange={onSelect}>
+        <label className="label is-large has-text-centered"> Region:
+            <select name="location" value={formData.location} onChange={(e) => changeHandler(e)} onChange={onSelect}>
                 <option value={location}>Select Region</option>
                 {props.locations.map (location => { return <option value={location.id}>{location.location}</option> })}               
             </select>
         </label>
 
-        <label> Method:
-            <select onChange={onSelect}>
+        <label className="label is-large has-text-centered"> Method:
+            <select name="method" value={formData.method} onChange={(e) => changeHandler(e)} onChange={onSelect}>
                 <option value={methods}>Select method</option>
                 {props.methods.map (method => { return <option value={method.id}>{method.method}</option> })}               
             </select>
         </label>
+{/* 
+        <label className="label is-large has-text-centered">Time:
+        <input type="time" name="time" value={formData.time} onChange={(e) => changeHandler(e)} id="appt" name="appt"  ></input>
+        </label> */}
 
-        <label>Time:</label>
-        <input type="time" id="appt" name="appt" min="09:00" max="18:00" required></input>
 
-        <label className="form__label" htmlFor="fish_img">
-            <span className="form__label-title">Fish Image (200x200ish)</span>
+        <label className="label is-large has-text-centered"> Grams:
+        <input type="number" name="weight" value={formData.weight} onChange={(e) => changeHandler(e)} required></input>
+        </label>
+
+        {/* <label className="label is-large has-text-centered" htmlFor="fish_img">
+            <span className="form__label-title">Fish Image: </span>
             <input type="file" name="fish_Img" onChange={onChangeFile} />
-          </label>
+          </label> */}
 
-        <button type="submit" className="btn">Submit</button>
+        <button className="button is-large is-fullwidth is-success" type="submit" className="btn">Submit</button>
 
 
     </form>

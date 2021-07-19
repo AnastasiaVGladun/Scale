@@ -8,7 +8,7 @@ import Home from './home'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
-import Catch from './Catch'
+
 
 
 import { checkAuth } from '../actions/auth'
@@ -19,6 +19,7 @@ import RulesInfo from './RulesInfo'
 import UserHome from './UserHome'
 import Achievements from './Achievements'
 import Footer from './Footer'
+import Catch from './Catch'
 
 
 function App (props) {
@@ -34,7 +35,9 @@ function App (props) {
   return (
     <Router>
 
-        <Catch/>
+      <Catch />
+
+
       <div className="container has-text-centered">
 
       
@@ -45,7 +48,7 @@ function App (props) {
               <h1 className="title is-1">Scale</h1>
             </Link>
             <Route path="/" component={Nav} />
-            <Route path="/stats" component={Statistic} />
+            <Route exact path="/" component={Home} />
           </div>
           </div>
           
@@ -54,18 +57,23 @@ function App (props) {
         {!auth.isAuthenticated &&
           <Route exact path="/" component={Login} />
         }
+        
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path='/fish' component={FishInfo} />
+        <Route path='/rules' component={RulesInfo} />
+        <Route path="/stats" component={Statistic} />
         </div>
 
         {auth.isAuthenticated &&
          <>
           <Route path='/user' component={UserHome} />
           <Route path="/diary" component={Diary} />
-          {/* <Route path="/user-home" component={UserHome} /> */}
           <Route path="/achievements" component={Achievements} />
        
           </>
+
+          
         } 
         <Route path='/' component={Footer}/> 
       </div>

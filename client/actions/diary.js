@@ -32,18 +32,20 @@ const setDiary = (diary) => {
 
       export function addCatch (formImage, formData) {
         return dispatch => {
-          return addFishImg(formImage)
-            .then(fileUrl => {
-              formData.image = fileUrl
+          // return addFishImg(formImage)
+          //   .then(fileUrl => {
+          //     formData.image = fileUrl
               return addCatchData(formData)
                 .then(catchId => {
-                  formData.id = catchId
-                  dispatch(pushCatch(formData))
+                  // catchId.id = catchId
+                  dispatch(pushCatch(catchId))
                   return null
                 })
-            })
+            
             .catch(err => {
               console.log('error in actions: ', err.message)
             })
         }
       }
+
+

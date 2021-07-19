@@ -10,8 +10,8 @@ body {
     display: flex; 
   }
   
-  #nav {
-    background-color: #8EC8B2; 
+  .navbar {
+    background-color: rgb(50, 56, 50);
     width: 390px;
   }
   
@@ -26,10 +26,11 @@ body {
     color:white;
     flex-direction: column;
     margin-bottom: 10px;
-  }
+  } 
   
   #vertical-list li {
     display: inline;
   }
+
   
   

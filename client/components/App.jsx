@@ -64,7 +64,6 @@ function App (props) {
           <Route path='/user' component={UserHome} />
           <Route path="/diary" component={Diary} />
           <Route path="/achievements" component={Achievements} />
-       
           </>
         } 
         <Route path='/' component={Footer}/> 

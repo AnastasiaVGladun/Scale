@@ -19,14 +19,21 @@ function BirdInfo (props) {
 </div> 
             <div>
 
-                <ul id="horizontal-list">
+                {/* <ul id="horizontal-list">
                     {bird.map(birdinfo => {
                         return <div className= "bird-info" key={birdinfo.id}>
                             <li><p> {birdinfo.name}</p></li>
                             <li>{birdinfo.description}</li>
                         </div>
                     })}
-                </ul>
+                </ul> */}
+
+
+                <img className='bird-img' src="/images/Bird/step1.png" alt="untangle bird pic"/>
+                <img className='bird-img' src="/images/Bird/step2.png" alt="untan bird pic"/>
+                <img className='bird-img' src="/images/Bird/step3.png" alt="unta bird pic"/>
+                <img className='bird-img' src="/images/Bird/step4.png" alt="unt bird pic"/>
+
             </div>
         </div>
 )

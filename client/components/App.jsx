@@ -31,25 +31,21 @@ function App (props) {
 }, [])
 
   return ( <div className='mainWrap'>
-    <div className="darkBlue"> </div>
-    <Router>
-      <div className="vertical-list">
-        {/* <div className="vertical-list">
-          <div className="vertical-list"> */}
+          <div className="darkBlue"> </div>
+            <Router>
+           <div className="vertical-list">
             <Link to='/' className="">
               <h1 className="title is-1">Scale</h1>
             </Link>
             <Route path="/" component={Nav} />
             
-          {/* </div>
-          </div> */}
           </div>
-
+          <Route exact path="/" component={Home} />
         <div >
         {!auth.isAuthenticated &&
           <Route exact path="/" component={Login} />
         }
-        <Route exact path="/" component={Home} />
+        
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path='/fish' component={FishInfo} />

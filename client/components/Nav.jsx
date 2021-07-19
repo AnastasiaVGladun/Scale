@@ -22,10 +22,10 @@ function Nav (props) {
 
   return <nav id="nav">
     <div>
-        <img id="logo-img" src="/images/Logo/logo_1.png" /> 
+        <img className="logo-img" src="/images/Logo/logo_1.png" /> 
       </div>
       <div className="container">
-        <div className="vertical-list">
+        <div >
           <span onClick={toggleBurger} className={`navbar-burger burger ${burgerVisible ? 'is-active' : ''}`} data-target="navbarMenuHeroA">
             <span></span>
             <span></span>
@@ -33,11 +33,11 @@ function Nav (props) {
           </span>
         </div>
         <div id="navbarMenuHeroA" className={`navbar-menu ${burgerVisible ? "is-active" : ''}`}>
-          <div className="navbar-end">
+          <div className='myNav'>
             { !auth.isAuthenticated
               ? (
                 <>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/'>HOME</Link>
+                  <Link onClick={toggleBurger}  to='/'>HOME</Link>
                   <Link onClick={toggleBurger} className="navbar-item is-large" to='/login'>LOGIN</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/register'>REGISTER</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>

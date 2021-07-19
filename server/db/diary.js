@@ -16,6 +16,8 @@ function addCatch(fishcatch, userId, db = connection) {
     quantity: fishcatch.quantity,
     user_id: userId
   }
+
+  // console.log(newFishcatch)
   
   return db('catch')
     .insert(newFishcatch )

@@ -7,16 +7,7 @@ import Home from './home'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
-<<<<<<< HEAD
-||||||| 5b7be69
 import Catch from './Catch'
-
-
-=======
-
-
-
->>>>>>> 6e98314be31b1ba25c65bdb208207ebc485e14bd
 import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
 import Diary from './Diary'
@@ -48,26 +39,17 @@ function App (props) {
           </div>
           </div>
           </div>
-        <div className='      '>
+          <div className='      '>
         {!auth.isAuthenticated &&
           <Route exact path="/" component={Login} />
         }
-        
+        <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-<<<<<<< HEAD
         <Route path='/fish' component={FishInfo} />
         <Route path='/rules' component={RulesInfo} />
-        <Route path="/bird" component={BirdInfo} />
-||||||| 5b7be69
-        </div>
-=======
-        <Route path='/fish' component={FishInfo} />
-        <Route path='/rules' component={RulesInfo} />
+        <Route path='/bird' component={BirdInfo} />
         <Route path="/stats" component={Statistic} />
-        </div>
->>>>>>> 6e98314be31b1ba25c65bdb208207ebc485e14bd
-
         </div>
         {auth.isAuthenticated &&
          <>
@@ -75,22 +57,19 @@ function App (props) {
           <Route path="/diary" component={Diary} />
           <Route path="/achievements" component={Achievements} />
           </>
-<<<<<<< HEAD
         }
         <Route path='/' component={Footer}/>
-        {/* </div>
-        </div> */}
-||||||| 5b7be69
-        } 
-        <Route path='/' component={Footer}/> 
-        {/* </div>
-        </div> */}
+white_check_mark
+heart
+raised_hands
 
-=======
-        } 
-        <Route path='/' component={Footer}/> 
 
->>>>>>> 6e98314be31b1ba25c65bdb208207ebc485e14bd
+
+
+
+
+
+
     </Router>
   )
 }

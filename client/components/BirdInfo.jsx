@@ -12,7 +12,10 @@ function BirdInfo (props) {
     },[])
     return (    
         <div> 
+            <h1>hello</h1>
             <div>
+                {/* <div>Bird Info</div> */}
+
                 <ul id="horizontal-list">
                     {bird.map(birdinfo => {
                         return <div className= "bird-info" key={birdinfo.id}>

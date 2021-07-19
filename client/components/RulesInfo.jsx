@@ -13,26 +13,36 @@ function RulesInfo (props) {
     },[])
     
     return (    
-        <div className='wrapper'> 
-                <h1 className= "headerStyle">Recreational fishing rules</h1>
-            <div>
-            <p>Using correct fishing methods and equipment protects local fisheries and keeps fish numbers sustainable for future generations. </p>
-            </div>
-                    <ul id="horizontal-list">
-                        {rules.map(rulesinfo => {
-                            return <div className="rules-info"key={rulesinfo.id}>
-                                <li>
-                                 <p> 
-                                        <a href={rulesinfo.link}target="_blank">{rulesinfo.region}</a>
-                                </p>
-                                </li>       
 
-                            </div>
-                        })}
-                    </ul>
-                </div>
+            <div >
+                <h1 className= "headerStyle">Recreational fishing rules</h1>
+                <p>Using correct fishing methods and equipment protects local fisheries and keeps fish numbers sustainable for future generations. </p>
+
+                < div className='rulesWrap'>
+                <img className='mapPhoto' src={'/images/icon/map.gif'} ></img>
+                    
+                            <ul id="horizontal-list">
+
+                                {rules.map(rulesinfo => {
+                                 return <div className="rules-info"key={rulesinfo.id}>
+                                      <li>
+                                        <p> 
+                                          <a href={rulesinfo.link}target="_blank">{rulesinfo.region}</a>
+                                        </p>
+                                        </li>       
+                                    </div>
+                                })}
+                            </ul>
+                        </div>
+                   
+                
+            
+       
+    </div>
+
     )
 }
+
 const mapStateToProps = (globalState) => {
     return {
       rules: globalState.rules

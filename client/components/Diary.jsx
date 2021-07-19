@@ -15,7 +15,7 @@ return (
                 <li className='diaryList'>
                 <p>Fish type: {entry.name}</p>
                 <p>Location: {entry.location}</p>
-               <p>Quantity: {entry.quantity}</p> 
+                <p>Quantity: {entry.quantity}</p> 
                 <img className='fishPhoto' src={`/images/Fishing people/${entry.photo}`} ></img>
                 </li>
             )

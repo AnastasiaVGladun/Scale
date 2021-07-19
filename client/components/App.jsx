@@ -35,7 +35,7 @@ function App (props) {
               <h1 className="title is-1">Scale</h1>
             </Link>
             <Route path="/" component={Nav} />
-            <Route exact path="/" component={Home} />
+            
           </div>
           </div>
           </div>

@@ -11,8 +11,8 @@ Recreational Fishing App - collecting data for good!
 * Tech Lead - agile/shared team approach due to our small team.
 
 ## Project Management
+![20210720_111008](https://user-images.githubusercontent.com/81403368/126238963-3912909d-c24e-458b-8900-5a495b3530a8.jpg)
 
-![20210716_184236](https://user-images.githubusercontent.com/81403368/125923078-663ef9ae-e7e7-4c96-ad1d-a25e414502de.jpg)
 ![Screenshot_20210716-183709_Gallery](https://user-images.githubusercontent.com/81403368/125923101-e0a7d2c3-8166-4371-a30d-c09d8de974cf.jpg)
 
 **Tool**

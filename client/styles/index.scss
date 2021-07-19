@@ -4,52 +4,105 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 // // Import custom variables and Bulma overides
-// @import "./variables.scss";
+@import "./variables.scss";
 
 // Import only what you need from Bulma
 @import "bulma/sass/utilities/_all.sass";
 @import "bulma/sass/base/_all.sass";
 @import "bulma/sass/elements/button.sass";
-@import "bulma/sass/elements/container.sass";
+// @import "bulma/sass/elements/container.sass";
 @import "bulma/sass/elements/title.sass";
 @import "bulma/sass/form/_all.sass";
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/layout/hero.sass";
 @import "bulma/sass/layout/section.sass";
+
+//setting up Gallery for birds
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
 body {
     font-family: 'Roboto', sans-serif; 
   }
-  
-  #horizontal-list {
+h1 {
+    font-size: 65pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+h2 {
+    font-size: 30pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: underline;
+}
+h4 {
+    font-size: 24pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h5 {
+    font-size: 14pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: auto;
+}
+.myCatch{
+    display: flex;
+    align-items: center;
+
+}
+.diaryList {
+    list-style-type: none;
+}
+.darkBlue {
+    display: flex;
+    width: 260px;
+    background-color: #006373;
+}
+.mainWrap{
+    display: flex;
+    margin: -50px;
+}
+.fishPhoto {
+    width: 150px;
+}
+.logo-img {
+    margin-left: 20px;
     display: flex; 
-  }
-  
-  #home-image {
+    width: 65%;
+}
+.vertical-list {
     display: flex; 
-  }
-  
-  .navbar {
-    background-color: rgb(50, 56, 50);
-    width: 390px;
-  }
-  
-  #logo-img {
-    display: flex; 
-    max-width: 100%;
-  }
-   
-  
-  #vertical-list {
-    display: flex; 
-    color:white;
+    background-color: #76e0c7;
     flex-direction: column;
     margin-bottom: 10px;
+    width: 150px;
+    flex-direction: column;
   } 
-  
-  #vertical-list li {
-    display: inline;
-  }
-  
+.myNav {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+}
+.formCatch {
+    display: flex;
+    flex-direction: column;
+}
   
 
 .fish-info {
@@ -67,6 +120,30 @@ body {
     
 }
 
+
+.mapPhoto {
+    width: 500px;
+    height: 700px;
+}
+.rulesWrap{
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: center;
+    align-items: stretch;
+
+}
+.horizontal-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+
 .bird-info {
     margin: 10px;
     padding: 20px;
@@ -81,6 +158,7 @@ body {
     width: 150px;
     
 }
+
 .rules-info {
     margin: 10px;
     padding: 20px;
@@ -91,13 +169,90 @@ body {
     font-size: 30px;
 }
 
-  .footerStyle {
-    font-weight: bold;
-    font-size: 10px;
+.footerStyle {
+font-weight: bold;
+font-size: 10px;
+text-align: center;
+}
+
+.headerStyle {
+font-size: 50px;
+margin-left: 30px;
+}
+
+#app {
+    min-height: 100vh;
+}
+
+.footer {
+    background-color: #13505A;
+    color: #fff;
+    height: 50px;
+    position: sticky;
+    top: 100%;
     text-align: center;
-  }
+    font-size: 18px;
+    padding: 10px;
+}
+
+.add-listing {
+    margin: 20px auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.add-listing button {
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+}
+
+.marketplace-body {
+    position: relative;
+}
+
+.marketplace-heading {
+    font-size: 45px;
+    text-align: center;
+}
+
+// .listing-container {
+    
+// }
+
+.listing {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #13505A;
+    color: white;
+    border-radius: 5px;
+}
+
+.listing p {
+    margin: 15px;
+}
 
   .headerStyle {
   font-size: 50px;
+
+
+
   margin-left: 30px;
+
+  margin-bottom: 50px;
+
+  }
+
+  .wrapper {
+    margin-top: 40px;
+    margin-left: 50px;
+
+
+  }
+
+  .bird-img {
+    
+  
+
   }

@@ -5,9 +5,9 @@ function Footer () {
   return (
     <>
     <div className='footerStyle'>
-      <h1 >
+      <h5 >
         Copyright © 2021 Wellington Institute of The Super Smart
-      </h1>
+      </h5>
      
     </div>
 

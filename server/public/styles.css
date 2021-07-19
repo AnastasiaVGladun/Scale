@@ -3419,7 +3419,6 @@ h5 {
 .fish-image {
   width: 150px; }
 
-
 .mapPhoto {
   width: 500px;
   height: 700px; }
@@ -3440,7 +3439,6 @@ h5 {
   align-content: center;
   align-items: center; }
 
-
 .bird-info {
   margin: 10px;
   padding: 20px; }
@@ -3451,7 +3449,6 @@ h5 {
 
 .bird-image {
   width: 150px; }
-
 
 .rules-info {
   margin: 10px;
@@ -3467,7 +3464,8 @@ h5 {
   text-align: center; }
 
 .headerStyle {
-  font-size: 50px; }
+  font-size: 50px;
+  margin-left: 30px; }
 
 #app {
   min-height: 100vh; }
@@ -3512,6 +3510,7 @@ h5 {
 
 .headerStyle {
   font-size: 50px;
+  margin-left: 30px;
   margin-bottom: 50px; }
 
 .wrapper {

@@ -15,19 +15,12 @@ function RulesInfo (props) {
     return (    
 
             <div >
-                <h1 className= "headerStyle"><p>Rules</p></h1>
+                <h1 className= "headerStyle">Recreational fishing rules</h1>
+                <p>Using correct fishing methods and equipment protects local fisheries and keeps fish numbers sustainable for future generations. </p>
+
                 < div className='rulesWrap'>
                 <img className='mapPhoto' src={'/images/icon/map.gif'} ></img>
-                    <div>
-                        <h1 className= "headerStyle"><p>Rules</p></h1>
-                        <div>
-                             <ul id="horizontal-list">
-
-                            <div className='wrapper'> 
-                                 <h1 className= "headerStyle">Recreational fishing rules</h1>
-                                    <div>
-                                        <p>Using correct fishing methods and equipment protects local fisheries and keeps fish numbers sustainable for future generations. </p>
-                                    </div>
+                    
                             <ul id="horizontal-list">
 
                                 {rules.map(rulesinfo => {
@@ -41,10 +34,10 @@ function RulesInfo (props) {
                                 })}
                             </ul>
                         </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                   
+                
+            
+       
     </div>
 
     )

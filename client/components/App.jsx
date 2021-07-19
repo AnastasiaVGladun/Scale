@@ -30,24 +30,22 @@ function App (props) {
     // dispatch(getAchievements())
 }, [])
 
-  return (
+  return ( <div className='mainWrap'>
+    <div className="darkBlue"> </div>
     <Router>
-      <div className="container has-text-centered">
-
-      
-
-        <div className="hero is-small is-primary">
-          <div className="hero-body has-text-centered">
+      <div className="vertical-list">
+        {/* <div className="vertical-list">
+          <div className="vertical-list"> */}
             <Link to='/' className="">
               <h1 className="title is-1">Scale</h1>
             </Link>
             <Route path="/" component={Nav} />
             
-          </div>
-          </div>
+          {/* </div>
+          </div> */}
           </div>
 
-        <div className='      '>
+        <div >
         {!auth.isAuthenticated &&
           <Route exact path="/" component={Login} />
         }
@@ -67,9 +65,10 @@ function App (props) {
        
           </>
         } 
-        <Route path='/' component={Footer}/> 
+        {/* <Route path='/' component={Footer}/>  */}
 
     </Router>
+    </div>
   )
 }
 

@@ -7,6 +7,7 @@ function getAllCatchById(id, db = connection) {
     .where('user_id', id)
     .join('fish','catch.fish_id', 'fish.id')
     .join('location', 'catch.region_id', 'location.id')
+    .join('method', 'catch.method_id', 'method.id')
 }
 
 // Add a catch 

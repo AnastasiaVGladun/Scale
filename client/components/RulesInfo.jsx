@@ -16,10 +16,13 @@ function RulesInfo (props) {
     },[])
     
     return (    
-            <div>
+            <div >
                 <h1 className= "headerStyle"><p>Rules</p></h1>
-            <div>
-                    <ul id="horizontal-list">
+                < div className='rulesWrap'>
+                <img className='mapPhoto' src={'/images/icon/map.gif'} ></img>
+
+            <div >
+                    <ul className="horizontal-list">
                         {rules.map(rulesinfo => {
                             return <div className="rules-info" key={rulesinfo.id}>
                                 <li><p> <a href={rulesinfo.link}target="_blank">{rulesinfo.region}</a></p></li>       
@@ -28,6 +31,7 @@ function RulesInfo (props) {
                             </div>
                         })}
                     </ul>
+                </div>
                 </div>
             </div>
     )

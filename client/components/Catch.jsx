@@ -53,7 +53,7 @@ function Catch (props) {
     return (
 
         <h1> Log My Catch</h1>,
-    <form className="form box" encType='multipart/form-data' className="form box" onSubmit={handleSubmit}>
+    <form className="formCatch" encType='multipart/form-data' onSubmit={handleSubmit}>
     
         <label> Fish:
             <select onChange={onSelect1}>

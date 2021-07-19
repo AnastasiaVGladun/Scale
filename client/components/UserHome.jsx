@@ -15,7 +15,7 @@ const UserHome = (props) => {
 
     return (
         <div className='userWrap'>
-        <h1>Hello{props.username}!</h1>
+        <h1>Hello{diary.username}!</h1>
             <div className='weather'>
                 <Weather />
             </div>

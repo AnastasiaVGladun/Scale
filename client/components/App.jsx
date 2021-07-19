@@ -8,7 +8,7 @@ import Home from './home'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
-import Catch from './Catch'
+
 
 
 import { checkAuth } from '../actions/auth'
@@ -18,6 +18,9 @@ import FishInfo from './FishInfo'
 import RulesInfo from './RulesInfo'
 import UserHome from './UserHome'
 import Achievements from './Achievements'
+import Poacher from './Poacher'
+import Marketplace from './Marketplace'
+import AddListing from './AddListing'
 import Footer from './Footer'
 
 function App (props) {
@@ -32,8 +35,6 @@ function App (props) {
 
   return (
     <Router>
-
-        <Catch/>
       <div className="container has-text-centered">
 
       
@@ -44,7 +45,7 @@ function App (props) {
               <h1 className="title is-1">Scale</h1>
             </Link>
             <Route path="/" component={Nav} />
-            <Route path="/stats" component={Statistic} />
+            <Route exact path="/" component={Home} />
           </div>
           </div>
           </div>
@@ -53,22 +54,25 @@ function App (props) {
         {!auth.isAuthenticated &&
           <Route exact path="/" component={Login} />
         }
+        
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path='/fish' component={FishInfo} />
+        <Route path='/rules' component={RulesInfo} />
+        <Route path="/stats" component={Statistic} />
         </div>
 
         {auth.isAuthenticated &&
          <>
           <Route path='/user' component={UserHome} />
           <Route path="/diary" component={Diary} />
-          {/* <Route path="/user-home" component={UserHome} /> */}
           <Route path="/achievements" component={Achievements} />
-       
+          <Route path="/poacher" component={Poacher} />
+          <Route path="/marketplace" component={Marketplace} />
+          <Route path="/addlisting" component={AddListing} />
           </>
         } 
         <Route path='/' component={Footer}/> 
-        {/* </div>
-        </div> */}
 
     </Router>
   )

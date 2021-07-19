@@ -41,6 +41,7 @@ function Nav (props) {
                   <Link onClick={toggleBurger} className="navbar-item is-large" to='/login'>LOGIN</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/register'>REGISTER</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/bird'>BIRD INFO</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/rules'>RULES</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
                   </>
@@ -49,6 +50,7 @@ function Nav (props) {
                 <>
                   <Link onClick={toggleBurger} className="navbar-item is-large" to='/'>HOME</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/bird'>BIRD INFO</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/rules'>RULES</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
                   <Link onClick={toggleBurger} className="navbar-item is-large" to='/diary'>DIARY</Link>

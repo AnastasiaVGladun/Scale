@@ -22,7 +22,11 @@ function RulesInfo (props) {
                     <ul id="horizontal-list">
                         {rules.map(rulesinfo => {
                             return <div className="rules-info" key={rulesinfo.id}>
-                                <li><p> <a href={rulesinfo.link}target="_blank">{rulesinfo.region}</a></p></li>       
+                                <li>
+                                 <p> 
+                                        <a href={rulesinfo.link}target="_blank">{rulesinfo.region}</a>
+                                </p>
+                                </li>       
 
                                 {/* <li>{rulesinfo.link}</li> */}
                             </div>

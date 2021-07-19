@@ -3,7 +3,7 @@ import { GET_RULES} from '../actions/rules'
 
 const initialState = []
 
-const rules = (state = initialState, action) => {
+const Rules = (state = initialState, action) => {
   switch (action.type) {
       case GET_RULES:
           return action.rules
@@ -12,5 +12,5 @@ const rules = (state = initialState, action) => {
   }
 }
 
-export default rules
+export default Rules
 

@@ -15,7 +15,7 @@ const setDiary = (diary) => {
        return dispatch => {
          return fetchDiary()
            .then(data => {
-             console.log(data)
+            //  console.log(data)
              return dispatch(setDiary(data))
            })
        }

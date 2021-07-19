@@ -10,7 +10,9 @@ function FishInfo (props) {
         return dispatch(getFish())
     },[])
     return (    
-            <div> 
+            <div className='wrapper'>
+             <h1 className= "headerStyle">Fishing Species in Aotearoa</h1>
+             <p><strong>A visual reference for identifying saltwater (and freshwater) fish species that are located in New Zealand waters.</strong> <p>Learn more about each fish species such as it's physical characteristics, typical locations in New Zealand and suitability for eating.</p></p>
                 <div>
                     <ul id="horizontal-list">
                         {fish.map(fishinfo => {
@@ -24,6 +26,7 @@ function FishInfo (props) {
                     </ul>
                 </div>
             </div>
+        
     )
 }
 const mapStateToProps = (globalState) => {

@@ -4,7 +4,15 @@ npm-debug.log
 dev.sqlite3
 bundle.js
 bundle.js.map
+styles.css
+styles.css.map
 .env
 coverage
+<<<<<<< HEAD
 server/public/styles.css*
 
+||||||| 5b7be69
+server/public/styles.css*
+=======
+.DS_Store
+>>>>>>> 6e98314be31b1ba25c65bdb208207ebc485e14bd

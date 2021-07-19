@@ -9,15 +9,12 @@ function RulesInfo (props) {
  
     useEffect(() => {
 
-
-
-        
         return dispatch(getRules())
     },[])
     
     return (    
             <div>
-                <h1 className= "headerStyle"><p>Rules</p></h1>
+                <h1 className= "headerStyle"><p>Fishing Rules</p></h1>
             <div>
                     <ul id="horizontal-list">
                         {rules.map(rulesinfo => {
@@ -28,7 +25,6 @@ function RulesInfo (props) {
                                 </p>
                                 </li>       
 
-                                {/* <li>{rulesinfo.link}</li> */}
                             </div>
                         })}
                     </ul>

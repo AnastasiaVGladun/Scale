@@ -20,6 +20,7 @@ Recreational Fishing App - collecting data for good!
 * Kanban board
 
 ![Screenshot_20210716-183957_Gallery](https://user-images.githubusercontent.com/81403368/125923113-f7e49a12-2af3-44a1-8ad2-e404bd7025de.jpg)
+![20210720_111603](https://user-images.githubusercontent.com/81403368/126239307-f373c48b-0b00-4fab-ac0d-d04ba2dc0d20.jpg)
 
 * Wireframes
 

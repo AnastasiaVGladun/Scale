@@ -17,6 +17,9 @@ import BirdInfo from './BirdInfo'
 import RulesInfo from './RulesInfo'
 import UserHome from './UserHome'
 import Achievements from './Achievements'
+import Poacher from './Poacher'
+import Marketplace from './Marketplace'
+import AddListing from './AddListing'
 import Footer from './Footer'
 function App (props) {
   const { auth, dispatch } = props
@@ -56,20 +59,12 @@ function App (props) {
           <Route path='/user' component={UserHome} />
           <Route path="/diary" component={Diary} />
           <Route path="/achievements" component={Achievements} />
+          <Route path="/poacher" component={Poacher} />
+          <Route path="/marketplace" component={Marketplace} />
+          <Route path="/addlisting" component={AddListing} />
           </>
         }
         <Route path='/' component={Footer}/>
-white_check_mark
-heart
-raised_hands
-
-
-
-
-
-
-
-
     </Router>
   )
 }

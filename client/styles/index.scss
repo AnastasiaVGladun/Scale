@@ -18,26 +18,22 @@
 @import "bulma/sass/layout/section.sass";
 
 //setting up Gallery for birds
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
+//   .bird-img {
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
+// div.gallery img {
+//   margin: 5px;
+//   float: left;
+//   width: 180px;
+// }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
+// div.gallery img {
+//   width: 100%;
+//   height: auto;
+// }
+// div.desc {
+//   padding: 15px
+// }
 
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
 
 
 //-------
@@ -77,8 +73,6 @@ body {
     display: inline;
   }
   
-  
-
 .fish-info {
     margin: 10px;
     padding: 20px;
@@ -194,8 +188,3 @@ margin-left: 30px;
 
   }
 
-  .bird-img {
-    
-  
-
-  }

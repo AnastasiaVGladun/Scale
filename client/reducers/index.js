@@ -9,6 +9,7 @@ import diary from './diary'
 import achievements from './achievements'
 import methods from './methods'
 import bird from './bird'
+import usersAchievements from './usersAchievements'
 
 export default combineReducers({
   auth,
@@ -19,5 +20,6 @@ export default combineReducers({
   diary,
   achievements,
   methods,
-  bird
+  bird,
+  usersAchievements
 })

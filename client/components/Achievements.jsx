@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { getAchievements } from '../actions/achievements'
+import { getAchievements,getUsersAchievements } from '../actions/achievements'
 
 const Achievements = (props) => {
   const { achievements, diary, dispatch } = props
-  console.log(diary)
+  console.log('this is achievement page', diary)
 
   useEffect(() => {
     dispatch(getAchievements())
+    dispatch(getUsersAchievements())
     return console.log(achievements)
   }, [])
 
 
   return (
     <>
+
       <h1>MY ACHIEVEMENTS</h1>
 
       {achievements && achievements.length > 0 &&
@@ -72,6 +74,7 @@ const Achievements = (props) => {
 const mapStateToProps = (globalState) => {
   return {
     achievements: globalState.achievements,
+    usersachievements: globalState.usersachievements,
     diary: globalState.diary
   }
 }

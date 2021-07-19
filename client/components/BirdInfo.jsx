@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 import { getBird } from '../actions/bird'
 
 function BirdInfo (props) {
-    const {bird, dispatch} = props
-    console.log(bird)
+    // const {bird, dispatch} = props
+    // console.log(bird)
  
-    useEffect(() => {
+    // useEffect(() => {
 
-        return dispatch(getBird())
-    },[])
+    //     return dispatch(getBird())
+    // },[])
     return (    
         <div className='wrapper'> 
           <h1 className= "headerStyle">Caught a bird?</h1>
@@ -29,18 +29,19 @@ function BirdInfo (props) {
                 </ul> */}
 
 
-                <img className='bird-img' src="/images/Bird/step1.png" alt="untangle bird pic"/>
-                <img className='bird-img' src="/images/Bird/step2.png" alt="untan bird pic"/>
-                <img className='bird-img' src="/images/Bird/step3.png" alt="unta bird pic"/>
-                <img className='bird-img' src="/images/Bird/step4.png" alt="unt bird pic"/>
+                <img className='bird-img' src="/images/Bird/step2.png" alt="untangle bird pic"/>
+                <img className='bird-img' src="/images/Bird/step3.png" alt="untan bird pic"/>
+                <img className='bird-img' src="/images/Bird/step4.png" alt="unta bird pic"/>
+                <img className='bird-img' src="/images/Bird/step5.png" alt="unt bird pic"/>
 
             </div>
         </div>
 )
 }
-const mapStateToProps = (globalState) => {
-return {
-  bird: globalState.bird
-}
-}
-export default connect(mapStateToProps)(BirdInfo)
+// const mapStateToProps = (globalState) => {
+// return {
+//   bird: globalState.bird
+// }
+// }
+// export default connect(mapStateToProps)(BirdInfo)
+export default BirdInfo

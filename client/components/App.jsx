@@ -34,9 +34,9 @@ function App (props) {
           <div className="darkBlue"> </div>
             <Router>
            <div className="vertical-list">
-            <Link to='/' className="">
+            {/* <Link to='/' className="">
               <h1 className="title is-1">Scale</h1>
-            </Link>
+            </Link> */}
             <Route path="/" component={Nav} />
             
           </div>

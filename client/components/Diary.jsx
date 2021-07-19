@@ -17,10 +17,11 @@ return (
             return (
                 <li className='diaryList'>
                 <h2>{entry.time}</h2>
-                <h4>Location: {entry.location}</h4>
+                <h4>{entry.location}</h4>
                 <div className="myCatch">
-                    <h5>Cought {entry.method}</h5>
-                    <h5>{entry.name}</h5>
+                    <h5>{entry.method}</h5>
+                    <h5>{entry.name}<br />
+                    spices</h5>
                     <img src={`/images/Fish/${entry.image}@2x.png`} ></img>
                     <h5>{entry.quantity}</h5> 
                     <img className='fishPhoto' src={`/images/Fishing people/${entry.photo}`} ></img>

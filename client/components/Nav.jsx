@@ -23,13 +23,14 @@ function Nav (props) {
   return <nav >
     <div>
         <img className="logo-img" src="/images/Logo/logo_1.png" /> 
+        <h1 className='homeName'>Scale</h1>
       </div>
-      <div className="container">
+      <div >
         <div >
           <span onClick={toggleBurger} className={`navbar-burger burger ${burgerVisible ? 'is-active' : ''}`} data-target="navbarMenuHeroA">
           </span>
         </div>
-        <div id="navbarMenuHeroA" className={`navbar-menu ${burgerVisible ? "is-active" : ''}`}>
+        <div  className={`navbar-menu ${burgerVisible ? "is-active" : ''}`}>
           <div className='myNav'>
             { !auth.isAuthenticated
               ? (
@@ -37,23 +38,23 @@ function Nav (props) {
                   <Link onClick={toggleBurger}  to='/'>HOME</Link>
                   <Link onClick={toggleBurger} className='navItem' to='/login'>LOGIN</Link>
                   <Link onClick={toggleBurger} className='navItem'  to='/register'>REGISTER</Link>
-                  <Link onClick={toggleBurger} className='navItem'className="navbar-item" to='/fish'>FISH INFO</Link>
-                  <Link onClick={toggleBurger} className='navItem'className="navbar-item" to='/bird'>BIRD INFO</Link>
-                  <Link onClick={toggleBurger} className='navItem'className="navbar-item" to='/rules'>RULES</Link>
+                  <Link onClick={toggleBurger} className='navItem' to='/fish'>FISH INFO</Link>
+                  <Link onClick={toggleBurger} className='navItem'to='/bird'>BIRD INFO</Link>
+                  <Link onClick={toggleBurger} className='navItem'to='/rules'>RULES</Link>
                   <Link onClick={toggleBurger} className='navItem' to='/stats'>STATISTICS</Link>
                   </>
                 )
               : (
                 <>
-                  <Link onClick={toggleBurger} className="navbar-item is-large" to='/'>HOME</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/bird'>BIRD INFO</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/rules'>RULES</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
-                  <Link onClick={toggleBurger} className="navbar-item is-large" to='/diary'>DIARY</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/user'>USERHOME</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/achievements'>ACHIEVEMENTS</Link>
-                  <Link to='/' className="navbar-item is-large" onClick={() => logout()}>LOGOUT</Link>
+                  <Link onClick={toggleBurger} className='navItem' to='/'>HOME</Link>
+                  <Link onClick={toggleBurger} className='navItem' to='/fish'>FISH INFO</Link>
+                  <Link onClick={toggleBurger} className='navItem' to='/bird'>BIRD INFO</Link>
+                  <Link onClick={toggleBurger} className='navItem' to='/rules'>RULES</Link>
+                  <Link onClick={toggleBurger} className='navItem' to='/stats'>STATISTICS</Link>
+                  <Link onClick={toggleBurger} className='navItem' to='/diary'>DIARY</Link>
+                  <Link onClick={toggleBurger} className='navItem' to='/user'>USERHOME</Link>
+                  <Link onClick={toggleBurger} className='navItem' to='/achievements'>ACHIEVEMENTS</Link>
+                  <Link to='/' className='navItem' onClick={() => logout()}>LOGOUT</Link>
 
 
 

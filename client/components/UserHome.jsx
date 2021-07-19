@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import Weather from './Weather'
 import { Link } from 'react-router-dom'
 import { getAchievements } from '../actions/achievements'
+import Poacher from './Poacher'
+import Marketplace from './Marketplace'
 
 
 
@@ -75,7 +77,7 @@ const UserHome = (props) => {
                     find fishing mates!</p>
                 <Link to='/marketplace'><button type="button">Marketplace</button></Link>
             </div>
-
+           
         </>
     )
 }

@@ -27,7 +27,9 @@ export const fetchDiary = () => {
 }
 
 export function addFishImg (fishImg) {
+  console.log('fish_img', fishImg)
   return request.post(baseUrl + '/upload')
+    .set(acceptJsonHeader)
     .send(fishImg)
     .then(res => {
       return res.text
@@ -35,7 +37,11 @@ export function addFishImg (fishImg) {
 }
 
 export function addCatchData (formData) {
+  console.log(formData, 'api')
   return request.post(baseUrl)
+  .set(acceptJsonHeader)
+  .set(getAuthorizationHeader())
+  
     .send(formData)
     .then(res => {
       return res.body

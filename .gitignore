@@ -8,4 +8,5 @@ styles.css
 styles.css.map
 .env
 coverage
-.DS_Store
+server/public/styles.css*
+

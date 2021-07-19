@@ -3337,6 +3337,40 @@ a.navbar-item,
   flex-shrink: 0;
   padding: 3rem 1.5rem; }
 
+.section {
+  padding: 3rem 1.5rem; }
+  @media screen and (min-width: 1024px) {
+    .section.is-medium {
+      padding: 9rem 1.5rem; }
+    .section.is-large {
+      padding: 18rem 1.5rem; } }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+#horizontal-list {
+  display: flex; }
+
+#home-image {
+  display: flex; }
+
+.navbar {
+  background-color: #323832;
+  width: 390px; }
+
+#logo-img {
+  display: flex;
+  max-width: 100%; }
+
+#vertical-list {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  margin-bottom: 10px; }
+
+#vertical-list li {
+  display: inline; }
+
 .fish-info {
   margin: 10px;
   padding: 20px; }
@@ -3346,6 +3380,17 @@ a.navbar-item,
   font-size: 30px; }
 
 .fish-image {
+  width: 150px; }
+
+.bird-info {
+  margin: 10px;
+  padding: 20px; }
+
+.bird-info p {
+  font-weight: bold;
+  font-size: 30px; }
+
+.bird-image {
   width: 150px; }
 
 .rules-info {
@@ -3363,7 +3408,11 @@ a.navbar-item,
 
 .headerStyle {
   font-size: 50px;
-  margin-left: 30px; }
+  margin-bottom: 50px; }
+
+.wrapper {
+  margin-top: 40px;
+  margin-left: 50px; }
 
 #app {
   min-height: 100vh; }

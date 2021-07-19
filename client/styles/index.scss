@@ -15,8 +15,43 @@
 @import "bulma/sass/form/_all.sass";
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/layout/hero.sass";
-// @import "bulma/sass/layout/section.sass";
+@import "bulma/sass/layout/section.sass";
 
+body {
+    font-family: 'Roboto', sans-serif; 
+  }
+  
+  #horizontal-list {
+    display: flex; 
+  }
+  
+  #home-image {
+    display: flex; 
+  }
+  
+  .navbar {
+    background-color: rgb(50, 56, 50);
+    width: 390px;
+  }
+  
+  #logo-img {
+    display: flex; 
+    max-width: 100%;
+  }
+
+  
+  #vertical-list {
+    display: flex; 
+    color:white;
+    flex-direction: column;
+    margin-bottom: 10px;
+  } 
+  
+  #vertical-list li {
+    display: inline;
+  }
+  
+  
 
 .fish-info {
     margin: 10px;
@@ -29,6 +64,21 @@
 }
 
 .fish-image {
+    width: 150px;
+    
+}
+
+.bird-info {
+    margin: 10px;
+    padding: 20px;
+}
+
+.bird-info p {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.bird-image {
     width: 150px;
     
 }
@@ -106,3 +156,14 @@ margin-left: 30px;
     margin: 15px;
 }
 
+  .headerStyle {
+  font-size: 50px;
+  margin-bottom: 50px;
+
+  }
+
+  .wrapper {
+    margin-top: 40px;
+    margin-left: 50px;
+
+  }

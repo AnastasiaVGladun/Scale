@@ -8,6 +8,9 @@ import locations from './locations'
 import diary from './diary'
 import achievements from './achievements'
 import methods from './methods'
+import poacher from './poacher'
+import marketplace from './marketplace'
+import bird from './bird'
 
 export default combineReducers({
   auth,
@@ -17,5 +20,8 @@ export default combineReducers({
   locations,
   diary,
   achievements,
-  methods
+  poacher,
+  marketplace,
+  methods,
+  bird
 })

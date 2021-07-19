@@ -4,17 +4,16 @@ import { getFish } from '../actions/fish'
 
 function FishInfo (props) {
     const {fish, dispatch} = props
-    console.log("this is fish info", fish)
+    console.log(fish)
  
     useEffect(() => {
         return dispatch(getFish())
     },[])
-    
-    
     return (    
-            <div> 
+            <div className='wrapper'>
+             <h1 className= "headerStyle">Fishing Species in Aotearoa</h1>
+             <p><strong>A visual reference for identifying saltwater (and freshwater) fish species that are located in New Zealand waters.</strong> <p>Learn more about each fish species such as it's physical characteristics, typical locations in New Zealand and suitability for eating.</p></p>
                 <div>
-                <h1 className= "headerStyle"><p>Fish Info</p></h1>
                     <ul id="horizontal-list">
                         {fish.map(fishinfo => {
                             return <div className="fish-info" key={fishinfo.id}>
@@ -27,6 +26,7 @@ function FishInfo (props) {
                     </ul>
                 </div>
             </div>
+        
     )
 }
 const mapStateToProps = (globalState) => {

@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import {connect} from 'react-redux'
 import { checkAuth } from '../actions/auth'
+import Catch from './Catch'
 
 
 function Diary (props){
 
 return (
     <div className='diary'>
-        <p>Your fish</p>
+        <p className='title'>My Fishing Diary</p>
         {props.diary.map(entry => {
             //do a thing
             return (
-                <li>
+                <li className='diaryList'>
                 <p>Fish type: {entry.name}</p>
                 <p>Location: {entry.location}</p>
                 <p>Quantity: {entry.quantity}</p> 
@@ -19,6 +20,8 @@ return (
                 </li>
             )
         })}
+       <p> Add new catch </p>
+       <Catch/>
     </div>
 )
 }

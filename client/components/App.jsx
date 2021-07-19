@@ -8,7 +8,7 @@ import Home from './home'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
-import Catch from './Catch'
+
 
 
 import { checkAuth } from '../actions/auth'
@@ -32,8 +32,6 @@ function App (props) {
 
   return (
     <Router>
-
-        <Catch/>
       <div className="container has-text-centered">
 
       
@@ -44,6 +42,7 @@ function App (props) {
               <h1 className="title is-1">Scale</h1>
             </Link>
             <Route path="/" component={Nav} />
+            
           </div>
           </div>
           </div>
@@ -68,8 +67,6 @@ function App (props) {
           </>
         } 
         <Route path='/' component={Footer}/> 
-        {/* </div>
-        </div> */}
 
     </Router>
   )

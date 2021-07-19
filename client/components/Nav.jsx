@@ -20,7 +20,7 @@ function Nav (props) {
     dispatch(logoutUser(confirmSuccess))
   }
 
-  return <nav className="navbar">
+  return <nav id="nav">
     <div>
         <img id="logo-img" src="/images/Logo/logo_1.png" /> 
       </div>

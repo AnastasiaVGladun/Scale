@@ -34,20 +34,17 @@ function Catch (props) {
         formImage.append('fish_img', fishImg)
           props.dispatch(addCatch(formImage, formData))
     }   
+    
     const onChangeFile = (e) => {
         setFishImg(e.target.files[0])
-      }
+    }
 
-      function onSelect1(event) {
-        setLocation(event.target.value);}
-
-        function onSelect2(event) {
-            setFish(event.target.value);}
-
-
-        function onSelect3(event) {
-                setMethods(event.target.value);}
-
+    function onSelect(event) {
+        setMethods(event.target.value);
+        setFish(event.target.value);
+        setFormData(event.target.value);
+        setLocation(event.target.value);
+    }
 
 
     return (
@@ -56,28 +53,25 @@ function Catch (props) {
     <form className="form box" encType='multipart/form-data' className="form box" onSubmit={handleSubmit}>
     
         <label> Fish:
-            <select onChange={onSelect1}>
+            <select onChange={onSelect}>
                 <option value={fish}>Select Fish Species:</option>
                 {props.fish.map(fish=> {return <option key={fish.id} value={fish.id}>{fish.name}</option>})}
             </select>
         </label>
 
         <label> Region:
-            <select onChange={onSelect2}>
+            <select onChange={onSelect}>
                 <option value={location}>Select Region</option>
                 {props.locations.map (location => { return <option value={location.id}>{location.location}</option> })}               
             </select>
         </label>
 
         <label> Method:
-            <select onChange={onSelect3}>
+            <select onChange={onSelect}>
                 <option value={methods}>Select method</option>
                 {props.methods.map (method => { return <option value={method.id}>{method.method}</option> })}               
             </select>
         </label>
-
-        
-
 
         <label>Time:</label>
         <input type="time" id="appt" name="appt" min="09:00" max="18:00" required></input>

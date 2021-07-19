@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 // Import custom variables and Bulma overides
-@import "./variables.scss";
+
 
 // Import only what you need from Bulma
 @import "bulma/sass/utilities/_all.sass";
@@ -51,4 +51,39 @@
   .headerStyle {
   font-size: 50px;
   margin-left: 30px;
+  }
+
+
+  body {
+    font-family: 'Roboto', sans-serif; 
+  }
+  
+  #horizontal-list {
+    display: flex; 
+  }
+  
+  #home-image {
+    display: flex; 
+  }
+  
+  #nav {
+    background-color: #8EC8B2; 
+    width: 390px;
+  }
+  
+  #logo-img {
+    display: flex; 
+    max-width: 100%;
+  }
+   
+  
+  #vertical-list {
+    display: flex; 
+    color:white;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  #vertical-list li {
+    display: inline;
   }

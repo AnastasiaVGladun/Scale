@@ -15,11 +15,12 @@ const setDiary = (diary) => {
        return dispatch => {
          return fetchDiary()
            .then(data => {
-             console.log(data)
              return dispatch(setDiary(data))
            })
        }
      }
+
+     
 
      export function pushCatch (fishCatch) {
       return {
@@ -46,4 +47,3 @@ const setDiary = (diary) => {
             })
         }
       }
-      

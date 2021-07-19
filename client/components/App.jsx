@@ -18,6 +18,8 @@ import FishInfo from './FishInfo'
 import RulesInfo from './RulesInfo'
 import UserHome from './UserHome'
 import Achievements from './Achievements'
+import Footer from './Footer'
+
 
 function App (props) {
   const { auth, dispatch } = props
@@ -46,7 +48,7 @@ function App (props) {
             <Route path="/stats" component={Statistic} />
           </div>
           </div>
-          </div>
+          
 
         <div className='      '>
         {!auth.isAuthenticated &&
@@ -66,7 +68,7 @@ function App (props) {
           </>
         } 
         <Route path='/' component={Footer}/> 
-        </div>
+      </div>
 
     </Router>
   )

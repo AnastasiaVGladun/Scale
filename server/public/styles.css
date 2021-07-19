@@ -1165,32 +1165,6 @@ table th {
       margin-left: 0.25rem;
       margin-right: 0.25rem; }
 
-.container {
-  flex-grow: 1;
-  margin: 0 auto;
-  position: relative;
-  width: auto; }
-  .container.is-fluid {
-    max-width: none !important;
-    padding-left: 32px;
-    padding-right: 32px;
-    width: 100%; }
-  @media screen and (min-width: 1024px) {
-    .container {
-      max-width: 960px; } }
-  @media screen and (max-width: 1215px) {
-    .container.is-widescreen:not(.is-max-desktop) {
-      max-width: 1152px; } }
-  @media screen and (max-width: 1407px) {
-    .container.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
-      max-width: 1344px; } }
-  @media screen and (min-width: 1216px) {
-    .container:not(.is-max-desktop) {
-      max-width: 1152px; } }
-  @media screen and (min-width: 1408px) {
-    .container:not(.is-max-desktop):not(.is-max-widescreen) {
-      max-width: 1344px; } }
-
 .title,
 .subtitle {
   word-break: break-word; }
@@ -3362,14 +3336,6 @@ a.navbar-item,
   flex-grow: 1;
   flex-shrink: 0;
   padding: 3rem 1.5rem; }
-
-.section {
-  padding: 3rem 1.5rem; }
-  @media screen and (min-width: 1024px) {
-    .section.is-medium {
-      padding: 9rem 1.5rem; }
-    .section.is-large {
-      padding: 18rem 1.5rem; } }
 
 .fish-info {
   margin: 10px;

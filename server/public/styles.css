@@ -3408,11 +3408,7 @@ body {
 
 .headerStyle {
   font-size: 50px;
-  margin-bottom: 50px; }
-
-.wrapper {
-  margin-top: 40px;
-  margin-left: 50px; }
+  margin-left: 30px; }
 
 #app {
   min-height: 100vh; }
@@ -3454,6 +3450,14 @@ body {
 
 .listing p {
   margin: 15px; }
+
+.headerStyle {
+  font-size: 50px;
+  margin-bottom: 50px; }
+
+.wrapper {
+  margin-top: 40px;
+  margin-left: 50px; }
 
 
 /*# sourceMappingURL=styles.css.map*/

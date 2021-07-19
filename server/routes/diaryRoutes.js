@@ -8,6 +8,7 @@ const router = express.Router()
 const multer = require('multer')
 const multerS3 = require('multer-s3')
 const AWS = require('aws-sdk')
+const { addAchievement } = require('../db/achievements')
 
 
 // Amazon s3 config
@@ -53,6 +54,9 @@ router.post('/', getTokenDecoder(), (req, res) => {
   return db.addCatch(req.body, userId)
   .then((fishcatch) => {
     res.json(fishcatch)
+  })
+  .then(() => {
+    return addAchievement(userId)
   })
   .catch(err => {
     console.log(err.message)

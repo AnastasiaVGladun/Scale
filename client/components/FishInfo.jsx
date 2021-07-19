@@ -4,7 +4,7 @@ import { getFish } from '../actions/fish'
 
 function FishInfo (props) {
     const {fish, dispatch} = props
-    console.log(fish)
+    // console.log(fish)
  
     useEffect(() => {
         return dispatch(getFish())

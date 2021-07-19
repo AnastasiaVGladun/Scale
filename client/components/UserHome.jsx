@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import Weather from './Weather'
-import {Link } from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
+import { getAchievements } from '../actions/achievements'
 
 
 
 const UserHome = (props) => {
-    const diary = props.diary
-    console.log(diary)
+    const { diary, achievements, dispatch } = props
+
     const latestEntry = diary[diary.length - 1]
-    console.log(latestEntry)
+    const latestAchievement = achievements[achievements.length - 1]
+
+    useEffect(() => {
+        dispatch(getAchievements())
+    }, [])
 
 
     return (
@@ -28,20 +32,34 @@ const UserHome = (props) => {
                 <p>Boat WOF expiry date</p>
             </div>
 
-            <h2>My Latest Entry</h2>
             <div>
-                {latestEntry &&
-                    <>
-                        <div> <img src={`/images/Fish/${latestEntry.image}@2x.png`} /></div>
-                        <div>{latestEntry.name}</div>
-                        <div>Quantity:{latestEntry.quantity}</div>
-                    </>
-                }
+                <h2>My Latest Entry</h2>
+                <div>
+                    {latestEntry ?
+                        <div key = {latestEntry.id}>
+                            <div> <img src={`/images/Fish/${latestEntry.image}@2x.png`} /></div>
+                            <div>{latestEntry.name}</div>
+                            <div>Quantity:{latestEntry.quantity}</div>
+                        </div>
+                        :
+                        <h2>Uh oh - no catch yet!</h2>
+                    }
+                </div>
             </div>
 
             <div>
-                <h2>Achievements</h2>
-                <p>placeholder for achievement</p>
+                <h2>My Latest Achievement</h2>
+                <div>
+                    {latestAchievement ?
+                        <div key = {latestAchievement.id}>
+                            <div><img src={latestAchievement.badge_image}></img></div>
+                            <div>{latestAchievement.name}</div>
+                            <div>{latestAchievement.description}</div>
+                        </div>
+                        :
+                        <h2>Go fishing to get some achievements!</h2>
+                    }
+                </div>
             </div>
 
             <div>
@@ -66,7 +84,8 @@ const UserHome = (props) => {
 const mapStateToProps = (globalState) => {
     return {
         diary: globalState.diary,
-        auth: globalState.auth
+        auth: globalState.auth,
+        achievements: globalState.achievements
     }
 }
 

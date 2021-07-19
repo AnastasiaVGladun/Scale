@@ -12,6 +12,7 @@ import poacher from './poacher'
 import marketplace from './marketplace'
 import bird from './bird'
 
+
 export default combineReducers({
   auth,
   fish,
@@ -23,5 +24,6 @@ export default combineReducers({
   poacher,
   marketplace,
   methods,
-  bird
+  bird,
+
 })

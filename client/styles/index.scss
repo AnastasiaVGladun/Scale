@@ -15,9 +15,9 @@
 @import "bulma/sass/form/_all.sass";
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/layout/hero.sass";
-@import "bulma/sass/layout/section.sass";
+// @import "bulma/sass/layout/section.sass";
 
-//setting up Gallery for birds
+// //setting up Gallery for birds
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
@@ -34,10 +34,10 @@ div.gallery img {
   height: auto;
 }
 
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
+// div.desc {
+//   padding: 15px;
+//   text-align: center;
+// }
 
 body {
     font-family: 'Roboto', sans-serif; 
@@ -66,39 +66,40 @@ h5 {
     align-items: center;
 
 }
-.diaryList {
-    list-style-type: none;
-}
-.darkBlue {
-    display: flex;
-    width: 260px;
-    background-color: #006373;
-}
-.mainWrap{
-    display: flex;
-    margin: -50px;
-}
-.fishPhoto {
-    width: 150px;
-}
-.logo-img {
-    margin-left: 20px;
-    display: flex; 
-    width: 65%;
-}
-.vertical-list {
-    display: flex; 
-    background-color: #76e0c7;
-    flex-direction: column;
-    margin-bottom: 10px;
-    width: 150px;
-    flex-direction: column;
-  } 
-.myNav {
-    align-items: stretch;
-    display: flex;
-    flex-direction: column;
-}
+// .diaryList {
+//     list-style-type: none;
+// }
+// .darkBlue {
+//     display: flex;
+//     width: 260px;
+//     background-color: #006373;
+// }
+// .mainWrap{
+//     display: flex;
+//     margin: -50px;
+// }
+// .fishPhoto {
+//     width: 150px;
+// }
+// .logo-img {
+//     margin-left: 20px;
+//     display: flex; 
+//     width: 65%;
+// }
+// .vertical-list {
+//     display: flex; 
+//     background-color: #76e0c7;
+//     flex-direction: column;
+//     margin-bottom: 10px;
+//     width: 150px;
+//     flex-direction: column;
+//   } 
+// .myNav {
+//     align-items: stretch;
+//     display: flex;
+//     flex-direction: column;
+//     border: 2px black solid;
+// }
 .formCatch {
     display: flex;
     flex-direction: column;
@@ -185,8 +186,8 @@ margin-left: 30px;
 }
 
 .footer {
-    background-color: #13505A;
-    color: #fff;
+    // background-color: #13505A;
+    color: #13505A;
     height: 50px;
     position: sticky;
     top: 100%;
@@ -255,4 +256,85 @@ margin-left: 30px;
     
   
 
-  }
+}
+
+// ==========================================================================
+// NAV
+.mainWrap {
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.logo-img {
+    width: 150px;
+    margin-top: 30px;
+}
+
+.logo-text {
+    margin: 20px auto;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo-text:hover {
+    color: #fff;
+}
+
+.nav{
+    width: 20vw;
+    min-width: 150px;
+    max-width: 400px;
+    text-align: center;
+    height: 100vh;
+    background-color: #8EC8B2;
+
+}
+
+.vertical-list{ 
+    width: 25vw;
+    min-width: 150px;
+    text-align: center;
+    height: 100vh;
+}
+
+.navbar-item {
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-menu.is-active {
+    background-color: #8EC8B2;
+}
+
+a.navbar-item {
+    display: block;
+    color: #fff;
+}
+
+a.navbar-item:hover {
+    background-color: #13505A;
+    color: #fff;
+}
+
+.myNav {
+    width: 100%;
+}
+
+.navbar-burger.burger:hover {
+    background-color: #13505A;
+    color: #fff;
+}
+
+.navbar-burger.burger {
+    margin: 0px auto;
+}
+
+
+// ==========================================================================
+.display {
+    overflow-y: scroll;
+    width: 90vw;
+    padding: 20px;
+}

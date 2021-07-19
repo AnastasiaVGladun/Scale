@@ -30,22 +30,12 @@ function App (props) {
     // dispatch(getAchievements())
 }, [])
 
-  return ( <div className='mainWrap'>
-    <div className="darkBlue"> </div>
+  return ( 
+    <div className='mainWrap'>
     <Router>
-      <div className="vertical-list">
-        {/* <div className="vertical-list">
-          <div className="vertical-list"> */}
-            <Link to='/' className="">
-              <h1 className="title is-1">Scale</h1>
-            </Link>
-            <Route path="/" component={Nav} />
-            
-          {/* </div>
-          </div> */}
-          </div>
+      <Route path="/" component={Nav} />
 
-        <div >
+      <div className="display">
         {!auth.isAuthenticated &&
           <Route exact path="/" component={Login} />
         }
@@ -55,18 +45,12 @@ function App (props) {
         <Route path='/fish' component={FishInfo} />
         <Route path='/rules' component={RulesInfo} />
         <Route path="/stats" component={Statistic} />
+        
+        {auth.isAuthenticated && <Route path='/user' component={UserHome} />}
+        {auth.isAuthenticated &&<Route path="/diary" component={Diary} />}
+        {auth.isAuthenticated && <Route path="/achievements" component={Achievements} />}  
+        <Route path='/' component={Footer}/> 
         </div>
-
-        {auth.isAuthenticated &&
-         <>
-          <Route path='/user' component={UserHome} />
-          <Route path="/diary" component={Diary} />
-          <Route path="/achievements" component={Achievements} />
-       
-          </>
-        } 
-        {/* <Route path='/' component={Footer}/>  */}
-
     </Router>
     </div>
   )
@@ -80,3 +64,40 @@ const mapStateToProps = (globalState) => {
 }
 
 export default connect(mapStateToProps)(App)
+
+
+
+
+
+
+        {/* <div className="vertical-list"> */}
+          {/* <div className="vertical-list">
+          <div className="vertical-list"> */}
+            {/* <Link to='/' className="">
+              <h1 className="title is-1">Scale</h1>
+            </Link> */}
+            
+            
+          {/* </div>
+          </div> */}
+        {/* </div> */}
+
+        // <div className="display">
+        // {!auth.isAuthenticated &&
+        //   <Route exact path="/" component={Login} />
+        // }
+        // <Route exact path="/" component={Home} />
+        // <Route path="/login" component={Login} />
+        // <Route path="/register" component={Register} />
+        // <Route path='/fish' component={FishInfo} />
+        // <Route path='/rules' component={RulesInfo} />
+        // <Route path="/stats" component={Statistic} />
+        
+        // {auth.isAuthenticated && 
+        //   <Route path='/user' component={UserHome} />
+        //   <Route path="/diary" component={Diary} />
+        //   <Route path="/achievements" component={Achievements} />
+        // } 
+        // </div>
+        {/* <Route path='/' component={Footer}/>  */}
+        // </Router>

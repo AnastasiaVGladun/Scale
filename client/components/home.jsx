@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 
-function Home () {
+function Home ({auth}) {
 
     return (    
             <div>
@@ -16,9 +16,11 @@ function Home () {
                     <li> <p>Register</p> </li>
                     </ul>
                 </div> */}
+                {auth.isAuthenticated && 
                 <div>
                     <img id="home-image" src="/images/Pictures/cover_page.png" />
                 </div>
+                }
             </div>
 
 
@@ -26,12 +28,10 @@ function Home () {
 }
 
 
-
-
-
 const mapStateToProps = (globalState) => {
   return {
-    fish: globalState.fish
+    fish: globalState.fish,
+    auth: globalState.auth
   }
 }
 

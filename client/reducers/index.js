@@ -11,7 +11,7 @@ import methods from './methods'
 import poacher from './poacher'
 import marketplace from './marketplace'
 import bird from './bird'
-import usersAchievements from './usersAchievements'
+
 
 export default combineReducers({
   auth,
@@ -25,5 +25,5 @@ export default combineReducers({
   marketplace,
   methods,
   bird,
-  usersAchievements
+
 })

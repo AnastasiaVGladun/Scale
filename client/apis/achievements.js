@@ -1,20 +1,12 @@
 import request from 'superagent'
+import { getAuthorizationHeader } from 'authenticare/client'
+
 
 const baseUrl = '/api/v1/diary/achievements'
-const userUrl = '/api/v1/diary/achievements/allusers'
-
-export const fetchAchievements = () => {
-  return request.get(baseUrl)
-  .then(response => {
-    return response.body
-  })
-  .catch(err => {
-    console.log('message', err.message)
-  })
-}
 
 export const fetchUsersAchievements = () => {
-  return request.get(userUrl)
+  return request.get(baseUrl)
+  .set(getAuthorizationHeader())
   .then(response => {
     return response.body
   })

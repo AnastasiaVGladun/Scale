@@ -7,19 +7,19 @@ const router = express.Router()
 
 
 // Get achievements badges
-router.get('/', (req, res) => {
+// router.get('/', (req, res) => {
 
-  return db.getAllAchievements()
-  .then((response) => {
-    res.json(response)
-  })
-  .catch(err => {
-    console.log(err.message)
-  })
-})
+//   return db.getAllAchievements()
+//   .then((response) => {
+//     res.json(response)
+//   })
+//   .catch(err => {
+//     console.log(err.message)
+//   })
+// })
 
 // Get all users achievements
-router.get('/allusers', getTokenDecoder(),(req, res) => {
+router.get('/', getTokenDecoder(),(req, res) => {
   const userId = (req.user.id)
 
   return db.getAllUsersAchievementsById(userId)
@@ -34,6 +34,8 @@ router.get('/allusers', getTokenDecoder(),(req, res) => {
 
 
 
-
-
 module.exports = router
+
+
+
+  

@@ -5,7 +5,7 @@ import { getRules } from '../actions/rules'
 function RulesInfo (props) {
  
     const {rules, dispatch} = props
-    console.log(rules)
+    // console.log(rules)
  
     useEffect(() => {
 

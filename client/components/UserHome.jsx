@@ -26,7 +26,7 @@ const UserHome = (props) => {
             </div>
 
 
-            <h2>Important Dates (placeholder)</h2>
+            <h2>Important Dates</h2>
             <div className='boatInfo'>
                <Boat/>
             </div>

@@ -19,6 +19,7 @@ import RulesInfo from './RulesInfo'
 import UserHome from './UserHome'
 import Achievements from './Achievements'
 import Footer from './Footer'
+import BirdInfo from './BirdInfo'
 
 function App (props) {
   const { auth, dispatch } = props
@@ -51,6 +52,8 @@ function App (props) {
         <Route path='/fish' component={FishInfo} />
         <Route path='/rules' component={RulesInfo} />
         <Route path="/stats" component={Statistic} />
+        <Route path="/bird" component={BirdInfo} />
+
         </div>
 
         {auth.isAuthenticated &&

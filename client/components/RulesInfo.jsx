@@ -19,10 +19,8 @@ function RulesInfo (props) {
                 <h5 className="rules">Using correct fishing methods and equipment protects local fisheries<br />
                  and keeps fish numbers sustainable for future generations. </h5>
 
-                < div className='rulesWrap'>
-                <img className='mapPhoto' src={'/images/icon/map.gif'} ></img>
-                    
-                            <ul >
+                < div className='rulesWrap'>        
+                        <ul >
 
                                 {rules.map(rulesinfo => {
                                  return <div className="rules-info"key={rulesinfo.id}>
@@ -34,6 +32,7 @@ function RulesInfo (props) {
                                     </div>
                                 })}
                             </ul>
+                            <img className='mapPhoto' src={'/images/icon/NZoutline.svg'} ></img>
                         </div>
                    
                 

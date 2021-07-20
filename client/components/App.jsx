@@ -22,6 +22,11 @@ import Poacher from './Poacher'
 import Marketplace from './marketplace'
 import AddListing from './AddListing'
 import Footer from './Footer'
+import BirdInfo from './BirdInfo'
+import SearchBox from './Search'
+import AddBoat from './AddBoat'
+import Obs from './obs'
+import AddObs from './AddObs'
 
 function App (props) {
   const { auth, dispatch } = props
@@ -37,9 +42,9 @@ function App (props) {
           <div className="darkBlue"> </div>
             <Router>
            <div className="vertical-list">
-            <Link to='/' className="">
+            {/* <Link to='/' className="">
               <h1 className="title is-1">Scale</h1>
-            </Link>
+            </Link> */}
             <Route path="/" component={Nav} />
             
           </div>
@@ -51,9 +56,13 @@ function App (props) {
         
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Route path='/fish' component={FishInfo} />
+        {/* <Route path='/fish' component={FishInfo} /> */}
+        <Route path='/fish' component={SearchBox} />
+
         <Route path='/rules' component={RulesInfo} />
         <Route path="/stats" component={Statistic} />
+        <Route path="/bird" component={BirdInfo} />
+
         </div>
 
         {auth.isAuthenticated &&
@@ -64,6 +73,9 @@ function App (props) {
           <Route path="/poacher" component={Poacher} />
           <Route path="/marketplace" component={Marketplace} />
           <Route path="/addListing" component={AddListing} />
+          <Route path="/addBoat" component={AddBoat} />
+          <Route path="/obs" component={Obs} />
+          <Route path="/addObs" component={AddObs} />
        
           </>
         } 

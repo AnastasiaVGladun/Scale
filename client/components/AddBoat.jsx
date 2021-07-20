@@ -1,38 +1,82 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { createBoatListing, getBoatListings } from '../actions/boat'
-import {Link} from 'react-router-dom'
+import { getObsListings, createObsListing } from '../actions/obs'
 
-const Boat = (props) => {
-  const {dispatch, boat} = props
+const AddListing = (props) => {
+  const {dispatch} = props
+  const [formData, setFormData] = useState({date: 21022021 ,name: '', email: '', phone: '', description: ''})
 
-  useEffect(() => {
-    dispatch(getBoatListings())
-  }, [])
+  // Onchange Handler 
+  const changeHandler = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value
+    })
+  }
+
+  // Submit Handler 
+  const submitHandler = (event) => {
+    event.preventDefault()
+    dispatch(createObsListing(formData))
+    setFormData({date: 21022021, name: '', email: '', phone: '', description: ''})
+  }
 
   return (
-    <div className="boat-body">
-      <h1 className="boat-heading">Boat</h1>
-      <div className="listing-container">
-      <div className="add-listing"><Link to='/addlisting'><button>+ Add listing</button></Link></div>
-        {boat.map((listing) => {
-          return (
-          <div className="listing" key={listing.id}>
-            <p>{listing.date}</p>
-            <p>{listing.name}</p>
-            <p>{listing.phone}</p>
-            <p>{listing.description}</p>
-          </div>)
-        })}
-      </div>
+    <div>
+  <form className="poacher-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
+        {/* Date */}
+        <div className="field">
+            <label className="label">Date</label>
+              <div className="control">
+                <input name="date" type="date" id="date" value={formData.date} onChange={(e) => changeHandler(e)}/>
+              </div>
+            </div>
+
+            {/* Name */}
+            <div className="field">
+              <label className="label">Name</label>
+              <div className="control">
+                <input name="name" type="text" id="name" value={formData.name} onChange={(e) => changeHandler(e)}  className="input" placeholder="Name"/>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="field">
+              <label className="label">Email</label>
+              <div className="control">
+                <input name="email" type="text" id="email" value={formData.email} onChange={(e) => changeHandler(e)} className="input" placeholder="Email"/>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="field">
+              <label className="label">Phone</label>
+              <div className="control">
+                <input name="phone" type="text" id="phone" value={formData.phone} onChange={(e) => changeHandler(e)} className="input" placeholder="Phone"/>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="field">
+              <label className="label">Description</label>
+              <div className="control">
+                <input name="description" type="text" id="description" value={formData.description} onChange={(e) => changeHandler(e)} className="input" placeholder="Description"/>
+              </div>
+            </div>
+            
+            {/* Submit Button */}
+            <div className="control">
+              <button className="buttonItem">Submit</button>
+            </div>
+      </form>
     </div>
   )
 }
 
 const mapStateToProps = (globalState) => {
   return {
-    boat: globalState.boat
+    obs: globalState.obs
   }
 }
 
-export default connect(mapStateToProps)(Boat) 
+export default connect(mapStateToProps)(AddListing) 

@@ -1,49 +1,58 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { getBoatListings } from '../actions/boat'
 import { Link } from 'react-router-dom'
+import { getBoatListings } from '../actions/boat'
+
 
 const Boat = (props) => {
-    const { dispatch, boat } = props
+    const { boat, dispatch } = props
 
     useEffect(() => {
         dispatch(getBoatListings())
     }, [])
 
+
     return (
         <>
-        <div className="boat-body">
-            <h2> className="boat-heading">{boat.boat_name}</h2>
-            <div className="listing-container">
-                <div className="add-listing"><Link to='/addlisting'><button>+ Add listing</button></Link></div>
-            </div>
-        </div>
-         
-         <div className="listing" key={boat.id}>
-            <h3>Boat Licence</h3><br></br>
-            <p>{boat.boat_licence}</p>
-            <p>{boat.boat_licence_expiry}</p>
-        </div>
+            {boat ?
+            <>
+            <div className='boatName'>Boat Name: {boat.boat_name}</div>
+                <div className='boatData'>
+                    {/* <div className='boatName'>Boat Name: {boat.boat_name}</div> */}
 
-        <div className="listing" key={boat.id}>
-            <h3>Fish Licence</h3><br></br>
-            <p>{boat.Fish_licence}</p>
-            <p>{boat.Fish_licence_expiry}</p>
-        </div>
+                    <div className="boatListings" key={boat.key}>
+                        <h3>Boat Licence</h3><br></br>
+                        <h3>{boat.boat_licence}</h3>
+                        <p>expires {boat.boat_licence_expiry}</p>
+                    </div>
 
-        <div className="listing" key={boat.id}>
-            <h3>Boat WOF</h3><br></br>
-            <p>{boat.Boat_WOF_licence}</p>
-            <p>{boat.Boat_WOF_licence_expiry}</p>
-        </div>
-        
+                    <div className="boatListings" key={boat.key}>
+                        <h3>Fish Licence</h3><br></br>
+                        <h3>{boat.Fish_licence}</h3>
+                        <p>expires {boat.Fish_licence_expiry}</p>
+                    </div>
+
+                    <div className="boatListings" key={boat.key}>
+                        <h3>Boat WOF</h3><br></br>
+                        <p>{boat.Boat_WOF_licence}</p>
+                        <p>expires {boat.Boat_WOF_licence_expiry}</p>
+                    </div>
+                </div>
+                </>
+                :
+                <div>
+                <h2>Please enter your info here</h2>
+                </div>
+            }
+
+
         </>
     )
 }
 
 const mapStateToProps = (globalState) => {
     return {
-        boat: globalState.boat
+        boat: globalState.boat,
     }
 }
 

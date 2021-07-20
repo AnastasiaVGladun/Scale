@@ -37,7 +37,7 @@
 
 body {
     font-family: 'Roboto', sans-serif; 
-    color: #006373;
+    
   }
 .buttonItem {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -45,9 +45,9 @@ body {
     font-weight: 700;
     margin: 30px;
     padding: 8px;
-    color: #006373;
+    color: white;
     border-color: #006373;
-    background-color: #b4e6ef;
+    background-color: #006373;
     box-shadow: 2px 2px #03404a;
     border-radius: 4px;
 }
@@ -56,7 +56,7 @@ h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     margin-bottom: 30px;
-    color: #006373;
+    color: #03404a;
 }
 h2 {
     font-size: 30pt;
@@ -64,22 +64,50 @@ h2 {
     text-decoration: underline;
     text-align: center;
     margin-top: 30px;
+    color: #006373;
+    font-weight: 700;
 }
 h4 {
     font-size: 24pt;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #006373;
+    font-weight: 700;
 }
 h5 {
-    font-size: 14pt;
+    font-size: 15pt;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: auto;
     text-align: center;
-
+    color: grey;
+}
+.homeName {
+    font-size: 45pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
 }
 .navItem {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    
+    // font-weight: 800;
 }
+.RegisterForm{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginForm {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .myCatch{
     display: flex;
     align-items: center;
@@ -90,7 +118,7 @@ h5 {
     padding-left: 30px;
 }
 .diaryWrap {
-    width: 70%;
+    width: 65%;
     padding-bottom: 55px;
 }
 .darkBlue {
@@ -100,7 +128,7 @@ h5 {
 }
 .mainWrap{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     flex-direction: row
 }
@@ -112,46 +140,51 @@ h5 {
   text-align: center;
 }
 .logo-img {
-    margin-left: 20px;
-    margin-bottom: 30px;
-    display: flex; 
     width: 65%;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 40px;
 }
 .homeImage {
     height: auto;
-    max-width: 71.3%;
+    max-width: 67.8%;
+    width: auto;
 }
 .vertical-list {
     display: flex; 
     background-color: #76e0c7;
     flex-direction: column;
-    width: 150px;
+    width: 200px;
     flex-direction: column;
   } 
 .myNav {
-    align-items: stretch;
+    align-items: center;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
 }
 .formCatch {
     display: flex;
     flex-direction: column;
 }
-  
+.inforulesWrap {
+width: 960px;
+}
 .infoWrap{
     width: 900px;
     margin-left: 40px;
 }
+
 .fish-info {
     margin: 10px;
     padding: 20px;
 }
-
-.fish-info p {
-    font-weight: bold;
-    font-size: 30px;
+.fish-image {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-
 .mapPhoto {
     width: 500px;
     height: 700px;
@@ -178,10 +211,94 @@ h5 {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 71.3%;
+    width:  67%;
 }
 .boatInfo {
     padding-left: 20px;
+}
+
+.boatData {
+    text-align: center;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+}
+
+.boatName {
+    font-size: 20px;
+    color: #006373;
+}
+
+.boatListings {
+    width: 60%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #13505A;
+    color: white;
+    border-radius: 5px;
+    box-shadow: rgb(50 50 50 / 50%) 0px 3px 6px 0px;
+}
+.importantDates {
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-bottom: solid 1px grey;
+}
+.latestEntry {
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-bottom: solid 1px grey;
+}
+
+.entryList {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.latestAchiv {
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-bottom: solid 1px grey;
+}
+
+.achivList {
+    margin-top: 20px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+}
+.achivList img {
+        padding: 20px;
+    height: auto;
+    width: 200px;
+    border: solid #13505A;
+    border-radius: 100px;
+    box-shadow: rgb(50 50 50 / 50%) 0px 3px 6px 0px;
+}
+
+.communityHelp {
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-bottom: solid 1px grey;
+}
+
+.helpList {
+    display: flex;
+    flex-direction: column;
+}
+.helpItem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 .weather {
     width: 80%;
@@ -193,33 +310,41 @@ h5 {
     font-weight: 700;
     margin: 3px;
     padding: 8px;
-    color: #006373;
-    border-color: #006373;
-    background-color: #b4e6ef;
-    box-shadow: 2px 2px #03404a;
     border-radius: 4px;
+    color: white;
+    border-color: #006373;
+    background-color: #006373;
+    box-shadow: 2px 2px #03404a;
+    // margin-bottom: 50px;
+    margin-left: 20px;
+    width: 200px;
 }
-.bird-info {
-    margin: 10px;
-    padding: 20px;
+.dropMenu option {
+    background-color: #03404a;
 }
-
-.bird-info p {
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.bird-image {
-    width: 150px;
-    
-}
-
-// .rules-info {
+// .bird-info {
 //     margin: 10px;
 //     padding: 20px;
 // }
 
-.rules-info p {
+// .bird-info p {
+//     font-weight: bold;
+//     font-size: 30px;
+// }
+
+// .bird-image {
+//     width: 150px;
+    
+// }
+
+.rules-info a {
+    color: #13505A;
+}
+.rules-info a:hover {
+    color: #777;
+  }
+
+.rules-info {
     font-weight: bold;
     font-size: 30px;
 }
@@ -234,11 +359,14 @@ text-align: center;
     font-size: 50px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
+    color: #13505A;
+    font-weight: 700;
 }
 .rules{
-    font-size: 30px;
+    font-size: 20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
+    padding: 20px
 }
 #app {
     min-height: 100vh;
@@ -294,11 +422,49 @@ text-align: center;
     margin-left: 50px;
 }
 
+.stat {
+    display: flex;
+    width: 950px;
+    flex-direction: column;
+}
+.statWrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* width: 100%; */
+    align-items: flex-start;
+    margin-left: 50px;
+    align-content: space-around;
+}
 
-// ==========================================================================
-// Poacher style
+.stat p {
+    font-size: 15pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 20px;
+    // text-align: center;
+    color: grey;
+}
+.statItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.statInfo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #13505A;
+    margin-right: 60px;
+}
+
+.statNum {
+    font-size: 30px;
+    font-weight: 700;
+    color: #13505A;
+    margin-left: 60px;
+}
+
+
 .poacher-form {
     width: 50vw;
     margin: 10px auto;
 }
-// ==========================================================================

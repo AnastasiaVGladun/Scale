@@ -1,12 +1,11 @@
 import { connect } from 'react-redux'
-import React, { Children, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { getLocations} from '../actions/locations'
 import { getFish } from '../actions/fish'
 import { getMethods} from '../actions/methods'
 import { addCatch } from '../actions/diary'
 import { storage } from './Firebase' 
-// import { put } from '../../server/routes/diaryRoutes'
-// import { ref } from '../../server/db/connection'
+
 
 function Catch (props) {
 
@@ -24,6 +23,7 @@ function Catch (props) {
         method_id: 'rod',
         time: '12:00am',
         weight: '50'
+        
 
     })
 
@@ -35,21 +35,24 @@ function Catch (props) {
         })
     }
 
-    // const handleSubmit = (e) => {
-    //     console.log('submit')
-    //     e.preventDefault()
-    //     const formImage = new FormData()
-    //     formImage.append('fish_img', fishImg)
-    //       props.dispatch(addCatch(formImage, formData))
-    // }   
+    const handleSubmit = (e) => {
+        console.log('submit')
+        e.preventDefault()
+        const formImge = new FormData()
+        formImage.append('fish_img', fishImg)
+          props.dispatch(addCatch(formImage, formData))
+    }   
 
+    
     const onChangeFile = (e) => {
         if (e.target.files[0]){
             setFishImg(e.target.files[0])
     }
     }
 
-    const handleUpload = () => {
+    const handleUpload = (e) => {
+        e.preventDefault()
+        const image = fishImg
         const uploadTask = storage.ref(`images/${image.name}`).put(image)
         uploadTask.on(
             "state_changed",
@@ -60,7 +63,7 @@ function Catch (props) {
             () => {
             storage
                 .ref('images')
-                .Child(image.name)
+                .child(image.name)
                 .getDownloadURL()
                 .then(url => {
                     console.log(url)
@@ -71,7 +74,7 @@ function Catch (props) {
 
     return (
       
-    <form className="form box" className="form box" className="form box" onSubmit={onChangeFile}>
+    <form className="form box" className="form box" className="form box" onSubmit={handleUpload}>
     
             <h1> Log My Catch</h1>
 
@@ -106,7 +109,7 @@ function Catch (props) {
 
         <label className="label is-large has-text-centered" htmlFor="fish_img">
             <span className="form__label-title">Fish Image: </span>
-            <input type="file" name="fish_img" onChange={handleUpload} />
+            <input type="file" name="fish_img" onChange={onChangeFile} />
           </label>
 
         <button className="button is-large is-fullwidth is-success" type="submit" className="btn">Submit</button>

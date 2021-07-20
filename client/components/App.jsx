@@ -47,6 +47,7 @@ function App (props) {
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path='/fish' component={FishInfo} />
+        <Route path="/bird" component={Birdinfo} />
         <Route path='/rules' component={RulesInfo} />
         <Route path="/stats" component={Statistic} />
         
@@ -56,6 +57,8 @@ function App (props) {
         {auth.isAuthenticated && <Route path="/poacher" component={Poacher} />}  
         {auth.isAuthenticated && <Route path="/marketplace" component={Marketplace} />}  
         {auth.isAuthenticated && <Route path="/addlisting" component={AddListing} />}  
+        {auth.isAuthenticated && <Route path="/bird" component={Birdinfo} />}     
+
         <Route path='/' component={Footer}/> 
         </div>
     </Router>

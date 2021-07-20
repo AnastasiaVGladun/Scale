@@ -2,6 +2,7 @@
 
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
 
 // // Import custom variables and Bulma overides
 @import "./variables.scss";
@@ -18,6 +19,10 @@
 // @import "bulma/sass/layout/section.sass";
 
 // //setting up Gallery for birds
+* {
+    font-family: 'Chakra Petch', sans-serif !important;
+}
+
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
@@ -50,7 +55,7 @@ h1 {
 h2 {
     font-size: 30pt;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-decoration: underline;
+    text-decoration: none;
 }
 h4 {
     font-size: 24pt;
@@ -66,40 +71,7 @@ h5 {
     align-items: center;
 
 }
-// .diaryList {
-//     list-style-type: none;
-// }
-// .darkBlue {
-//     display: flex;
-//     width: 260px;
-//     background-color: #006373;
-// }
-// .mainWrap{
-//     display: flex;
-//     margin: -50px;
-// }
-// .fishPhoto {
-//     width: 150px;
-// }
-// .logo-img {
-//     margin-left: 20px;
-//     display: flex; 
-//     width: 65%;
-// }
-// .vertical-list {
-//     display: flex; 
-//     background-color: #76e0c7;
-//     flex-direction: column;
-//     margin-bottom: 10px;
-//     width: 150px;
-//     flex-direction: column;
-//   } 
-// .myNav {
-//     align-items: stretch;
-//     display: flex;
-//     flex-direction: column;
-//     border: 2px black solid;
-// }
+
 .formCatch {
     display: flex;
     flex-direction: column;
@@ -108,19 +80,17 @@ h5 {
 
 .fish-info {
     margin: 10px;
-    padding: 20px;
+    margin-bottom: 50px;
 }
 
 .fish-info p {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .fish-image {
-    width: 150px;
-    
+    width: 150px; 
 }
-
 
 .mapPhoto {
     width: 500px;
@@ -217,10 +187,6 @@ margin-left: 30px;
     text-align: center;
 }
 
-// .listing-container {
-    
-// }
-
 .listing {
     width: 60%;
     margin: 20px auto;
@@ -234,29 +200,27 @@ margin-left: 30px;
     margin: 15px;
 }
 
-  .headerStyle {
-  font-size: 50px;
+.headerStyle {
+font-size: 50px;
 
 
 
-  margin-left: 30px;
+margin-left: 30px;
 
-  margin-bottom: 50px;
-
-  }
-
-  .wrapper {
-    margin-top: 40px;
-    margin-left: 50px;
-
-
-  }
-
-  .bird-img {
-    
-  
+margin-bottom: 50px;
 
 }
+
+.wrapper {
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+// .bird-img {
+
+
+
+// }
 
 // ==========================================================================
 // NAV
@@ -288,7 +252,7 @@ margin-left: 30px;
     max-width: 400px;
     text-align: center;
     height: 100vh;
-    background-color: #8EC8B2;
+    background-color:  #13505A;
 
 }
 
@@ -305,7 +269,7 @@ margin-left: 30px;
 }
 
 .navbar-menu.is-active {
-    background-color: #8EC8B2;
+    background-color:#13505A;
 }
 
 a.navbar-item {
@@ -314,7 +278,7 @@ a.navbar-item {
 }
 
 a.navbar-item:hover {
-    background-color: #13505A;
+    background-color: #8EC8B2;
     color: #fff;
 }
 
@@ -323,12 +287,13 @@ a.navbar-item:hover {
 }
 
 .navbar-burger.burger:hover {
-    background-color: #13505A;
+    background-color: #8EC8B2;
     color: #fff;
 }
 
 .navbar-burger.burger {
     margin: 0px auto;
+    color: #fff;
 }
 
 #logout:hover {
@@ -358,3 +323,120 @@ a.navbar-item:hover {
 .poacher-form input{
     width: 100%; 
 }
+
+//================================================================
+// Markert place 
+
+.card {
+    border: 2px red solid; 
+    margin: 20px auto;
+    width: 60vw;
+}
+
+.card-content {
+    // border: 2px blue solid; 
+
+}
+
+.card-footer {
+    // border: 2px yellow solid; 
+    display: flex;
+}
+
+.card-footer-item {
+    border: 2px black solid; 
+    width: 50%;
+    text-align: center;
+}
+// =========================================================================
+
+//Log in
+
+.button.is-primary {
+    margin: 10px auto;
+    width: 150px;
+}
+
+.form.box {
+    width: 60vw;
+    margin: 40px auto;
+    padding: 20px;
+}
+//================================================================
+// User Home 
+.weather-container {
+    width: 35vw;
+    position: absolute;
+    align-self: sticky;
+    right: 30px;
+    top: 30px;
+}
+
+.dropMenu {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.user-home-card { 
+    width: 35vw;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: #8EC8B2;
+    color: #fff;
+    opacity: 0.9;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.user-home-card:hover {
+    transform: scale(1.05);
+    
+}
+
+.my-community-card {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px auto;
+    border-radius: 10px;
+    background-color: #8EC8B2;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.user-stats-container {
+    margin-bottom: 20px;
+    position: relative;
+    padding: 10px;
+}
+
+.my-community-container {
+    padding: 10px;
+}
+
+.community-p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+p {
+    font-size: 18px;
+}
+
+hr {
+    margin-top: -1px;
+}
+
+// ================================================================
+// Fish-info
+
+.Fish-info-container {
+    width: 70vw;
+    margin: 10px auto;
+}
+
+// ================================================================
+// 

@@ -19,12 +19,13 @@ const AddListing = (props) => {
     event.preventDefault()
     dispatch(createMarketplaceLising(formData))
     setFormData({date: 21022021, name: '', email: '', phone: '', description: ''})
+    props.history.push("/marketplace")
   }
 
   return (
     <div>
       <h1>Add a Listing</h1>
-      <form className="poacher-form" onSubmit= {(e) => submitHandler(e)}>
+      <form className="poacher-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
         {/* Date */}
         <div className="field">
             <label className="label">Date</label>

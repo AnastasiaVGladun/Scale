@@ -37,7 +37,7 @@ function Weather(props) {
   });
 
   return (
-      <>
+    <div className="weather-container">
     <select onChange={onSelect} className='dropMenu'>
     <option value="All">Choose your region</option>
     {props.locations.map (location => {
@@ -54,7 +54,7 @@ function Weather(props) {
       unitsLabels={{ temperature: 'C', windSpeed: 'Km/h' }}
       showForecast
     />
-    </>
+    </div>
   );
 };
 
@@ -66,3 +66,5 @@ const mapStateToProps = (globalState) => {
   }
   
   export default connect(mapStateToProps)(Weather)
+
+

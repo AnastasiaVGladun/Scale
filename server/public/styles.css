@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap);
 /* Bulma Utilities */
 .button, .input, .textarea, .select select, .file-cta,
 .file-name {
@@ -3337,6 +3338,9 @@ a.navbar-item,
   flex-shrink: 0;
   padding: 3rem 1.5rem; }
 
+* {
+  font-family: 'Chakra Petch', sans-serif !important; }
+
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
@@ -3361,7 +3365,7 @@ h1 {
 h2 {
   font-size: 30pt;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  text-decoration: underline; }
+  text-decoration: none; }
 
 h4 {
   font-size: 24pt;
@@ -3382,11 +3386,11 @@ h5 {
 
 .fish-info {
   margin: 10px;
-  padding: 20px; }
+  margin-bottom: 50px; }
 
 .fish-info p {
   font-weight: bold;
-  font-size: 30px; }
+  font-size: 20px; }
 
 .fish-image {
   width: 150px; }
@@ -3512,7 +3516,7 @@ h5 {
   max-width: 400px;
   text-align: center;
   height: 100vh;
-  background-color: #8EC8B2; }
+  background-color: #13505A; }
 
 .vertical-list {
   width: 25vw;
@@ -3525,25 +3529,26 @@ h5 {
   width: 100%; }
 
 .navbar-menu.is-active {
-  background-color: #8EC8B2; }
+  background-color: #13505A; }
 
 a.navbar-item {
   display: block;
   color: #fff; }
 
 a.navbar-item:hover {
-  background-color: #13505A;
+  background-color: #8EC8B2;
   color: #fff; }
 
 .myNav {
   width: 100%; }
 
 .navbar-burger.burger:hover {
-  background-color: #13505A;
+  background-color: #8EC8B2;
   color: #fff; }
 
 .navbar-burger.burger {
-  margin: 0px auto; }
+  margin: 0px auto;
+  color: #fff; }
 
 #logout:hover {
   background-color: #F14668; }
@@ -3562,6 +3567,87 @@ a.navbar-item:hover {
 
 .poacher-form input {
   width: 100%; }
+
+.card {
+  border: 2px red solid;
+  margin: 20px auto;
+  width: 60vw; }
+
+.card-footer {
+  display: flex; }
+
+.card-footer-item {
+  border: 2px black solid;
+  width: 50%;
+  text-align: center; }
+
+.button.is-primary {
+  margin: 10px auto;
+  width: 150px; }
+
+.form.box {
+  width: 60vw;
+  margin: 40px auto;
+  padding: 20px; }
+
+.weather-container {
+  width: 35vw;
+  position: absolute;
+  align-self: sticky;
+  right: 30px;
+  top: 30px; }
+
+.dropMenu {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 5px;
+  cursor: pointer; }
+
+.user-home-card {
+  width: 35vw;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 10px;
+  background-color: #8EC8B2;
+  color: #fff;
+  opacity: 0.9;
+  transition: all .5s ease-in-out;
+  cursor: pointer; }
+
+.user-home-card:hover {
+  transform: scale(1.05); }
+
+.my-community-card {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px auto;
+  border-radius: 10px;
+  background-color: #8EC8B2;
+  color: #fff;
+  opacity: 0.9; }
+
+.user-stats-container {
+  margin-bottom: 20px;
+  position: relative;
+  padding: 10px; }
+
+.my-community-container {
+  padding: 10px; }
+
+.community-p {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 18px; }
+
+p {
+  font-size: 18px; }
+
+hr {
+  margin-top: -1px; }
+
+.Fish-info-container {
+  width: 70vw;
+  margin: 10px auto; }
 
 
 /*# sourceMappingURL=styles.css.map*/

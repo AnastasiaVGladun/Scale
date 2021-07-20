@@ -12,18 +12,14 @@ function FishInfo (props) {
     return (    
             <div className='wrapper'>
              <h1 className= "headerStyle">Fishing Species in Aotearoa</h1>
-             <p><strong>A visual reference for identifying saltwater (and freshwater) fish species that are located in New Zealand waters.</strong> <p>Learn more about each fish species such as it's physical characteristics, typical locations in New Zealand and suitability for eating.</p></p>
-                <div>
-                    <ul id="horizontal-list">
+                <div className="Fish-info-container">
                         {fish.map(fishinfo => {
                             return <div className="fish-info" key={fishinfo.id}>
-                                <li><p> {fishinfo.name}</p></li>
-                                <li> <p><img className= 'fish-image' src={`/images/Fish/${fishinfo.image}@2x.png`}/>
-</p></li>
-                                <li>{fishinfo.description}</li>
+                                <h2> {fishinfo.name}</h2>
+                                <p><img className= 'fish-image' src={`/images/Fish/${fishinfo.image}@2x.png`}/></p>
+                                <p>{fishinfo.description}</p>
                             </div>
                         })}
-                    </ul>
                 </div>
             </div>
         

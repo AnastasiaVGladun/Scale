@@ -3396,8 +3396,7 @@ h5 {
   width: 150px; }
 
 .mapPhoto {
-  width: 500px;
-  height: 700px; }
+  width: 250px; }
 
 .rulesWrap {
   display: flex;
@@ -3426,9 +3425,39 @@ h5 {
 .bird-image {
   width: 150px; }
 
-.rules-info {
-  margin: 10px;
+.rules-map {
+  width: 350px;
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  text-align: center; }
+
+.rules-container {
+  text-align: center; }
+
+.rules-main {
+  display: flex;
+  position: relative;
   padding: 20px; }
+
+.rules-info {
+  width: 220px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #8EC8B2;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  box-sizing: border-box;
+  transition: all .2s ease-in-out; }
+
+.rules-info:hover {
+  transform: scale(1.05); }
+
+.rulesWrap {
+  width: 52vw; }
 
 .rules-info p {
   font-weight: bold;
@@ -3648,6 +3677,28 @@ hr {
 .Fish-info-container {
   width: 70vw;
   margin: 10px auto; }
+
+.stats-wrap, .stats-container {
+  text-align: center; }
+
+.fish-stat {
+  width: 250px;
+  display: inline-block;
+  margin: 20px;
+  text-align: center; }
+
+.fish-stat img {
+  width: 280px;
+  height: 120px; }
+
+.diary-card {
+  border: 2px red solid;
+  width: 40vw;
+  margin: 20px auto; }
+
+.diary-conatiner {
+  border: 2px blue solid;
+  display: flex; }
 
 
 /*# sourceMappingURL=styles.css.map*/

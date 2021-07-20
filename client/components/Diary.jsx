@@ -13,19 +13,31 @@ return (
         {props.diary.map(entry => {
             console.log(entry)
             return (
-                <li className='diaryList'>
-                <h2>{entry.time}</h2>
-                <h4>Location: {entry.location}</h4>
-                <div className="myCatch">
-                    <h5>Cought {entry.method}</h5>
-                    <h5>Fish type: {entry.name}</h5>
-                    <h5>Quantity: {entry.quantity}</h5> 
-                    <img className='fishPhoto' src={`/images/Fishing people/${entry.photo}`} ></img>
+                <div className="diary-conatiner">
+                    <div className="diary-card">
+                    <div className="card-image">
+                    <figure className="image is-4by3">
+                    <img src={`/images/Fishing people/${entry.photo}`} alt="fish catch image"/>
+                    </figure>
+                    </div>
+                
+                    <div className="card-content">
+                    <div className="content">
+                        <p>Location: {entry.location}</p>
+                        <p>Cought {entry.method}</p>
+                        <p>Fish type: {entry.name}</p>
+                        <p>Quantity: {entry.quantity}</p> 
+                        <p>Description: {entry.description}</p> 
+                        <h2>{entry.time}</h2>
+                    </div>
+                    </div>
                 </div>
-                </li>
+                </div>
             )
         })}
-                <Link to='/addCatch'><button type="button">New Catch</button></Link>
+
+        
+        <Link to='/addCatch'><button type="button">New Catch</button></Link>
     </div>
 )
 }
@@ -39,3 +51,5 @@ const mapStateToProps = (globalState) => {
   }
   
   export default connect(mapStateToProps)(Diary)
+
+

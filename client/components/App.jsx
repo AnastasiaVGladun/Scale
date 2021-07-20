@@ -18,6 +18,9 @@ import FishInfo from './FishInfo'
 import RulesInfo from './RulesInfo'
 import UserHome from './UserHome'
 import Achievements from './Achievements'
+import Poacher from './Poacher'
+import Marketplace from './marketplace'
+import AddListing from './AddListing'
 import Footer from './Footer'
 
 function App (props) {
@@ -58,6 +61,9 @@ function App (props) {
           <Route path='/user' component={UserHome} />
           <Route path="/diary" component={Diary} />
           <Route path="/achievements" component={Achievements} />
+          <Route path="/poacher" component={Poacher} />
+          <Route path="/marketplace" component={Marketplace} />
+          <Route path="/addListing" component={AddListing} />
        
           </>
         } 

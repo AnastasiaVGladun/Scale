@@ -3373,12 +3373,14 @@ h2 {
   text-decoration: underline;
   text-align: center;
   margin-top: 30px;
-  color: #006373; }
+  color: #006373;
+  font-weight: 700; }
 
 h4 {
   font-size: 24pt;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #006373; }
+  color: #006373;
+  font-weight: 700; }
 
 h5 {
   font-size: 15pt;
@@ -3399,6 +3401,18 @@ h5 {
   font-size: 20px;
   color: white;
   padding: 10px; }
+
+.RegisterForm {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.loginForm {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .myCatch {
   display: flex;
@@ -3501,6 +3515,80 @@ h5 {
 .boatInfo {
   padding-left: 20px; }
 
+.boatData {
+  text-align: center;
+  display: flex;
+  margin: auto;
+  flex-direction: row; }
+
+.boatName {
+  font-size: 20px;
+  color: #006373; }
+
+.boatListings {
+  width: 60%;
+  margin: 20px;
+  padding: 20px;
+  background-color: #13505A;
+  color: white;
+  border-radius: 5px; }
+
+.importantDates {
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-bottom: solid 1px grey; }
+
+.latestEntry {
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-bottom: solid 1px grey; }
+
+.entryList {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly; }
+
+.latestAchiv {
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-bottom: solid 1px grey; }
+
+.achivList {
+  margin-top: 20px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center; }
+
+.achivList img {
+  padding: 20px;
+  height: auto;
+  width: 200px;
+  border: solid #13505A;
+  border-radius: 100px; }
+
+.communityHelp {
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-bottom: solid 1px grey; }
+
+.helpList {
+  display: flex;
+  flex-direction: column; }
+
+.helpItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center; }
+
 .weather {
   width: 80%;
   margin: auto; }
@@ -3516,7 +3604,6 @@ h5 {
   border-color: #006373;
   background-color: #006373;
   box-shadow: 2px 2px #03404a;
-  margin-bottom: 50px;
   margin-left: 20px;
   width: 200px; }
 
@@ -3542,7 +3629,8 @@ h5 {
   font-size: 50px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: center;
-  color: #13505A; }
+  color: #13505A;
+  font-weight: 700; }
 
 .rules {
   font-size: 20px;

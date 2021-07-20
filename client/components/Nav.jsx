@@ -20,39 +20,42 @@ function Nav (props) {
     dispatch(logoutUser(confirmSuccess))
   }
 
-  return <nav className="navbar">
+  return <nav >
     <div>
-        <img id="logo-img" src="/images/Logo/logo_1.png" /> 
+        <img className="logo-img" src="/images/Logo/logo_1.png" /> 
       </div>
       <div className="container">
-        <div className="vertical-list">
+        <div >
           <span onClick={toggleBurger} className={`navbar-burger burger ${burgerVisible ? 'is-active' : ''}`} data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
           </span>
         </div>
         <div id="navbarMenuHeroA" className={`navbar-menu ${burgerVisible ? "is-active" : ''}`}>
-          <div className="navbar-end">
-            { auth.isAuthenticated
+          <div className='myNav'>
+            { !auth.isAuthenticated
               ? (
                 <>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/'>HOME</Link>
-
-                  <Link to='/' className="navbar-item is-large" onClick={() => logout()}>LOGOUT</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/statistics'>STATISTICS</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
+                  <Link onClick={toggleBurger}  to='/'>HOME</Link>
+                  <Link onClick={toggleBurger} className='navItem' to='/login'>LOGIN</Link>
+                  <Link onClick={toggleBurger} className='navItem'  to='/register'>REGISTER</Link>
+                  <Link onClick={toggleBurger} className='navItem'className="navbar-item" to='/fish'>FISH INFO</Link>
+                  <Link onClick={toggleBurger} className='navItem'className="navbar-item" to='/bird'>BIRD INFO</Link>
+                  <Link onClick={toggleBurger} className='navItem'className="navbar-item" to='/rules'>RULES</Link>
+                  <Link onClick={toggleBurger} className='navItem' to='/stats'>STATISTICS</Link>
                   </>
                 )
               : (
                 <>
                   <Link onClick={toggleBurger} className="navbar-item is-large" to='/'>HOME</Link>
-                  <Link onClick={toggleBurger} className="navbar-item is-large" to='/login'>LOGIN</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/register'>REGISTER</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/statistics'>STATISTICS</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/id'>DIARY</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/fish'>ACHIVEMENT</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/bird'>BIRD INFO</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/rules'>RULES</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
+                  <Link onClick={toggleBurger} className="navbar-item is-large" to='/diary'>DIARY</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/user'>USERHOME</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/achievements'>ACHIEVEMENTS</Link>
+                  <Link to='/' className="navbar-item is-large" onClick={() => logout()}>LOGOUT</Link>
+
+
 
                 </>
               )

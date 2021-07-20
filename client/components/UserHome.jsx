@@ -52,6 +52,10 @@ const UserHome = (props) => {
                         </div>
                     }
                 </div>
+                <Link to='/addCatch'><button className='buttonItem'type="button">Add Catch</button></Link>
+                <Link to='/diary'><button className='buttonItem'type="button">View Diary</button></Link>
+
+
             </div>
            
 
@@ -70,6 +74,8 @@ const UserHome = (props) => {
                         
                         </div>
                     }
+                <Link to='/achievements'><button className='buttonItem'type="button">View Achievements</button></Link>
+
             </div>
 
             <div className='communityHelp'>

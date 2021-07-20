@@ -9,22 +9,17 @@ const SearchBox = (props) => {
     const [search, setSearch] = useState('')
     
      const handleChange = (e) => {
-        //  console.log(e.target.value)
          e.preventDefault()
         setSearch(e.target.value)
      } 
 
-     const filteredInfo = search.length === 0
-     const speciesArr = fish.map (species =>{
-        return species.name })
-     console.log(search)
-     console.log(fish)
-     console.log(speciesArr)
-    ? fish
-    : speciesArr.filter(fish => {
-        return fish.toLowerCase().includes(search.toLowerCase())  
+
+    const filteredName = fish.filter(theFish => {
+        console.log('theFish',theFish.name)
+        return theFish.name.toLowerCase().includes(search.toLowerCase())  
         
-    })       
+    })   
+    console.log('name',filteredName)    
        
 
   return (
@@ -39,7 +34,7 @@ const SearchBox = (props) => {
                     value={search}
                     onChange={handleChange}
                     />
-            <FishInfo fish={filteredInfo}/>
+            <FishInfo fish={filteredName}/>
     </div>
   );
 }
@@ -50,5 +45,4 @@ const mapStateToProps = (globalState) => {
     }
   }
   export default connect(mapStateToProps)(SearchBox)
-
-// export default SearchBox
+  

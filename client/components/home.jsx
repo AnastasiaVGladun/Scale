@@ -7,9 +7,6 @@ function Home () {
            
       <img className="homeImage" src="/images/Pictures/scaleCover.png" />
 
-          
-
-
     )
 }
 

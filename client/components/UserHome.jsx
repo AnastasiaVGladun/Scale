@@ -89,7 +89,7 @@ const UserHome = (props) => {
                     <div className='helpItem'>
                         <p> Be our kaitiaki out there and capture observations
                             that will contribute to environmental data trends and changes</p>
-                        <Link to='/obs'><button className='buttonItem'type="button">Capture Observations</button></Link>
+                        <Link to='/obs'><button className='buttonItem'type="button">Add Observations</button></Link>
                     </div>  
                     <div className='helpItem'>
                         <p> Want to take the boat out but my mates are too busy? Perhaps we can find someone to go with you.

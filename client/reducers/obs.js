@@ -5,9 +5,9 @@ const intialState = []
 const reducer = (state = intialState, action) => {
   switch (action.type) {
     case SET_OBS_LISTING:
-      return action.listing
+      return action.obs
     case ADD_OBS_LISTING:
-        return [...state, action.newListing]
+        return [...state, action.obs]
       default:
       return state
   }

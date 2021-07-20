@@ -25,7 +25,7 @@ import Footer from './Footer'
 import BirdInfo from './BirdInfo'
 import SearchBox from './Search'
 import AddBoat from './AddBoat'
-import Obs from './obs'
+import Obs from './Obs'
 import AddObs from './AddObs'
 
 function App (props) {

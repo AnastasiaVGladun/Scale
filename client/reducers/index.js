@@ -28,5 +28,4 @@ export default combineReducers({
   methods,
   bird,
   boat
-
 })

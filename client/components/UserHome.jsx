@@ -6,9 +6,8 @@ import { getAchievements } from '../actions/achievements'
 import Boat from './Boat'
 
 
-
 const UserHome = (props) => {
-    const { diary, achievements, dispatch } = props
+    const { diary, achievements, dispatch} = props
 
     const latestEntry = diary[diary.length - 1]
     const latestAchievement = achievements[achievements.length - 1]
@@ -20,13 +19,17 @@ const UserHome = (props) => {
 
     return (
         <div className='userWrap'>
-        <h1>Hello{diary.username}!</h1>
+        {latestAchievement ?   
+        <h1>Hello {latestEntry.username}!</h1>
+        :
+        <p>loading</p>
+        }
             <div className='weather'>
                 <Weather />
             </div>
 
 
-            <h2>Important Dates (placeholder)</h2>
+            <h2>Important Dates</h2>
             <div className='boatInfo'>
                <Boat/>
             </div>
@@ -76,7 +79,7 @@ const UserHome = (props) => {
 
             </div>
 
-        </div>
+        </div >
     )
 }
 

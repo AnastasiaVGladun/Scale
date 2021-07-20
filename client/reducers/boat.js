@@ -5,7 +5,7 @@ const intialState = []
 const reducer = (state = intialState, action) => {
   switch (action.type) {
     case SET_BOAT_LISTING:
-      return action.listing
+      return action.boat
     case ADD_BOAT_LISTING:
         return [...state, action.newListing]
       default:

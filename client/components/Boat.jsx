@@ -43,7 +43,7 @@ const Boat = (props) => {
                 <h2>Please enter your info here</h2>
             }
 
-            {/* <div className="add-listing"><Link to='/addBoat'><button>Add listing</button></Link></div> */}
+            <div className="add-listing"><Link to='/addBoat'><button>Add Details</button></Link></div>
 
 
         </>

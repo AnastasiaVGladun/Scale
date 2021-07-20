@@ -12,7 +12,7 @@ function getAllBoatListingsById (userId, db = connection) {
 function addBoatListing(listing, userId, db = connection) {
   return db('boat')
     .insert(listing,userId)
-    .then( ()=> { // returning new poacher Id
+    .then( ()=> { // returning new boat Id
       return  getAllBoatListingsById(userId) 
     })
 }

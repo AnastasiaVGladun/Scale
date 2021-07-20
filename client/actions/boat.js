@@ -30,11 +30,11 @@ const addBoatListingToStore = (boat) => {
 }
 
 //thunk
-export const createBoatLising = (boat) => { 
+export const createBoatListing = (boat) => { 
   return dispatch => {
     return postBoatListing(boat)
-      .then(newBoatListing => { 
-        return dispatch(addBoatListingToStore(newBoatListing))
+      .then(newListing => { 
+        return dispatch(addBoatListingToStore(newListing))
       })
   }
 }

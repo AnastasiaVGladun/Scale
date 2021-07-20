@@ -24,6 +24,7 @@ import AddListing from './AddListing'
 import Footer from './Footer'
 import BirdInfo from './BirdInfo'
 import SearchBox from './Search'
+import AddBoat from './AddBoat'
 
 function App (props) {
   const { auth, dispatch } = props
@@ -70,6 +71,7 @@ function App (props) {
           <Route path="/poacher" component={Poacher} />
           <Route path="/marketplace" component={Marketplace} />
           <Route path="/addListing" component={AddListing} />
+          <Route path="/addBoat" component={AddBoat} />
        
           </>
         } 

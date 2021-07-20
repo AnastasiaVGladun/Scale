@@ -8,11 +8,13 @@ import { Link} from 'react-router-dom'
 function Diary (props){
 
 return (
+    <>
     <div className='diaryWrap'>
         <h1>My Fishing Diary</h1>
         <Link to='/addCatch'><button className='buttonItem'type="button">Add a New Catch</button></Link>
 
-        {props.diary.map(entry => {
+       {props.diary ?
+        props.diary.map(entry => {
             // console.log(entry)
             return (
                 <li className='diaryList'>
@@ -27,9 +29,17 @@ return (
                     <img className='fishPhoto' src={`/images/Fishing people/${entry.photo}`} ></img>
                 </div>
                 </li>
-            )
-        })}
+                )
+        })
+                 :
+                 <div>
+                <img src ='./images/Icon/sammyfavi.png'></img>
+                <p>Uh oh - no catch yet!</p>
+                </div>
+            
+        }
     </div>
+    </>
 )
 }
 

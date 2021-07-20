@@ -23,7 +23,7 @@ const UserHome = (props) => {
         {latestAchievement ?   
         <h1>Hello {latestEntry.username}!</h1>
         :
-        <p>loading</p>
+        <p>Hello Fisherman!</p>
         }
 
             <div className='weather'>
@@ -47,10 +47,14 @@ const UserHome = (props) => {
                             <div><h5>Quantity:{latestEntry.quantity}</h5></div>
                         </div>
                         :
-                        <h2>Uh oh - no catch yet!</h2>
+                        <div>
+                            <h4>Uh oh - no catch yet!Better head out there...</h4>
+                            <img src ='./images/Icon/sammyfavi.png'></img>
+                        </div>
                     }
                 </div>
             </div>
+           
 
             <div className='latestAchiv'>
                 <h4>My Latest Achievement</h4>
@@ -61,7 +65,11 @@ const UserHome = (props) => {
                             <div><h5>{latestAchievement.description}</h5></div>
                         </div>
                         :
-                        <h2>Go fishing to get some achievements!</h2>
+                        <div>
+                        <h4>Come on mate - go fishing to get some achievements!</h4>
+                        <img src ='./images/selectMethod/fishDive@2x.png'></img>
+                        
+                        </div>
                     }
             </div>
 

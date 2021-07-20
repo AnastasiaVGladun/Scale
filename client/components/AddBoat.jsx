@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { createBoatLising } from '../actions/boat'
+import { createBoatListing } from '../actions/boat'
+import { Link } from 'react-router-dom'
 
 const AddBoat = (props) => {
   const {dispatch} = props
-  const [formData, setFormData] = useState({date: 21022021 ,name: '', email: '', phone: '', description: ''})
+  const [formData, setFormData] = useState({ 
+    boat_name: '',
+    boat_licence: '',
+    boat_licence_expiry: '',
+    Fish_licence: '',
+    Fish_licence_expiry: '',
+    Boat_WOF_licence: '',
+    Boat_WOF_licence_expiry: '',})
 
   // Onchange Handler 
   const changeHandler = (event) => {
@@ -17,30 +25,44 @@ const AddBoat = (props) => {
   // Submit Handler 
   const submitHandler = (event) => {
     event.preventDefault()
-    dispatch(createBoatLising(formData))
-    setFormData({date: 21022021, name: '', email: '', phone: '', description: ''})
+    dispatch(createBoatListing(formData))
+    setFormData({boat_name: '',
+    boat_licence: '',
+    boat_licence_expiry: '',
+    Fish_licence: '',
+    Fish_licence_expiry: '',
+    Boat_WOF_licence: '',
+    Boat_WOF_licence_expiry: ''})
+
   }
+
 
   return (
     <div>
-      <form className="poacher-form" onSubmit= {(e) => submitHandler(e)}>
-        <h1>Add Listing</h1>
-          <label htmlFor="date">Date
-            <input name="date" type="text" id="date" value={formData.date} onChange={(e) => changeHandler(e)}/>
+      <form className="boat-form" onSubmit= {(e) => submitHandler(e)}>
+        <h1>Add Your Details</h1>
+          <label htmlFor="boat_name">Boat Name
+            <input name="boat_name" type="text" id="boat_name" value={formData.boat_name} onChange={(e) => changeHandler(e)}/>
           </label>
-          <label htmlFor="name">Name
-            <input name="name" type="text" id="name" value={formData.name} onChange={(e) => changeHandler(e)}/>
+          <label htmlFor="boat_licence">Boat Licence Number
+            <input name="boat_licence" type="text" id="boat_licence" value={formData.boat_licence} onChange={(e) => changeHandler(e)}/>
           </label>
-          <label htmlFor="email">Email
-            <input name="email" type="text" id="email" value={formData.email} onChange={(e) => changeHandler(e)}/>
+          <label htmlFor="boat_licence_expiry">Boat Licence Expiry Date
+            <input name="boat_licence_expiry" type="text" id="boat_licence_expiry" value={formData.boat_licence_expiry} onChange={(e) => changeHandler(e)}/>
           </label>
-          <label htmlFor="phone">Phone
-            <input name="phone" type="text" id="phone" value={formData.phone} onChange={(e) => changeHandler(e)}/>
+          <label htmlFor="Fish_licence">Fish Licence Number
+            <input name="Fish_licence" type="text" id="Fish_licence" value={formData.Fish_licence} onChange={(e) => changeHandler(e)}/>
           </label>
-          <label htmlFor="description">Description
-            <input name="description" type="text" id="description" value={formData.description} onChange={(e) => changeHandler(e)}/>
+          <label htmlFor="Fish_licence_expiry">Fish Licence Expiry Date
+            <input name="Fish_licence_expiry" type="text" id="Fish_licence_expiry" value={formData.Fish_licence_expiry} onChange={(e) => changeHandler(e)}/>
           </label>
-          <button>Submit</button>
+          <label htmlFor="Boat_WOF_licence">Boat WOF Licence Number
+            <input name="Boat_WOF_licence" type="text" id="Boat_WOF_licence" value={formData.Boat_WOF_licence} onChange={(e) => changeHandler(e)}/>
+          </label>
+          <label htmlFor="Boat_WOF_licence_expiry">Boat WOF Licence Expiry Date
+            <input name="Boat_WOF_licence_expiry" type="text" id="Boat_WOF_licence_expiry" value={formData.Boat_WOF_licence_expiry} onChange={(e) => changeHandler(e)}/>
+          </label>
+         <button>Submit</button> 
       </form>
     </div>
   )

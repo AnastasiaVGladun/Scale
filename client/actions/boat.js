@@ -3,10 +3,10 @@ import { postBoatListing, fetchBoatListings } from "../apis/boat";
 export const SET_BOAT_LISTING = 'SET_BOAT_LISTING'
 export const ADD_BOAT_LISTING = 'ADD_BOAT_LISTING'
 
-const setBoatListing = (listing) => {
+const setBoatListing = (boat) => {
     return {
         type: SET_BOAT_LISTING,
-        listing
+        boat
     }
 }
 
@@ -22,18 +22,19 @@ export const getBoatListings = () => {
 
 //----------------------------------------------------------------
 
-const addBoatListingToStore = (newListing) => {
+const addBoatListingToStore = (boat) => {
   return {
     type: ADD_BOAT_LISTING,
-    newListing
+    boat
   }
 }
-      
-export const createBoatLising = (listing) => { 
+
+//thunk
+export const createBoatLising = (boat) => { 
   return dispatch => {
-    return postBoatListing(listing)
-      .then(newListing => { 
-        return dispatch(addBoatListingToStore(newListing))
+    return postBoatListing(boat)
+      .then(newBoatListing => { 
+        return dispatch(addBoatListingToStore(newBoatListing))
       })
   }
 }

@@ -11,7 +11,7 @@ const UserHome = (props) => {
 
     const latestEntry = diary[diary.length - 1]
     const latestAchievement = achievements[achievements.length - 1]
-    const name = latestEntry.username
+    
 
     useEffect(() => {
         dispatch(getAchievements())
@@ -23,7 +23,7 @@ const UserHome = (props) => {
         {latestAchievement ?   
         <h1>Hello {latestEntry.username}!</h1>
         :
-        <p>loading</p>
+        <p>Hello Fisherman!</p>
         }
             <div className='weather'>
                 <Weather />
@@ -45,10 +45,14 @@ const UserHome = (props) => {
                             <div>Quantity:{latestEntry.quantity}</div>
                         </div>
                         :
-                        <h2>Uh oh - no catch yet!</h2>
+                        <div>
+                            <h4>Uh oh - no catch yet!Better head out there...</h4>
+                            <img src ='./images/Icon/sammyfavi.png'></img>
+                        </div>
                     }
                 </div>
             </div>
+           
 
             <div>
                 <h2>My Latest Achievement</h2>
@@ -60,7 +64,11 @@ const UserHome = (props) => {
                             <div>{latestAchievement.description}</div>
                         </div>
                         :
-                        <h2>Go fishing to get some achievements!</h2>
+                        <div>
+                        <h4>Come on mate - go fishing to get some achievements!</h4>
+                        <img src ='./images/selectMethod/fishDive@2x.png'></img>
+                        
+                        </div>
                     }
                 </div>
             </div>

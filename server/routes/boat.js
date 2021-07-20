@@ -5,9 +5,10 @@ const db = require('../db/boat')
 
 const router = express.Router()
 
-// Get all boat listings
+// Get boat by ID
 router.get('/', getTokenDecoder(), (req, res) => {
-  return db.getAllBoatListings()
+  const userId = (req.user.id)
+  return db.getAllBoatListingsById(userId)
   .then((response) => {
     res.json(response)
   })
@@ -17,15 +18,31 @@ router.get('/', getTokenDecoder(), (req, res) => {
 })
 
 
-// Add a boat listing
+// Add a boat listing by id
 router.post('/', getTokenDecoder(), (req, res) => {
-  return db.addBoatListing(req.body)
-  .then((listing) => {
-    res.json(listing)
+  const userId = (req.user.id)
+  const listing = (req.body)
+  return db.addBoatListing(listing, userId)
+  .then((newlisting) => {
+    res.json(newlisting)
   })
   .catch(err => {
     console.log(err.message)
   })
 })
+
+// Update a boat listing by id
+router.patch('/', getTokenDecoder(), (req, res) => {
+  const userId = (req.user.id)
+  const listing = (req.body)
+  return db.updateBoatListing(listing, userId)
+  .then((newlisting) => {
+    res.json(newlisting)
+  })
+  .catch(err => {
+    console.log(err.message)
+  })
+})
+
 
 module.exports = router

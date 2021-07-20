@@ -8,16 +8,13 @@ import { storage } from './Firebase'
 // import { put } from '../../server/routes/diaryRoutes'
 // import { ref } from '../../server/db/connection'
 
-
 function Catch (props) {
-    
 
     useEffect(() =>{
         props.dispatch(getLocations())
         props.dispatch(getFish())
         props.dispatch(getMethods())
     }, [])
- 
     
     const [fishImg, setFishImg] = useState(null)
     const [formData, setFormData] = useState({
@@ -30,7 +27,6 @@ function Catch (props) {
 
     })
 
-
     const  changeHandler = (e) => {
         console.log('click')
         setFormData({
@@ -39,13 +35,13 @@ function Catch (props) {
         })
     }
 
-    // const handleSubmit = (e) => {
-    //     console.log('submit')
-    //     e.preventDefault()
-    //     const formImage = new FormData()
-    //     formImage.append('fish_img', fishImg)
-    //       props.dispatch(addCatch(formImage, formData))
-    // }   
+    const handleSubmit = (e) => {
+        console.log('submit')
+        e.preventDefault()
+        const formImage = new FormData()
+        formImage.append('fish_img', fishImg)
+          props.dispatch(addCatch(formImage, formData))
+    }   
 
     const onChangeFile = (e) => {
         if (e.target.files[0]){
@@ -53,7 +49,7 @@ function Catch (props) {
     }
     }
 
-    handleUpload = () => {
+    const handleUpload = () => {
         const uploadTask = storage.ref(`images/${image.name}`).put(image)
         uploadTask.on(
             "state_changed",
@@ -73,16 +69,11 @@ function Catch (props) {
         )
     }
 
-   
-
-
     return (
-
       
     <form className="form box" className="form box" className="form box" onSubmit={handleUpload}>
     
             <h1> Log My Catch</h1>
-
 
         <label className="label is-large has-text-centered"> Fish:
             <select name="fish_id" value={formData.name} onChange={(e) => changeHandler(e)} >
@@ -104,11 +95,10 @@ function Catch (props) {
                 {props.methods.map (method => { return <option value={method.id}>{method.method}</option> })}               
             </select>
         </label>
-{/* 
+       {/* 
         <label className="label is-large has-text-centered">Time:
         <input type="time" name="time" value={formData.time} onChange={(e) => changeHandler(e)} id="appt" name="appt"  ></input>
         </label> */}
-
 
         <label className="label is-large has-text-centered"> Grams:
         <input type="number" name="weight" value={formData.weight} onChange={(e) => changeHandler(e)} required></input>
@@ -121,10 +111,8 @@ function Catch (props) {
 
         <button className="button is-large is-fullwidth is-success" type="submit" className="btn">Submit</button>
 
-
     </form>
-)
-
+ )
 }
 
 const mapStateToProps = (globalState) => {
@@ -140,4 +128,4 @@ export default connect(mapStateToProps)(Catch)
 
 
 
-//weight 
+

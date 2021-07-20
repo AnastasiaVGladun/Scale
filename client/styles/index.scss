@@ -156,7 +156,8 @@ h5 {
     flex-direction: column;
     width: 200px;
     flex-direction: column;
-  } 
+} 
+
 .myNav {
     align-items: center;
     display: flex;
@@ -467,4 +468,24 @@ text-align: center;
 .poacher-form {
     width: 50vw;
     margin: 10px auto;
+}
+
+// ==================================
+.poacher-container {
+    margin: 20px auto;
+    color: #006373;
+}
+
+.label {
+    color: #006373;
+}
+
+.add-listing-form {
+    width: 50vw;
+    margin: 10px auto;
+}
+
+.add-listing-container {
+    margin: 20px auto;
+
 }

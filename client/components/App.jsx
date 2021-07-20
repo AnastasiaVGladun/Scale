@@ -49,7 +49,7 @@ function App (props) {
             
           </div>
           <Route exact path="/" component={Home} />
-        <div >
+        <div>
         {!auth.isAuthenticated &&
           <Route exact path="/" component={Login} />
         }

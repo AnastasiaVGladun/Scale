@@ -23,8 +23,9 @@ const AddListing = (props) => {
   }
 
   return (
-    <div>
-  <form className="poacher-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
+    <div className="add-listing-container">
+      <h1>Add a Listing</h1>
+  <form className="add-listing-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
         {/* Date */}
         <div className="field">
             <label className="label">Date</label>

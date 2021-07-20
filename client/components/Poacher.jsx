@@ -21,7 +21,8 @@ const Poacher = (props) => {
     setFormData({name: '', email: '', phone: '', description: ''})
   }
   return (
-    <div>
+    <div className="poacher-container">
+      <h1>Pot a Poacher</h1>
 <form className="poacher-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
 
 {/* Name */}

@@ -23,7 +23,6 @@ router.post('/', getTokenDecoder(), (req, res) => {
     const listing = req.body
     const newListing = {
           user_id:userId,
-          name:listing.username,
           date: listing.date,
           title:listing.title,
           image: listing.image,

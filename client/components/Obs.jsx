@@ -18,7 +18,7 @@ const Obs = (props) => {
       <div className="add-listing"><Link to='/addObs'><button className ='buttonItem'>Add Observation</button></Link></div>
         {obs.map((listing) => {
           return (
-          <div className="listing" key={listing.id}>
+          <div className="listing">
             <h4>{listing.title}</h4>
             <p>{listing.date}</p>
             <p>by {listing.username}</p>

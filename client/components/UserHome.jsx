@@ -11,6 +11,7 @@ const UserHome = (props) => {
 
     const latestEntry = diary[diary.length - 1]
     const latestAchievement = achievements[achievements.length - 1]
+    const name = latestEntry.username
 
     useEffect(() => {
         dispatch(getAchievements())

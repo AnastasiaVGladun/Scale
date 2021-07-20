@@ -14,7 +14,7 @@ function RulesInfo (props) {
     
     return (    
 
-            <div className="rules">
+            <div className="inforulesWrap">
                 <p className= "headerStyle">Recreational fishing rules</p>
                 <h5 className="rules">Using correct fishing methods and equipment protects local fisheries<br />
                  and keeps fish numbers sustainable for future generations. </h5>
@@ -27,9 +27,9 @@ function RulesInfo (props) {
                                 {rules.map(rulesinfo => {
                                  return <div className="rules-info"key={rulesinfo.id}>
                                       <li>
-                                        <p> 
+      
                                           <a href={rulesinfo.link}target="_blank">{rulesinfo.region}</a>
-                                        </p>
+                                      
                                         </li>       
                                     </div>
                                 })}

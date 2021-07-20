@@ -11,7 +11,7 @@ const UserHome = (props) => {
 
     const latestEntry = diary[diary.length - 1]
     const latestAchievement = achievements[achievements.length - 1]
-    const name = latestEntry.username
+    // const name = latestEntry.username
 
     useEffect(() => {
         dispatch(getAchievements())
@@ -25,24 +25,26 @@ const UserHome = (props) => {
         :
         <p>loading</p>
         }
+
             <div className='weather'>
                 <Weather />
             </div>
 
-
-            <h2>Important Dates</h2>
-            <div className='boatInfo'>
+            <div className='importantDates'>
+            <h4>Important Dates</h4>
+            
                <Boat/>
+               <div ><Link to='/addBoat'><button className="buttonItem" >Add listing</button></Link></div>
+           
             </div>
-
-            <div>
-                <h2>My Latest Entry</h2>
-                <div>
+            <div className='latestEntry'>
+                <h4>My Latest Entry</h4>
+                <div >
                     {latestEntry ?
-                        <div key = {latestEntry.id}>
+                        <div className='entryList' key = {latestEntry.id}>
                             <div> <img src={`/images/Fish/${latestEntry.image}@2x.png`} /></div>
-                            <div>{latestEntry.name}</div>
-                            <div>Quantity:{latestEntry.quantity}</div>
+                            <div><h5>{latestEntry.name}</h5></div>
+                            <div><h5>Quantity:{latestEntry.quantity}</h5></div>
                         </div>
                         :
                         <h2>Uh oh - no catch yet!</h2>
@@ -50,34 +52,39 @@ const UserHome = (props) => {
                 </div>
             </div>
 
-            <div>
-                <h2>My Latest Achievement</h2>
-                <div>
+            <div className='latestAchiv'>
+                <h4>My Latest Achievement</h4>
                     {latestAchievement ?
-                        <div key = {latestAchievement.id}>
+                        <div className='achivList' key = {latestAchievement.id}>
                             <div><img src={latestAchievement.badge_image}></img></div>
-                            <div>{latestAchievement.name}</div>
-                            <div>{latestAchievement.description}</div>
+                            <div><h4>{latestAchievement.name}</h4></div>
+                            <div><h5>{latestAchievement.description}</h5></div>
                         </div>
                         :
                         <h2>Go fishing to get some achievements!</h2>
                     }
-                </div>
             </div>
 
-            <div>
-                <h2>Help My Community</h2>
-                <p>Fish cops cannot be everywhere and we need to help them build a picture of
-                    illegal behaviour so they can target their efforts.</p>
-                <Link to='/poacher'><button className='buttonItem'type="button">Pot a Poacher</button></Link>
-                <p> Be our kaitiaki out there and capture observations
-                    that will contribute to environmental data trends and changes</p>
-                <Link to='/observations'><button className='buttonItem'type="button">Capture Observations</button></Link>
-                <p> Want to take the boat out but my mates are too busy? Perhaps we can find someone to go with you.
-                    Or post any other fishing related things here. Make use of our marketplace to
-                    find fishing mates!</p>
-                <Link to='/marketplace'><button className='buttonItem' type="button">Marketplace</button></Link>
-
+            <div className='communityHelp'>
+                <h4>Help My Community</h4>
+                <div className='helpList'>
+                    <div className='helpItem'>
+                        <p>Fish cops cannot be everywhere and we need to help them build a picture of
+                            illegal behaviour so they can target their efforts.</p>
+                        <Link to='/poacher'><button className='buttonItem'type="button">Pot a Poacher</button></Link>
+                    </div>
+                    <div className='helpItem'>
+                        <p> Be our kaitiaki out there and capture observations
+                            that will contribute to environmental data trends and changes</p>
+                        <Link to='/observations'><button className='buttonItem'type="button">Capture Observations</button></Link>
+                    </div>  
+                    <div className='helpItem'>
+                        <p> Want to take the boat out but my mates are too busy? Perhaps we can find someone to go with you.
+                            Or post any other fishing related things here. Make use of our marketplace to
+                            find fishing mates!</p>
+                        <Link to='/marketplace'><button className='buttonItem' type="button">Marketplace</button></Link>
+                    </div>
+                </div>
             </div>
 
         </div >

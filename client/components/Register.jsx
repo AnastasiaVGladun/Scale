@@ -44,10 +44,10 @@ function Register (props) {
   }
 
   return (
-    <form className="Register form box" onSubmit={handleSubmit}>
-      <h1 className="title is-2">Register</h1>
+    <form className="RegisterForm" onSubmit={handleSubmit}>
+      <h1 className= "headerStyle">Register</h1>
       <hr />
-      {auth.errorMessage && <span className="has-text-danger is-large">{auth.errorMessage}</span>}
+      {auth.errorMessage && <span >{auth.errorMessage}</span>}
       <label className="column is-6 is-offset-one-quarter label is-large has-text-centered">Username
         <input required className="input is-large has-text-centered is-fullwidth" placeholder="User Name" type="text" name="username" autoComplete="username" onChange={handleChange} value={formData.username}/>
       </label>
@@ -68,7 +68,7 @@ function Register (props) {
           <input required className="input is-large has-text-centered is-fullwidth" placeholder="Confirm Password" type="password" name="confirm_password" autoComplete="new-password" onChange={handleChange} value={formData.confirm_password}/>
         </label>
       </div>
-      <input className="button is-success is-large is-fullwidth" value="Register" type="submit" />
+      <input className='buttonItem' value="Register" type="submit" />
     </form>
   )
 }

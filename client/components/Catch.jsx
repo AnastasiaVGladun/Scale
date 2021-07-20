@@ -1,9 +1,12 @@
 import { connect } from 'react-redux'
-import React, { useEffect, useState } from 'react'
+import React, { Children, useEffect, useState } from 'react'
 import { getLocations} from '../actions/locations'
 import { getFish } from '../actions/fish'
 import { getMethods} from '../actions/methods'
 import { addCatch } from '../actions/diary'
+import { storage } from './Firebase' 
+// import { put } from '../../server/routes/diaryRoutes'
+// import { ref } from '../../server/db/connection'
 
 
 function Catch (props) {
@@ -36,16 +39,38 @@ function Catch (props) {
         })
     }
 
-    const handleSubmit = (e) => {
-        console.log('submit')
-        e.preventDefault()
-        const formImage = new FormData()
-        formImage.append('fish_img', fishImg)
-          props.dispatch(addCatch(formImage, formData))
-    }   
+    // const handleSubmit = (e) => {
+    //     console.log('submit')
+    //     e.preventDefault()
+    //     const formImage = new FormData()
+    //     formImage.append('fish_img', fishImg)
+    //       props.dispatch(addCatch(formImage, formData))
+    // }   
 
     const onChangeFile = (e) => {
-        setFishImg(e.target.files[0])
+        if (e.target.files[0]){
+            setFishImg(e.target.files[0])
+    }
+    }
+
+    handleUpload = () => {
+        const uploadTask = storage.ref(`images/${image.name}`).put(image)
+        uploadTask.on(
+            "state_changed",
+            snapshot => {},
+            error => {
+                console.log(error)
+            },
+            () => {
+            storage
+                .ref('images')
+                .Child(image.name)
+                .getDownloadURL()
+                .then(url => {
+                    console.log(url)
+                })
+            }
+        )
     }
 
    
@@ -54,7 +79,7 @@ function Catch (props) {
     return (
 
       
-    <form className="form box" className="form box" encType='multipart/form-data' className="form box" onSubmit={handleSubmit}>
+    <form className="form box" className="form box" className="form box" onSubmit={handleUpload}>
     
             <h1> Log My Catch</h1>
 

@@ -10,7 +10,6 @@ import Register from './Register'
 import Nav from './Nav'
 
 
-
 import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
 import Diary from './Diary'

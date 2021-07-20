@@ -48,7 +48,7 @@ body {
     color: white;
     border-color: #006373;
     background-color: #006373;
-    box-shadow: 2px 2px #03404a;
+    box-shadow: 1px 1px 3px 1px #024841;
     border-radius: 4px;
 }
 h1 {
@@ -235,6 +235,7 @@ width: 960px;
     background-color: #13505A;
     color: white;
     border-radius: 5px;
+    box-shadow:  1px 1px 5px 1px #024841;
 }
 .importantDates {
     padding: 20px;
@@ -278,6 +279,7 @@ width: 960px;
     width: 200px;
     border: solid #13505A;
     border-radius: 100px;
+    box-shadow:  1px 1px 5px 1px #024841;
 }
 .achievementWrap {
     display: flex;
@@ -292,6 +294,7 @@ width: 960px;
     width: 200px;
     border: solid #13505A;
     border-radius: 100px;
+    box-shadow: 1px 1px 5px 1px #024841;
 }
 .achievementList {
     margin-top: 60px;
@@ -470,6 +473,7 @@ text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 80px;
 }
 .statInfo {
     font-size: 30px;

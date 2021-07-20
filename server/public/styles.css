@@ -3357,7 +3357,7 @@ body {
   color: white;
   border-color: #006373;
   background-color: #006373;
-  box-shadow: 2px 2px #03404a;
+  box-shadow: 1px 1px 3px 1px #024841;
   border-radius: 4px; }
 
 h1 {
@@ -3531,7 +3531,8 @@ h5 {
   padding: 20px;
   background-color: #13505A;
   color: white;
-  border-radius: 5px; }
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 1px #024841; }
 
 .importantDates {
   padding: 20px;
@@ -3571,7 +3572,8 @@ h5 {
   height: auto;
   width: 200px;
   border: solid #13505A;
-  border-radius: 100px; }
+  border-radius: 100px;
+  box-shadow: 1px 1px 5px 1px #024841; }
 
 .achievementWrap {
   display: flex;
@@ -3584,7 +3586,8 @@ h5 {
   height: auto;
   width: 200px;
   border: solid #13505A;
-  border-radius: 100px; }
+  border-radius: 100px;
+  box-shadow: 1px 1px 5px 1px #024841; }
 
 .achievementList {
   margin-top: 60px;
@@ -3730,7 +3733,8 @@ h5 {
 .statItem {
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  margin-top: 80px; }
 
 .statInfo {
   font-size: 30px;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { getMarketPlaceListings, createMarketplaceLising } from '../actions/marketplace'
+import { createMarketplaceListing } from '../actions/marketplace'
 
 const AddListing = (props) => {
   const {dispatch} = props
@@ -17,7 +17,7 @@ const AddListing = (props) => {
   // Submit Handler 
   const submitHandler = (event) => {
     event.preventDefault()
-    dispatch(createMarketplaceLising(formData))
+    dispatch(createMarketplaceListing(formData))
     setFormData({date: 21022021, name: '', email: '', phone: '', description: ''})
   }
 

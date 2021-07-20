@@ -25,7 +25,7 @@ import Footer from './Footer'
 import BirdInfo from './BirdInfo'
 import SearchBox from './Search'
 import AddBoat from './AddBoat'
-import Obs from './obs'
+import Obs from './Obs'
 import AddObs from './AddObs'
 
 function App (props) {
@@ -51,14 +51,13 @@ function App (props) {
           <Route exact path="/" component={Home} />
         <div>
         {!auth.isAuthenticated &&
-          <Route exact path="/" component={Login} />
+        <>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+        </>
         }
         
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        {/* <Route path='/fish' component={FishInfo} /> */}
         <Route path='/fish' component={SearchBox} />
-
         <Route path='/rules' component={RulesInfo} />
         <Route path="/stats" component={Statistic} />
         <Route path="/bird" component={BirdInfo} />

@@ -52,4 +52,4 @@ const mapStateToProps = (globalState) => {
   }
 }
 
-export default connect(mapStateToProps)(AddListing) 
+export default connect(mapStateToProps)(AddBoat) 

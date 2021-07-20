@@ -38,7 +38,7 @@ const setDiary = (diary) => {
               return addCatchData(formData)
                 .then(catchId => {
                   console.log(catchId)
-                  // catchId.id = catchId
+                  catchId.id = catchId
                   dispatch(pushCatch(catchId))
                   return null
                 })

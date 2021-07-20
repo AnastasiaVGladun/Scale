@@ -30,6 +30,7 @@ export function addFishImg (fishImg) {
   console.log('fish_img', fishImg)
   return request.post(baseUrl + '/upload')
     .set(acceptJsonHeader)
+    .set(getAuthorizationHeader())
     .send(fishImg)
     .then(res => {
       return res.text

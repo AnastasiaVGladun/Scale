@@ -16,7 +16,7 @@ function Weather(props) {
 
     function onSelect(event) {
         
-        console.log("Our value: ", event.target.value);
+        // console.log("Our value: ", event.target.value);
         setLocation(event.target.value);
 
         

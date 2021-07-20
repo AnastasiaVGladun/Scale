@@ -8,6 +8,7 @@ function getAllCatchById(id, db = connection) {
     .join('fish','catch.fish_id', 'fish.id')
     .join('location', 'catch.region_id', 'location.id')
     .join('method', 'catch.method_id', 'method.id')
+    .join('users','catch.user_id', 'users.id')
 }
 
 // Add a catch 

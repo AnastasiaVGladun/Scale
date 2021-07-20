@@ -5,7 +5,7 @@ import { getRules } from '../actions/rules'
 function RulesInfo (props) {
  
     const {rules, dispatch} = props
-    console.log(rules)
+    // console.log(rules)
  
     useEffect(() => {
 
@@ -14,14 +14,15 @@ function RulesInfo (props) {
     
     return (    
 
-            <div >
-                <h1 className= "headerStyle">Recreational fishing rules</h1>
-                <p>Using correct fishing methods and equipment protects local fisheries and keeps fish numbers sustainable for future generations. </p>
+            <div className="rules">
+                <p className= "headerStyle">Recreational fishing rules</p>
+                <h5 className="rules">Using correct fishing methods and equipment protects local fisheries<br />
+                 and keeps fish numbers sustainable for future generations. </h5>
 
                 < div className='rulesWrap'>
                 <img className='mapPhoto' src={'/images/icon/map.gif'} ></img>
                     
-                            <ul id="horizontal-list">
+                            <ul >
 
                                 {rules.map(rulesinfo => {
                                  return <div className="rules-info"key={rulesinfo.id}>

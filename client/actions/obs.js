@@ -29,7 +29,7 @@ const addObsListingToStore = (newListing) => {
   }
 }
       
-export const createObsLising = (listing) => { 
+export const createObsListing = (listing) => { 
   return dispatch => {
     return postObsListing(listing)
       .then(newListing => { 

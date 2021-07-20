@@ -25,6 +25,8 @@ import Footer from './Footer'
 import BirdInfo from './BirdInfo'
 import SearchBox from './Search'
 import AddBoat from './AddBoat'
+import Obs from './obs'
+import AddObs from './AddObs'
 
 function App (props) {
   const { auth, dispatch } = props
@@ -72,6 +74,8 @@ function App (props) {
           <Route path="/marketplace" component={Marketplace} />
           <Route path="/addListing" component={AddListing} />
           <Route path="/addBoat" component={AddBoat} />
+          <Route path="/obs" component={Obs} />
+          <Route path="/addObs" component={AddObs} />
        
           </>
         } 

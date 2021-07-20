@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 import { getBird } from '../actions/bird'
 
 function BirdInfo (props) {
-    const {bird, dispatch} = props
-    console.log(bird)
+    // const {bird, dispatch} = props
+    // console.log(bird)
  
-    useEffect(() => {
+    // useEffect(() => {
 
-        return dispatch(getBird())
-    },[])
+    //     return dispatch(getBird())
+    // },[])
     return (    
         <div className='wrapper'> 
           <h1 className= "headerStyle">Caught a bird?</h1>
@@ -40,9 +40,10 @@ function BirdInfo (props) {
         </div>
 )
 }
-const mapStateToProps = (globalState) => {
-return {
-  bird: globalState.bird
-}
-}
-export default connect(mapStateToProps)(BirdInfo)
+// const mapStateToProps = (globalState) => {
+// return {
+//   bird: globalState.bird
+// }
+// }
+// export default connect(mapStateToProps)(BirdInfo)
+export default BirdInfo

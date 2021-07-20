@@ -5,7 +5,7 @@ function Home () {
 
     return (    
            
-      <img className="homeImage" src="/images/Pictures/cover_page.png" />
+      <img className="homeImage" src="/images/Pictures/scaleCover.png" />
 
           
 

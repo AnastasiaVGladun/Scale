@@ -11,7 +11,6 @@ const UserHome = (props) => {
 
     const latestEntry = diary[diary.length - 1]
     const latestAchievement = achievements[achievements.length - 1]
-    // const name = latestEntry.username
 
     useEffect(() => {
         dispatch(getAchievements())
@@ -34,7 +33,7 @@ const UserHome = (props) => {
             <h4>Important Dates</h4>
             
                <Boat/>
-               <div ><Link to='/addBoat'><button className="buttonItem" >Add listing</button></Link></div>
+               <div ><Link to='/addBoat'><button className="buttonItem" >Add Details</button></Link></div>
            
             </div>
             <div className='latestEntry'>
@@ -84,7 +83,7 @@ const UserHome = (props) => {
                     <div className='helpItem'>
                         <p> Be our kaitiaki out there and capture observations
                             that will contribute to environmental data trends and changes</p>
-                        <Link to='/observations'><button className='buttonItem'type="button">Capture Observations</button></Link>
+                        <Link to='/obs'><button className='buttonItem'type="button">Capture Observations</button></Link>
                     </div>  
                     <div className='helpItem'>
                         <p> Want to take the boat out but my mates are too busy? Perhaps we can find someone to go with you.

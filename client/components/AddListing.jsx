@@ -19,6 +19,7 @@ const AddListing = (props) => {
     event.preventDefault()
     dispatch(createMarketplaceLising(formData))
     setFormData({date: 21022021, name: '', email: '', phone: '', description: ''})
+    props.history.push("/marketplace")
   }
 
   return (

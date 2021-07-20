@@ -3573,6 +3573,30 @@ h5 {
   border: solid #13505A;
   border-radius: 100px; }
 
+.achievementWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 990px; }
+
+.achievementWrap img {
+  padding: 20px;
+  height: auto;
+  width: 200px;
+  border: solid #13505A;
+  border-radius: 100px; }
+
+.achievementList {
+  margin-top: 60px;
+  width: 800px;
+  display: flex;
+  text-align: center; }
+
+.achievementListItem {
+  width: 400px;
+  display: flex;
+  flex-direction: column; }
+
 .communityHelp {
   padding: 20px;
   margin-top: 20px;

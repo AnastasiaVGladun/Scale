@@ -17,10 +17,16 @@ import FishInfo from './FishInfo'
 import RulesInfo from './RulesInfo'
 import UserHome from './UserHome'
 import Achievements from './Achievements'
+import Poacher from './Poacher'
+import Marketplace from './marketplace'
+import AddListing from './AddListing'
 import Footer from './Footer'
 import Catch from './Catch'
-
-
+import BirdInfo from './BirdInfo'
+import SearchBox from './Search'
+import AddBoat from './AddBoat'
+import Obs from './obs'
+import AddObs from './AddObs'
 
 function App (props) {
   const { auth, dispatch } = props
@@ -33,34 +39,32 @@ function App (props) {
 }, [])
 
   return ( <div className='mainWrap'>
-    <div className="darkBlue"> </div>
-    <Router>
-
-      <Catch />
-
-
-      <div className="container has-text-centered">
-        <div className="hero is-small is-primary">
-          <div className="hero-body has-text-centered">
-            <Link to='/' className="">
-              <h1 className="title is-1">Scale</h1>
-            </Link>
-            <Route path="/" component={Nav} />
+            <div className="darkBlue"> </div>
+              <Router>
+              <div className="vertical-list">
+                <Link to='/' className="">
+                  {/* <h1 className="title is-1">Scale</h1> */}
+                </Link>
+                <Route path="/" component={Nav} />
             
-          </div>
-          </div>
+            </div>
+          <div>
           
 
         <div className='      '>
-        {!auth.isAuthenticated &&
-          <Route exact path="/" component={Login} />
-        }
+          {!auth.isAuthenticated &&
+            <Route exact path="/" component={Login} />
+          }
         
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Route path='/fish' component={FishInfo} />
+        {/* <Route path='/fish' component={FishInfo} /> */}
+        <Route path='/fish' component={SearchBox} />
+
         <Route path='/rules' component={RulesInfo} />
         <Route path="/stats" component={Statistic} />
+        <Route path="/bird" component={BirdInfo} />
+
         </div>
 
         {auth.isAuthenticated &&
@@ -68,14 +72,21 @@ function App (props) {
           <Route path='/user' component={UserHome} />
           <Route path="/diary" component={Diary} />
           <Route path="/achievements" component={Achievements} />
-          <Route path ='/catch' component={Catch} />
+          <Route path="/poacher" component={Poacher} />
+          <Route path="/marketplace" component={Marketplace} />
+          <Route path="/addListing" component={AddListing} />
+          <Route path="/addBoat" component={AddBoat} />
+          <Route path="/obs" component={Obs} />
+          <Route path="/addObs" component={AddObs} />
+          <Route path="/addcatch" component={Catch} />
+       
           </>
 
           
         } 
         <Route path='/' component={Footer}/> 
       </div>
-
+    
     </Router>
     </div>
   )

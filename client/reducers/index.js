@@ -11,6 +11,8 @@ import methods from './methods'
 import poacher from './poacher'
 import marketplace from './marketplace'
 import bird from './bird'
+import boat from './boat'
+
 
 
 export default combineReducers({
@@ -25,5 +27,5 @@ export default combineReducers({
   marketplace,
   methods,
   bird,
-
+  boat
 })

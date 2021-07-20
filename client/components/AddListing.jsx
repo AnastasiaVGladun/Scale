@@ -23,24 +23,51 @@ const AddListing = (props) => {
 
   return (
     <div>
-      <form className="poacher-form" onSubmit= {(e) => submitHandler(e)}>
-        <h1>Add Listing</h1>
-          <label htmlFor="date">Date
-            <input name="date" type="text" id="date" value={formData.date} onChange={(e) => changeHandler(e)}/>
-          </label>
-          <label htmlFor="name">Name
-            <input name="name" type="text" id="name" value={formData.name} onChange={(e) => changeHandler(e)}/>
-          </label>
-          <label htmlFor="email">Email
-            <input name="email" type="text" id="email" value={formData.email} onChange={(e) => changeHandler(e)}/>
-          </label>
-          <label htmlFor="phone">Phone
-            <input name="phone" type="text" id="phone" value={formData.phone} onChange={(e) => changeHandler(e)}/>
-          </label>
-          <label htmlFor="description">Description
-            <input name="description" type="text" id="description" value={formData.description} onChange={(e) => changeHandler(e)}/>
-          </label>
-          <button>Submit</button>
+  <form className="poacher-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
+        {/* Date */}
+        <div className="field">
+            <label className="label">Date</label>
+              <div className="control">
+                <input name="date" type="date" id="date" value={formData.date} onChange={(e) => changeHandler(e)}/>
+              </div>
+            </div>
+
+            {/* Name */}
+            <div className="field">
+              <label className="label">Name</label>
+              <div className="control">
+                <input name="name" type="text" id="name" value={formData.name} onChange={(e) => changeHandler(e)}  className="input" placeholder="Name"/>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="field">
+              <label className="label">Email</label>
+              <div className="control">
+                <input name="email" type="text" id="email" value={formData.email} onChange={(e) => changeHandler(e)} className="input" placeholder="Email"/>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="field">
+              <label className="label">Phone</label>
+              <div className="control">
+                <input name="phone" type="text" id="phone" value={formData.phone} onChange={(e) => changeHandler(e)} className="input" placeholder="Phone"/>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="field">
+              <label className="label">Description</label>
+              <div className="control">
+                <input name="description" type="text" id="description" value={formData.description} onChange={(e) => changeHandler(e)} className="input" placeholder="Description"/>
+              </div>
+            </div>
+            
+            {/* Submit Button */}
+            <div className="control">
+              <button className="buttonItem">Submit</button>
+            </div>
       </form>
     </div>
   )

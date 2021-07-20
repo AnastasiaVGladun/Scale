@@ -12,6 +12,9 @@ const birdRoutes = require('./routes/bird')
 const methodRoutes = require('./routes/methods')
 const poacherRoutes = require('./routes/poacher')
 const marketplaceRoutes = require('./routes/marketplace')
+const boatRoutes = require('./routes/boat')
+const obsRoutes = require('./routes/obs')
+
 
 const server = express()
 server.use(express.json())
@@ -29,5 +32,7 @@ server.use ('/api/v1/bird-info', birdRoutes)
 server.use ('/api/v1/methods', methodRoutes)
 server.use('/api/v1/poacher', poacherRoutes)
 server.use('/api/v1/marketplace', marketplaceRoutes)
+server.use('/api/v1/boat', boatRoutes)
+server.use('/api/v1/obs', obsRoutes)
 
 module.exports = server

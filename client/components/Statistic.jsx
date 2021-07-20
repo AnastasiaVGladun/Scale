@@ -21,25 +21,32 @@ function Stats (props) {
     }
 
     return (
-        <>
+        <div className='stat'>
+        <h1 className= "headerStyle">Statistics</h1>
+        <h5>Hi New Zealand! Here’s how we are tracking with our fish catch.<br />
+        Look around to see what type of fish is being caught in each region.</h5><br />
+        <p>Choose your region</p>
         
-            <select onChange={onSelect}>
-                <option value="All">All</option>
+        
+            <select className='dropMenu'onChange={onSelect}>
+                <option value="All">New Zealand</option>
                 {props.locations.map (location => {
-                    return <option key = {location.id} value={location.id}>{location.location}</option> 
+                    return <option  key = {location.id} value={location.id}>{location.location}</option> 
                     })
                 }               
                  </select>
-
-            
-            Hello from stats page
+                 <div className="statWrap">
             {props.stats.map((stat) => {
                 // console.log (stat)
-                return <div key ={stat.id}> <img src={`/images/Fish/${stat.image}@2x.png`}/>{stat.name} - {stat.quantity}</div>
+                return <div className='statItem' key ={stat.id}> 
+                <div className='statInfo'>{stat.name}</div><br />
+                <img className='statImg'src={`/images/Fish/${stat.image}@2x.png`}/>
+                <div className='statNum'>{stat.quantity}</div>
+                </div>
             })}
             
-
-        </>
+        </div>
+        </div>
     )
 }
 

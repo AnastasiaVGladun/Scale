@@ -35,13 +35,13 @@ function Catch (props) {
         })
     }
 
-    const handleSubmit = (e) => {
-        console.log('submit')
-        e.preventDefault()
-        const formImage = new FormData()
-        formImage.append('fish_img', fishImg)
-          props.dispatch(addCatch(formImage, formData))
-    }   
+    // const handleSubmit = (e) => {
+    //     console.log('submit')
+    //     e.preventDefault()
+    //     const formImage = new FormData()
+    //     formImage.append('fish_img', fishImg)
+    //       props.dispatch(addCatch(formImage, formData))
+    // }   
 
     const onChangeFile = (e) => {
         if (e.target.files[0]){
@@ -71,7 +71,7 @@ function Catch (props) {
 
     return (
       
-    <form className="form box" className="form box" className="form box" onSubmit={handleUpload}>
+    <form className="form box" className="form box" className="form box" onSubmit={onChangeFile}>
     
             <h1> Log My Catch</h1>
 
@@ -106,7 +106,7 @@ function Catch (props) {
 
         <label className="label is-large has-text-centered" htmlFor="fish_img">
             <span className="form__label-title">Fish Image: </span>
-            <input type="file" name="fish_img" onChange={onChangeFile} />
+            <input type="file" name="fish_img" onChange={handleUpload} />
           </label>
 
         <button className="button is-large is-fullwidth is-success" type="submit" className="btn">Submit</button>

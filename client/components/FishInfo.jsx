@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { getFish } from '../actions/fish'
+import SearchBox from './Search'
+
 
 function FishInfo (props) {
     const {fish, dispatch} = props
     // console.log(fish)
- 
+    
     useEffect(() => {
         return dispatch(getFish())
     },[])
     return (    
+        
             <div className='infoWrap'>
-             <h1 className= "headerStyle">Fishing Species in Aotearoa</h1>
+                {/* <SearchBox/> */}
+             {/* <h1 className= "headerStyle">Fishing Species in Aotearoa</h1>
              <h5>A visual reference for identifying saltwater (and freshwater) fish species that are located in New Zealand waters.</h5>
-             <h5>Learn more about each fish species such as it's physical characteristics, typical locations in New Zealand and suitability for eating.</h5>
+             <h5>Learn more about each fish species such as it's physical characteristics, typical locations in New Zealand and suitability for eating.</h5> */}
                 <div>
                     <ul className="horizontal-list">
                         {fish.map(fishinfo => {
@@ -35,5 +39,7 @@ const mapStateToProps = (globalState) => {
     }
   }
   export default connect(mapStateToProps)(FishInfo)
+
+// export default FishInfo
 
 

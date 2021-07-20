@@ -12,6 +12,7 @@ const UserHome = (props) => {
 
     const latestEntry = diary[diary.length - 1]
     const latestAchievement = achievements[achievements.length - 1]
+    const name = latestEntry.username
 
     useEffect(() => {
         dispatch(getAchievements())
@@ -20,7 +21,7 @@ const UserHome = (props) => {
 
     return (
         <div className='userWrap'>
-        <h1>Hello{diary.username}!</h1>
+        <h1>Hello{name}!</h1>
             <div className='weather'>
                 <Weather />
             </div>

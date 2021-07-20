@@ -20,6 +20,7 @@ import UserHome from './UserHome'
 import Achievements from './Achievements'
 import Footer from './Footer'
 import BirdInfo from './BirdInfo'
+import SearchBox from './Search'
 
 function App (props) {
   const { auth, dispatch } = props
@@ -49,7 +50,9 @@ function App (props) {
         
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Route path='/fish' component={FishInfo} />
+        {/* <Route path='/fish' component={FishInfo} /> */}
+        <Route path='/fish' component={SearchBox} />
+
         <Route path='/rules' component={RulesInfo} />
         <Route path="/stats" component={Statistic} />
         <Route path="/bird" component={BirdInfo} />

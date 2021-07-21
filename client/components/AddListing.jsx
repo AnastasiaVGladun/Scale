@@ -5,6 +5,7 @@ import { createMarketplaceListing } from '../actions/marketplace'
 const AddListing = (props) => {
   console.log(props)
   const {dispatch} = props
+  console.log(props)
   const [formData, setFormData] = useState({date: 21022021 ,name: '', email: '', phone: '', description: ''})
 
   // Onchange Handler 
@@ -24,8 +25,9 @@ const AddListing = (props) => {
   }
 
   return (
-    <div>
-  <form className="poacher-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
+    <div className="add-listing-container">
+      <h1>Add a Listing</h1>
+  <form className="add-listing-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
         {/* Date */}
         <div className="field">
             <label className="label">Date</label>

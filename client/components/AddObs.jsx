@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import { createObsListing } from '../actions/obs'
 
 const AddListing = (props) => {
-    const { dispatch } = props
+    const { dispatch, history } = props
+    console.log (history)
     const [formData, setFormData] = useState({date:'21-02-2021', title:'', description:'' })
 
     // Onchange Handler 
@@ -19,11 +20,12 @@ const AddListing = (props) => {
         event.preventDefault()
         dispatch(createObsListing(formData))
         setFormData({date:'21-02-2021', title:'', description:''})
+        history.push("/obs")
     }
 
 
     return (
-        <div>
+        <div className="obs-container">
             <h1 className="obs-heading">Add Observations</h1>
             <form className="poacher-form" onSubmit={(e) => submitHandler(e)} autoComplete="off">
                 {/* Date */}

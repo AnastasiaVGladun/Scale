@@ -12,6 +12,7 @@ import poacher from './poacher'
 import marketplace from './marketplace'
 import bird from './bird'
 import boat from './boat'
+import bird_form from './bird_form'
 import obs from './obs'
 
 
@@ -28,6 +29,8 @@ export default combineReducers({
   marketplace,
   methods,
   bird,
+  boat,
+  bird_form,
   boat,
   obs
 })

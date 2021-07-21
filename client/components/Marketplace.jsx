@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { createMarketplaceLising, getMarketPlaceListings } from '../actions/marketplace'
+import { getMarketPlaceListings } from '../actions/marketplace'
 import {Link} from 'react-router-dom'
 
 const Marketplace = (props) => {

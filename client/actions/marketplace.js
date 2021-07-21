@@ -29,7 +29,7 @@ const addMarketplaceListingToStore = (newListing) => {
   }
 }
       
-export const createMarketplaceLising = (listing) => { 
+export const createMarketplaceListing = (listing) => { 
   return dispatch => {
     return postMarketplaceListing(listing)
       .then(newListing => { 

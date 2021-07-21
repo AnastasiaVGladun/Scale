@@ -12,20 +12,21 @@ const Achievements = (props) => {
 
 
   return (
-    <>
+    <div className='achievementWrap'>
       <h1>MY ACHIEVEMENTS</h1>
-
+<div className='achievementList'>
       {achievements && achievements.length > 0 &&
       achievements.map(achievement => {
           return (
-          <div>
+          <div className='achievementListItem'>
             <div key = {achievement.id}><img src={achievement.badge_image}></img></div>
-            <div key = {achievement.id}>{achievement.name}</div>
-            <div key = {achievement.id}>{achievement.description}</div>
+            <div key = {achievement.id}><h4>{achievement.name}</h4></div>
+            <div key = {achievement.id}><h5>{achievement.description}</h5></div>
           </div>)   
       })
     }
-    </>
+    </div>
+    </div>
   )
 }
 

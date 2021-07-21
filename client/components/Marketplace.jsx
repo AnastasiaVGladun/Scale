@@ -10,6 +10,8 @@ const Marketplace = (props) => {
     dispatch(getMarketPlaceListings())
   }, [])
 
+  
+
   return (
     <div className="marketplace-body">
       <h1 className="marketplace-heading">Marketplace</h1>

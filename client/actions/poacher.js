@@ -11,6 +11,7 @@ const addPoacherToStore = (newPoacher) => {
       
 export const createPoacher = (poacher) => { 
   return dispatch => {
+    console.log(poacher)
     return postPoacher(poacher)
       .then(newPoacher => { 
         return dispatch(addPoacherToStore(newPoacher))

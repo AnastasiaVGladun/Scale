@@ -24,7 +24,7 @@ const AddBird = (props) => {
   }
 
   return (
-    <div>
+    <div classNmae="add-bird-container">
   <form className="add-bird-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
         {/* Title */}
         <div className="field">

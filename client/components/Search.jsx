@@ -25,10 +25,11 @@ const SearchBox = (props) => {
   return (
     <div className='infoWrap'>
               <h1 className= "headerStyle">Fishing Species in Aotearoa</h1>
-             <h5>A visual reference for identifying saltwater (and freshwater) fish species that are located in New Zealand waters.</h5>
-             <h5>Learn more about each fish species such as it's physical characteristics, typical locations in New Zealand and suitability for eating.</h5>
+             <p>A visual reference for identifying saltwater (and freshwater) fish species that are located in New Zealand waters.</p>
+             <p>Learn more about each fish species such as it's physical characteristics, typical locations in New Zealand and suitability for eating.</p>
                 
                 <input 
+                    className= "searchBox"
                     type="text" 
                     placeholder="Search name" 
                     value={search}

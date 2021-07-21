@@ -18,14 +18,14 @@ return (
             // console.log(entry)
             return (
                 <li className='diaryList'>
-                <h2>{entry.time}</h2>
-                <h4>{entry.location}</h4>
+                <h2>{entry.date}</h2>
+                <h3>{entry.location}</h3>
+                <p>{entry.description}</p>//need to be changed to entry.diary
                 <div className="myCatch">
-                    <h5>{entry.method}</h5>
-                    <h5>{entry.name}<br />
-                    species</h5>
+                    <p>{entry.method}</p>
+                    <p>{entry.name}</p>
                     <img src={`/images/Fish/${entry.image}@2x.png`} ></img>
-                    <h5>{entry.quantity}</h5> 
+                    <h4>{entry.quantity}</h4> 
                     <img className='fishPhoto' src={`/images/Fishing people/${entry.photo}`} ></img>
                 </div>
                 </li>

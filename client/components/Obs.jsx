@@ -14,8 +14,8 @@ const Obs = (props) => {
     <>
     <div className="obs-body">
       <h1 className="obs-heading">Observations</h1>
-      <div className="listing-container">
-      <div className="add-listing"><Link to='/addObs'><button className ='buttonItem'>Add Observation</button></Link></div>
+      <div >
+      <div ><Link to='/addObs'><button className ='buttonItem butnLeft'>Add Observation</button></Link></div>
         {obs.map((listing) => {
           return (
           <div className="listing">

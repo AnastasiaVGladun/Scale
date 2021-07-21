@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 // // Import custom variables and Bulma overides
 @import "./variables.scss";
+
 // Import only what you need from Bulma
 @import "bulma/sass/utilities/_all.sass";
 @import "bulma/sass/base/_all.sass";
@@ -13,7 +14,7 @@
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/layout/hero.sass";
 @import "bulma/sass/layout/section.sass";
-/
+
 body {
     font-family: 'Roboto', sans-serif;
   }
@@ -530,8 +531,10 @@ text-align: center;
     width: 900px;
 }
 
-.poacher-container, .add-listing-container, .obs-container, .add-boat-conatiner  {
+.form-container  {
     margin: 20px auto;
+    width: 50vw;
+    border: 3px blue solid;
 }
 .label {
     color: #006373;

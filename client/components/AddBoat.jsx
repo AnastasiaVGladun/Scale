@@ -38,8 +38,8 @@ const AddBoat = (props) => {
 
 
   return (
-    <div className="obs-container">
-      <form className="poacher-form" onSubmit= {(e) => submitHandler(e)}>
+    <div className="form-container">
+      <form className="form" onSubmit= {(e) => submitHandler(e)}>
         <h1>Add Your Details</h1>
         <div className="field"></div>
           <label htmlFor="boat_name">Boat Name</label>

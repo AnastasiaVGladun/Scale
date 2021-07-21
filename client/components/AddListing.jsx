@@ -48,8 +48,8 @@ const AddListing = (props) => {
     }
 
   return (
-    <div>
-  <form className="poacher-form" onSubmit= {handleUpload} autoComplete="off">
+    <div className="form-container">
+  <form className="form" onSubmit= {handleUpload} autoComplete="off">
         {/* Date */}
           <div className="field">
             <label className="label">Date</label>

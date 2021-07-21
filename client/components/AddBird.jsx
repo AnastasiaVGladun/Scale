@@ -51,16 +51,8 @@ const AddBird = (props) => {
     }
 
   return (
-<<<<<<< HEAD
-    <div classNmae="add-bird-container">
-  <form className="add-bird-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
-||||||| 74056f6
-    <div>
-  <form className="add-bird-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
-=======
-    <div>
-  <form className="add-bird-form" onSubmit= {handleUpload} autoComplete="off">
->>>>>>> b7b8ea234a292a9044ee1cac184aa8fc002f766d
+    <div className="form-container">
+  <form className="form" onSubmit= {handleUpload} autoComplete="off">
         {/* Title */}
         <div className="field">
             <label className="label">Title</label>

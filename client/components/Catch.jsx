@@ -67,9 +67,9 @@ function Catch (props) {
     }
 
     return (
-      <div className="add-listing-contanier">
+      <div className="form-contanier">
            <h1> Log My Catch</h1>
-        <form className="add-listing-form"  onSubmit={handleUpload}>
+        <form className="form"  onSubmit={handleUpload}>
     
           
        <div className="field">

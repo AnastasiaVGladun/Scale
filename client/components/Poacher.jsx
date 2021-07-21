@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { createPoacher } from '../actions/poacher'
+import {storage} from './Firebase'
 
 const Poacher = (props) => {
-  const {dispatch} = props
-  const [formData, setFormData] = useState({name: '', email: '', phone: '', description: ''})
-
+  // const {dispatch} = props
+  const [formData, setFormData] = useState({name: '', email: '', phone: '', description: '', image: ''})
+  const [img, setImg] = useState(null) 
+  
   // Onchange Handler 
   const changeHandler = (event) => {
     setFormData({
@@ -14,15 +16,42 @@ const Poacher = (props) => {
     })
   }
 
-  // Submit Handler 
-  const submitHandler = (event) => {
-    event.preventDefault()
-    dispatch(createPoacher(formData))
-    setFormData({name: '', email: '', phone: '', description: ''})
-  }
+ 
+
+    
+    const onChangeFile = (e) => {
+        if (e.target.files[0]){
+            setImg(e.target.files[0])
+    }
+    }
+
+    const handleUpload = (e) => {
+        e.preventDefault()
+        const image = img
+        const uploadTask = storage.ref(`images/${image.name}`).put(image)
+        uploadTask.on(
+            "state_changed",
+            snapshot => {},
+            error => {
+                console.log(error)
+            },
+            () => {
+            storage
+                .ref('images')
+                .child(image.name)
+                .getDownloadURL()
+                .then(url => {
+                    formData.image = url
+                    props.dispatch(createPoacher(formData))
+                })
+            } 
+        )
+    }
+
+
   return (
     <div>
-<form className="poacher-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
+<form className="poacher-form" onSubmit= {handleUpload} autoComplete="off">
 
 {/* Name */}
 <div className="field">
@@ -55,6 +84,12 @@ const Poacher = (props) => {
     <input name="description" type="text" id="description" value={formData.description} onChange={(e) => changeHandler(e)} className="input" placeholder="Description"/>
   </div>
 </div>
+
+
+<label className="label" htmlFor="fish_img">
+            <span className="form__label-title">Image: </span>
+            <input type="file" name="image" onChange={onChangeFile} />
+  </label>
 
 {/* Submit Button */}
 <div className="control">

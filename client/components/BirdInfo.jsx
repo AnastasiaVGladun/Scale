@@ -17,8 +17,7 @@ function BirdInfo (props) {
           <div>
           <p>If a seabird is noticed on a line, stop the vessel to reduce drag on the line. When the bird is within reach, gently bring it on board by hand or using a net. Do not pull the bird up on the line as this may cause further injury. Do not handle birds by wingtips as it can break the wing. With one crew member holding the bird, another crew member can carefully detach the fishing gear from the animal.</p>
          </div> 
-<a class="w3-button w3-black" href="#/diary">I've found an injured bird! </a>
-
+<a class="w3-button w3-black" href="#/birdform"><button>I've found an injured bird!</button></a>
             <div>
 
                 {/* <ul id="horizontal-list">

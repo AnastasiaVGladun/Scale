@@ -51,13 +51,13 @@ const AddBird = (props) => {
     }
 
   return (
-    <div>
+    <div className='birdFormWrap'>
   <form className="add-bird-form" onSubmit= {handleUpload} autoComplete="off">
         {/* Title */}
         <div className="field">
             <label className="label">Title</label>
               <div className="control">
-                <input name="title" type="text" id="title" value={formData.title} onChange={(e) => changeHandler(e)}/>
+                <input name="title" type="text" id="title" value={formData.title} onChange={(e) => changeHandler(e)} className="input" />
               </div>
             </div>
 

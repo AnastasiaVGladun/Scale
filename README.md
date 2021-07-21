@@ -2,7 +2,8 @@
 Team: Scale  
 Karen, Anastasia, Silvia, James, Saula, Yousuf
 
-Recreational Fishing App - Fishing (Collecting data) for good!
+Tech for Good
+An app for recreational fishers to record their catch, get weather data, and ultimately builds a dataset to monitor and maintain levels of fish species.
 
 ## Team Organisation 
 * Scrum and Vibes Lead - Silvia

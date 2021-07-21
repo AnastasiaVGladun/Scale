@@ -10,7 +10,7 @@ exports.seed = function(knex) {
           date:'30-06-2021', 
           name: 'ally', 
           description: 'I have found a dead bird on the little island ',
-          image: ''},
+          image: '/images/Bird/1birdinj.jpeg'},
 
 
           { id: 2, 
@@ -18,7 +18,7 @@ exports.seed = function(knex) {
             date: '16-04-2021', 
             name: 'ally', 
             description: 'I have found an injured penguin and i took it home ',
-            image: ''},
+            image: '/images/Bird/2birdinj.jpeg'},
 
 
             { id: 3, 
@@ -26,7 +26,7 @@ exports.seed = function(knex) {
               date: '09-02-2021', 
               name: 'ally', 
               description: 'I have found a trapped seagul and untangled a fishing line ',
-              image: ''}
+              image: '/images/Bird/3birdinj.jpeg'}
         ]);
     });
 };

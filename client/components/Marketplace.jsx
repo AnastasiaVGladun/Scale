@@ -20,6 +20,7 @@ const Marketplace = (props) => {
           <div className="listing" key={listing.id}>
             <p>{listing.date}</p>
             <p>{listing.name}</p>
+            <img src={listing.image}></img>
             <p>{listing.phone}</p>
             <p>{listing.description}</p>
           </div>)

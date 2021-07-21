@@ -3469,7 +3469,7 @@ p {
 .iconFish {
   width: 50px;
   margin-bottom: 50px;
-  animation-duration: 4s;
+  animation-duration: 7s;
   animation-name: slidein1;
   animation-iteration-count: infinite;
   animation-direction: alternate; }
@@ -3479,14 +3479,14 @@ p {
     margin-left: 70%;
     width: 30%; }
   to {
-    margin-left: 0%;
+    margin-left: -5%;
     width: 30%; } }
 
 .iconFish2 {
   width: 30px;
   margin-left: 50px;
   margin-bottom: 50px;
-  animation-duration: 4s;
+  animation-duration: 7s;
   animation-name: slidein;
   animation-iteration-count: infinite;
   animation-direction: alternate; }

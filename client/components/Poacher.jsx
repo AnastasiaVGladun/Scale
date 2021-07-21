@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { createPoacher } from '../actions/poacher'
 
 const Poacher = (props) => {
-  const {dispatch} = props
+  const {dispatch, history} = props
   const [formData, setFormData] = useState({name: '', email: '', phone: '', description: ''})
 
   // Onchange Handler 
@@ -19,6 +19,7 @@ const Poacher = (props) => {
     event.preventDefault()
     dispatch(createPoacher(formData))
     setFormData({name: '', email: '', phone: '', description: ''})
+    history.push('/user')
   }
   return (
     <div className="poacher-container">

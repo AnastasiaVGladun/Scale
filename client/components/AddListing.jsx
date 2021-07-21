@@ -4,6 +4,7 @@ import { createMarketplaceListing } from '../actions/marketplace'
 
 const AddListing = (props) => {
   const {dispatch} = props
+  console.log(props)
   const [formData, setFormData] = useState({date: 21022021 ,name: '', email: '', phone: '', description: ''})
 
   // Onchange Handler 

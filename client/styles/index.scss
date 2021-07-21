@@ -493,21 +493,16 @@ text-align: center;
 }
 
 // ==================================
-.poacher-container {
+.poacher-container, .add-listing-container, .obs-container, .add-boat-conatiner  {
     margin: 20px auto;
-    color: #006373;
 }
 
 .label {
     color: #006373;
 }
 
-.add-listing-form {
+
+.add-listing-form  {
     width: 50vw;
     margin: 10px auto;
-}
-
-.add-listing-container {
-    margin: 20px auto;
-
 }

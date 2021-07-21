@@ -20,19 +20,19 @@ const Boat = (props) => {
                 <div className='boatData'>
 
                     <div className="boatListings" key={boat.boat_licence}>
-                        <h3>Boat Licence</h3>
-                        <h3>{boat.boat_licence}</h3>
+                        <p>Boat Licence</p>
+                        <p>{boat.boat_licence}</p>
                         <p>expires {boat.boat_licence_expiry}</p>
                     </div>
 
                     <div className="boatListings" key={boat.Fish_licence}>
-                        <h3>Fish Licence</h3>
-                        <h3>{boat.Fish_licence}</h3>
+                        <p>Fish Licence</p>
+                        <p>{boat.Fish_licence}</p>
                         <p>expires {boat.Fish_licence_expiry}</p>
                     </div>
 
                     <div className="boatListings" key={boat.Boat_WOF_licence}>
-                        <h3>Boat WOF</h3>
+                        <p>Boat WOF</p>
                         <p>{boat.Boat_WOF_licence}</p>
                         <p>expires {boat.Boat_WOF_licence_expiry}</p>
                     </div>

@@ -20,8 +20,6 @@ export const getObsListings = () => {
   }
 }
 
-//----------------------------------------------------------------
-
 const addObsListingToStore = (newObs) => {
   return {
     type: ADD_OBS_LISTING,

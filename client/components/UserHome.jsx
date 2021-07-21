@@ -34,7 +34,7 @@ const UserHome = (props) => {
             <h4>Important Dates</h4>
             
                <Boat/>
-               <div ><Link to='/addBoat'><button className="buttonItem" >Add Details</button></Link></div>
+               <div  className='butnLeft'><Link to='/addBoat'><button className="buttonItem" >Add Details</button></Link></div>
            
             </div>
             <div className='latestEntry'>
@@ -43,8 +43,8 @@ const UserHome = (props) => {
                     {latestEntry ?
                         <div className='entryList' key = {latestEntry.id}>
                             <div> <img src={`/images/Fish/${latestEntry.image}@2x.png`} /></div>
-                            <div><h5>{latestEntry.name}</h5></div>
-                            <div><h5>Quantity:{latestEntry.quantity}</h5></div>
+                            <div><h4>{latestEntry.name}</h4></div>
+                            <div><h4>Quantity:{latestEntry.quantity}</h4></div>
                         </div>
                         :
                         <div>
@@ -53,7 +53,7 @@ const UserHome = (props) => {
                         </div>
                     }
                 </div>
-                <Link to='/addCatch'><button className='buttonItem'type="button">Add Catch</button></Link>
+                <Link to='/addCatch'><button className='buttonItem btnLeft'type="button">Add Catch</button></Link>
                 <Link to='/diary'><button className='buttonItem'type="button">View Diary</button></Link>
 
 
@@ -65,8 +65,8 @@ const UserHome = (props) => {
                     {latestAchievement ?
                         <div className='achivList' key = {latestAchievement.id}>
                             <div><img src={latestAchievement.badge_image}></img></div>
-                            <div><h4>{latestAchievement.name}</h4></div>
-                            <div><h5>{latestAchievement.description}</h5></div>
+                            <div><h3>{latestAchievement.name}</h3></div>
+                            <div><p>{latestAchievement.description}</p></div>
                         </div>
                         :
                         <div>
@@ -75,8 +75,7 @@ const UserHome = (props) => {
                         
                         </div>
                     }
-                <Link to='/achievements'><button className='buttonItem'type="button">View Achievements</button></Link>
-
+                <Link to='/achievements'><button className='buttonItem butnLeft'type="button">View Achievements</button></Link>
             </div>
 
             <div className='communityHelp'>

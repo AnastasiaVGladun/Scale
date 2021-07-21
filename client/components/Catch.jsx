@@ -108,12 +108,18 @@ function Catch (props) {
         </label> */}
         
         <div className="field">
-        <label className="label"> Grams: </label>
+        <label className="label"> Time spent fishing: </label>
         <div className="control">
-        <input type="number" name="weight" value={formData.weight} onChange={(e) => changeHandler(e)} required></input>
+        <input type="number" name="time" value={formData.time} onChange={(e) => changeHandler(e)} required></input>
         </div>
         </div>
 
+        <div className="field">
+        <label className="label"> Notes: </label>
+        <div className="control">
+        <input type="text" name="diary" value={formData.diary} onChange={(e) => changeHandler(e)} required></input>
+        </div>
+        </div>
 
         <div className="field">
         <label className="label" htmlFor="fish_img"> </label>

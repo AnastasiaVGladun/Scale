@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { createMarketplaceListing } from '../actions/marketplace'
 
 const AddListing = (props) => {
+  console.log(props)
   const {dispatch} = props
   const [formData, setFormData] = useState({date: 21022021 ,name: '', email: '', phone: '', description: ''})
 
@@ -19,6 +20,7 @@ const AddListing = (props) => {
     event.preventDefault()
     dispatch(createMarketplaceListing(formData))
     setFormData({date: 21022021, name: '', email: '', phone: '', description: ''})
+    props.history.push('/marketplace')
   }
 
   return (

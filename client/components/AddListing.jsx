@@ -29,7 +29,7 @@ const AddListing = (props) => {
       <h1>Add a Listing</h1>
   <form className="add-listing-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
         {/* Date */}
-        <div className="field">
+          <div className="field">
             <label className="label">Date</label>
               <div className="control">
                 <input name="date" type="date" id="date" value={formData.date} onChange={(e) => changeHandler(e)}/>

@@ -15,7 +15,7 @@ const Bird_form = (props) => {
     <div className="bird_form-body">
       <h1 className="bird_form-heading">COMMUNITY BIRD WATCH</h1>
       <div className="listing-container">
-      <div className="add-listing"><Link to='/addlisting'><button>Add your Bird</button></Link></div>
+      <div className="add-listing"><Link to='/addbird'><button>Add your Bird</button></Link></div>
         {bird_form.map((listing) => {
           return (
           <div className="listing" key={listing.id}>

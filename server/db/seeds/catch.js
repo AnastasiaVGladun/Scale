@@ -17,7 +17,7 @@ exports.seed = function(knex) {
           date:'10-05-2021',
           description:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
-        { id: 1, 
+        { id: 2, 
           user_id: '2',
           fish_id:'1',
           region_id:'2',
@@ -29,7 +29,7 @@ exports.seed = function(knex) {
           date:'10-05-2021',
           description:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
-        { id: 1, 
+        { id: 3, 
           user_id: '',
           fish_id:'20',
           region_id:'3',
@@ -41,11 +41,11 @@ exports.seed = function(knex) {
           date:'10-05-2021',
           description:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
-        { id: 1, 
+        { id: 4, 
           user_id: '1',
           fish_id:'14',
           region_id:'3',
-          method_id:'1', 
+          method_id:'2', 
           quantity:'2', 
           photo:'1.png',
           weight:'10',
@@ -53,7 +53,7 @@ exports.seed = function(knex) {
           date:'10-05-2021',
           description:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
-        { id: 2, 
+        { id: 5, 
           user_id: '1',
           fish_id:'16',
           region_id:'2',
@@ -65,11 +65,11 @@ exports.seed = function(knex) {
           date:'10-05-2021',
           description:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
-        { id: 3, 
+        { id: 6, 
           user_id: '1',
           fish_id:'1',
           region_id:'14',
-          method_id:'1', 
+          method_id:'2', 
           quantity:'2', 
           photo:'1.png',
           weight:'10',
@@ -78,11 +78,11 @@ exports.seed = function(knex) {
           description:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
 
-        { id: 4, 
+        { id: 7, 
           user_id: '3',
           fish_id:'2',
-          region_id:'1',
-          method_id:'14', 
+          region_id:'14',
+          method_id:'3', 
           quantity:'2', 
           photo:'1.png',
           weight:'10',
@@ -90,7 +90,7 @@ exports.seed = function(knex) {
           date:'10-05-2021',
           description:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
-        { id: 5, 
+        { id: 8, 
           user_id: '3',
           fish_id:'3',
           region_id:'1',
@@ -102,7 +102,7 @@ exports.seed = function(knex) {
           date:'10-05-2021',
           description:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
-        { id: 6, 
+        { id: 9, 
           user_id: '4',
           fish_id:'8',
           region_id:'8',
@@ -114,7 +114,7 @@ exports.seed = function(knex) {
           date:'10-05-2021',
           description:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
-        { id: 7, 
+        { id: 10, 
           user_id: '4',
           fish_id:'20',
           region_id:'8',

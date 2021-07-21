@@ -19,7 +19,7 @@ function FishInfo (props) {
                             return <div className="fish-info" key={fishinfo.id}>
                                 <li><h4>{fishinfo.name}</h4></li>
                                 <li> <img className= 'fish-image' src={`/images/Fish/${fishinfo.image}@2x.png`}/></li>
-                                <li><h5>{fishinfo.description}</h5></li>
+                                <li><p>{fishinfo.description}</p></li>
                             </div>
                         })}
                     </ul>

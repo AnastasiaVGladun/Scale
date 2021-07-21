@@ -18,15 +18,16 @@ return (
             // console.log(entry)
             return (
                 <li className='diaryList'>
-                <h2>{entry.time}</h2>
-                <h4>{entry.location}</h4>
+                <h2>{entry.date}</h2>
+                <h3>{entry.location}</h3>
+                <p>My perfect fish skhfbvkfjbvdfvjdfvvjnnnnnrnnfdnvkhrbflkewhrgtkwrtbv.mrf bm.rwthbghwkjltb vmnfbgwjrtbgtm.fnbv s.rgbktrjbgv msfdvbmrtbgday</p>
                 <div className="myCatch">
                     <p>{entry.method}
                     {/* <br />
                     <a>method</a> */}
                     </p>
-                    <p>{entry.name}<br />
-                    {/* <a>species</a> */}
+                    <p>{entry.name}
+                    
                     </p>
                     <img src={`/images/Fish/${entry.image}@2x.png`} ></img>
                     <h4>{entry.quantity}

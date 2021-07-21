@@ -20,25 +20,15 @@ export const getObsListings = () => {
   }
 }
 
-//----------------------------------------------------------------
-
 const addObsListingToStore = (newObs) => {
   return {
     type: ADD_OBS_LISTING,
     newObs
   }
 }
-<<<<<<< HEAD
-      
-export const createObsListing = (listing) => { 
-||||||| 11472b9
-      
-export const createObsLising = (listing) => { 
-=======
  
 //thunk
 export const createObsListing = (obs) => { 
->>>>>>> ae9412e0eb03ad66f3f27cb817a8fbba0d9ff1a0
   return dispatch => {
     return postObsListing(obs)
       .then(newObs => { 

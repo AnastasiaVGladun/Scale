@@ -3365,7 +3365,7 @@ h1 {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: center;
   margin-bottom: 30px;
-  color: #03404a; }
+  color: #03404A; }
 
 h2 {
   font-size: 40px;
@@ -3488,7 +3488,7 @@ p {
 
 .vertical-list {
   display: flex;
-  background-color: #76e0c7;
+  background-color: #76E0C7;
   flex-direction: column;
   width: 200px;
   flex-direction: column; }
@@ -3682,12 +3682,12 @@ p {
   color: white;
   border-color: #006373;
   background-color: #006373;
-  box-shadow: 2px 2px #03404a;
+  box-shadow: 2px 2px #03404A;
   margin-left: 20px;
   width: 200px; }
 
 .dropMenu option {
-  background-color: #03404a; }
+  background-color: #03404A; }
 
 .rules-info a {
   color: #13505A; }
@@ -3841,6 +3841,9 @@ p {
 .add-listing-form {
   width: 50vw;
   margin: 10px auto; }
+
+.add-bird-container {
+  border: 2px red solid; }
 
 
 /*# sourceMappingURL=styles.css.map*/

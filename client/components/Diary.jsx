@@ -20,7 +20,7 @@ return (
                 <li className='diaryList'>
                 <h2>{entry.date}</h2>
                 <h3>{entry.location}</h3>
-                <p>{entry.description}</p>//need to be changed to entry.diary
+                <p>{entry.diary}</p>
                 <div className="myCatch">
                     <p>{entry.method}</p>
                     <p>{entry.name}</p>

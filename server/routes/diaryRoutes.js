@@ -15,8 +15,9 @@ const { addAchievement } = require('../db/achievements')
 const s3 = new AWS.S3()
 AWS.config.update(
   {
-    accessKeyId: 'AKIASMHVL5VSEXOU6XMC',
-    secretAccessKey: '5Pobu56D7GtYEli45zg+UwrH/SRuMXyOWXq5jpB'
+    bucketName: process.env.AWS_BUCKET_NAME,
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
   })
 
 

@@ -10,7 +10,6 @@ import Register from './Register'
 import Nav from './Nav'
 
 
-
 import { checkAuth } from '../actions/auth'
 import Statistic from './Statistic'
 import Diary from './Diary'
@@ -22,6 +21,7 @@ import Poacher from './Poacher'
 import Marketplace from './marketplace'
 import AddListing from './AddListing'
 import Footer from './Footer'
+import Catch from './Catch'
 import BirdInfo from './BirdInfo'
 import SearchBox from './Search'
 import AddBoat from './AddBoat'
@@ -41,13 +41,13 @@ function App (props) {
 }, [])
 
   return ( <div className='mainWrap'>
-          <div className="darkBlue"> </div>
-            <Router>
-           <div className="vertical-list">
-            {/* <Link to='/' className="">
-              <h1 className="title is-1">Scale</h1>
-            </Link> */}
-            <Route path="/" component={Nav} />
+            <div className="darkBlue"> </div>
+              <Router>
+              <div className="vertical-list">
+                <Link to='/' className="">
+                  {/* <h1 className="title is-1">Scale</h1> */}
+                </Link>
+                <Route path="/" component={Nav} />
             
           </div>
           <Route exact path="/" component={Home} />
@@ -77,12 +77,17 @@ function App (props) {
           <Route path="/addBoat" component={AddBoat} />
           <Route path="/obs" component={Obs} />
           <Route path="/addObs" component={AddObs} />
+          <Route path="/addCatch" component={Catch} />
+       
           <Route path="/foundbird" component={BirdForm} />
           <Route path="/addbird" component={AddBird} />
           </>
+
+          
         } 
         {/* <Route path='/' component={Footer}/>  */}
-
+      
+    
     </Router>
     </div>
   )

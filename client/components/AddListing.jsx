@@ -1,33 +1,55 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { createMarketplaceListing } from '../actions/marketplace'
+import { storage} from './Firebase'
 
 const AddListing = (props) => {
   console.log(props)
   const {dispatch} = props
-  console.log(props)
-  const [formData, setFormData] = useState({date: 21022021 ,name: '', email: '', phone: '', description: ''})
-
+  const [formData, setFormData] = useState({date: 21022021 ,name: '', email: '', phone: '', description: '', image: ''})
+  const [img, setImg] = useState(null) 
   // Onchange Handler 
+
+
   const changeHandler = (event) => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value
     })
   }
+    
+    const onChangeFile = (e) => {
+        if (e.target.files[0]){
+            setImg(e.target.files[0])
+    }
+    }
 
-  // Submit Handler 
-  const submitHandler = (event) => {
-    event.preventDefault()
-    dispatch(createMarketplaceListing(formData))
-    setFormData({date: 21022021, name: '', email: '', phone: '', description: ''})
-    props.history.push('/marketplace')
-  }
+    const handleUpload = (e) => {
+        e.preventDefault()
+        const image = img
+        const uploadTask = storage.ref(`images/${image.name}`).put(image)
+        uploadTask.on(
+            "state_changed",
+            snapshot => {},
+            error => {
+                console.log(error)
+            },
+            () => {
+            storage
+                .ref('images')
+                .child(image.name)
+                .getDownloadURL()
+                .then(url => {
+                    formData.image = url
+                    props.dispatch(createMarketplaceListing(formData))
+                })
+            } 
+        )
+    }
 
   return (
-    <div className="add-listing-container">
-      <h1>Add a Listing</h1>
-  <form className="add-listing-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
+    <div>
+  <form className="poacher-form" onSubmit= {handleUpload} autoComplete="off">
         {/* Date */}
           <div className="field">
             <label className="label">Date</label>
@@ -67,6 +89,11 @@ const AddListing = (props) => {
                 <input name="description" type="text" id="description" value={formData.description} onChange={(e) => changeHandler(e)} className="input" placeholder="Description"/>
               </div>
             </div>
+
+            <label className="label" htmlFor="fish_img">
+            <span className="form__label-title">Image: </span>
+            <input type="file" name="image" onChange={onChangeFile} />
+            </label>
             
             {/* Submit Button */}
             <div className="control">

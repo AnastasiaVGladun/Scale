@@ -1,31 +1,66 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { createBird_formListing } from '../actions/bird_form'
+import { storage} from './Firebase'
 
 const AddBird = (props) => {
   const {dispatch} = props
   
-  const [formData, setFormData] = useState({title: '', date: 21022021 , name: '', description: ''})
-
+  const [formData, setFormData] = useState({title: '', date: 21022021 , name: '', description: '', image: '' })
+  const [img, setImg] = useState(null) 
   // Onchange Handler 
+  
+
+ 
+
+
   const changeHandler = (event) => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value
     })
   }
+    
+    const onChangeFile = (e) => {
+        if (e.target.files[0]){
+            setImg(e.target.files[0])
+    }
+    }
 
-  // Submit Handler 
-  const submitHandler = (event) => {
-    event.preventDefault()
-    dispatch(createBird_formListing(formData))
-    setFormData({title: '', date: 21022021 , name: '', description: ''})
-    props.history.push('/foundbird')
-  }
+    const handleUpload = (e) => {
+        e.preventDefault()
+        const image = img
+        const uploadTask = storage.ref(`images/${image.name}`).put(image)
+        uploadTask.on(
+            "state_changed",
+            snapshot => {},
+            error => {
+                console.log(error)
+            },
+            () => {
+            storage
+                .ref('images')
+                .child(image.name)
+                .getDownloadURL()
+                .then(url => {
+                    formData.image = url
+                    props.dispatch(createBird_formListing(formData))
+                })
+            } 
+        )
+    }
 
   return (
+<<<<<<< HEAD
     <div classNmae="add-bird-container">
   <form className="add-bird-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
+||||||| 74056f6
+    <div>
+  <form className="add-bird-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
+=======
+    <div>
+  <form className="add-bird-form" onSubmit= {handleUpload} autoComplete="off">
+>>>>>>> b7b8ea234a292a9044ee1cac184aa8fc002f766d
         {/* Title */}
         <div className="field">
             <label className="label">Title</label>
@@ -57,6 +92,11 @@ const AddBird = (props) => {
                 <input name="description" type="text" id="description" value={formData.description} onChange={(e) => changeHandler(e)} className="input" placeholder="Description"/>
               </div>
             </div>
+
+            <label className="label" htmlFor="fish_img">
+            <span className="form__label-title">Image: </span>
+            <input type="file" name="image" onChange={onChangeFile} />
+            </label>
             
             {/* Submit Button */}
             <div className="control">

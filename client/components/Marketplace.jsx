@@ -15,9 +15,8 @@ const Marketplace = (props) => {
   return (
     <div className="marketplace-body">
       <h1 className="marketplace-heading">Marketplace</h1>
-      {/* <div > */}
-        
-      <Link to='/addlisting'><button className='buttonItem'>Add listing</button></Link>
+      <div className="listing-container">
+      <div><Link to='/addlisting'><button className="buttonItem butnLeft">Add listing</button></Link></div>
         {marketplace.map((listing) => {
           return (
           <div className="listing" key={listing.id}>
@@ -29,7 +28,7 @@ const Marketplace = (props) => {
           </div>)
         })}
       </div>
-    // </div>
+    </div>
   )
 }
 

@@ -49,14 +49,14 @@ const AddListing = (props) => {
 
 
     return (
-        <div className="obs-container">
+        <div className="form-container">
             <h1 className="obs-heading">Add Observations</h1>
-            <form className="poacher-form" onSubmit={handleUpload} autoComplete="off">
+            <form className="form" onSubmit={handleUpload} autoComplete="off">
                 {/* Date */}
                 <div className="field">
                     <label className="label">Date</label>
                     <div className="control">
-                        <input name="date" type="date" id="date" value={formData.date} onChange={(e) => changeHandler(e)} />
+                        <input name="date" type="date" id="date" value={formData.date} onChange={(e) => changeHandler(e)} className="input" placeholder="Name"/>
                     </div>
                 </div>
 

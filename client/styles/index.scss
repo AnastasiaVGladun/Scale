@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 // // Import custom variables and Bulma overides
 @import "./variables.scss";
+
 // Import only what you need from Bulma
 @import "bulma/sass/utilities/_all.sass";
 @import "bulma/sass/base/_all.sass";
@@ -13,6 +14,7 @@
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/layout/hero.sass";
 @import "bulma/sass/layout/section.sass";
+
 //setting up Gallery for birds
 // div.gallery img {
 //   margin: 5px;
@@ -26,6 +28,21 @@
 // div.desc {
 //   padding: 15px
 // }
+
+//setting up Gallery for birds
+// div.gallery img {
+//   margin: 5px;
+//   float: left;
+//   width: 180px;
+// }
+// div.gallery img {
+//   width: 100%;
+//   height: auto;
+// }
+// div.desc {
+//   padding: 15px
+// }
+
 body {
     font-family: 'Roboto', sans-serif;
   }
@@ -38,7 +55,13 @@ body {
     color: white;
     border-color: #006373;
     background-color: #006373;
+
     box-shadow: 1px 1px 3px 1px #024841;
+
+    box-shadow: 1px 1px 3px 1px #024841;
+
+    box-shadow: 2px 2px #03404A;
+
     border-radius: 4px;
 }
 h1 {
@@ -69,6 +92,7 @@ h4 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #006373;
     font-weight: 700;
+    margin: 20px;
     // text-align: center;
 }
 h5{
@@ -116,14 +140,15 @@ p {
     padding-left: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
+    justify-content: space-between;
 }
 .myCatch p {
     font-family: 'Roboto';
     font-size: 25px;
     color: #006373;
     font-weight: 600;
+    margin: 20px;
 }
 .myCatch a {
 
@@ -151,7 +176,51 @@ p {
 .darkBlue {
     width: 260px;
     background-color: #006373;
+    display: flex;
+    flex-direction: column;
 }
+.iconFish {
+    width: 50px;
+    margin-bottom: 50px;
+    animation-duration: 4s;
+    animation-name: slidein1;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    @keyframes slidein1 {
+    from {
+      margin-left: 70%;
+      width: 30%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 30%;
+    }
+  }
+}
+.iconFish2 {
+    width: 30px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    animation-duration: 4s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    @keyframes slidein {
+    from {
+      margin-left: 0%;
+      width: 30%;
+    }
+  
+    to {
+      margin-left: 70%;
+      width: 30%;
+    }
+  }
+}
+
+
 .mainWrap{
     display: flex;
     flex-wrap: nowrap;
@@ -382,6 +451,34 @@ width: 960px;
 .dropMenu option {
     background-color: #03404A;
 }
+
+// .bird-info {
+//     margin: 10px;
+//     padding: 20px;
+// }
+// .bird-info p {
+//     font-weight: bold;
+//     font-size: 30px;
+// }
+// .bird-image {
+//     width: 150px;
+// }
+
+// .bird-info {
+//     margin: 10px;
+//     padding: 20px;
+// }
+
+// .bird-info p {
+//     font-weight: bold;
+//     font-size: 30px;
+// }
+
+// .bird-image {
+//     width: 150px;
+    
+// }
+
 .rules-info a {
     color: #13505A;
 }
@@ -428,6 +525,7 @@ text-align: center;
     cursor: pointer;
     text-align: center;
 }
+
 .add-listing button {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
@@ -464,13 +562,34 @@ text-align: center;
     color: #fff;
 }
 
+.wrapper {
+    margin-top: 40px;
+    margin-left: 50px;
+
+
+.wrapper {
+    margin-top: 40px;
+    margin-left: 50px;
+
+.wrapper {
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
 .birdWrap{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    margin-left: 30px;
+    // margin-left: 300px;
     margin-right: 30px;
     width: 900px;
+    flex-wrap: nowrap;
+}
+.birdFormWrap{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    flex-wrap: nowrap;
 }
 .birdWrap a {
     text-align: center;
@@ -521,24 +640,37 @@ text-align: center;
     color: #13505A;
     margin-left: 60px;
 }
+
 .poacher-form {
     width: 50vw;
     margin: 10px auto;
 }
+
+.poacher-form {
+    width: 50vw;
+    margin: 10px auto;
+}
+
+
 .obs-body {
     width: 900px;
 }
 
-.poacher-container, .add-listing-container, .obs-container, .add-boat-conatiner  {
+
+
+
+// .poacher-container, .add-listing-container, .obs-container, .add-boat-conatiner  {
+
+// }
+
+
+.form-container  {
+
     margin: 20px auto;
+    width: 50vw;
+    // text-align: center;
 }
+
 .label {
     color: #006373;
-}
-.add-listing-form  {
-    width: 50vw;
-    margin: 10px auto;
-}
-.add-bird-container {
-    border: 2px red solid;
 }

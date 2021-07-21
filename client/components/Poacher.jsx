@@ -50,8 +50,9 @@ const Poacher = (props) => {
 
 
   return (
-    <div>
-<form className="poacher-form" onSubmit= {handleUpload} autoComplete="off">
+    <div className="form-container">
+      <h1>Add a Poacher</h1>
+<form className="form" onSubmit= {handleUpload} autoComplete="off">
 
 {/* Name */}
 <div className="field">

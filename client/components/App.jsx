@@ -41,7 +41,21 @@ function App (props) {
 }, [])
 
   return ( <div className='mainWrap'>
-            <div className="darkBlue"> </div>
+            <div className="darkBlue"> 
+            <img className='iconFish' src="/images/Icon/Fish4.png" alt="untangle bird pic"/>
+            <img className='iconFish2' src="/images/Icon/Fish2.png" alt="untangle bird pic"/>
+            <img className='iconFish' src="/images/Icon/Fish3.png" alt="untangle bird pic"/>
+            <img className='iconFish2' src="/images/Icon/Fish4.png" alt="untangle bird pic"/>
+            <img className='iconFish' src="/images/Icon/Fish2.png" alt="untangle bird pic"/>
+            <img className='iconFish2' src="/images/Icon/Fish3.png" alt="untangle bird pic"/>
+            <img className='iconFish' src="/images/Icon/Fish4.png" alt="untangle bird pic"/>
+            <img className='iconFish2' src="/images/Icon/Fish2.png" alt="untangle bird pic"/>
+            <img className='iconFish' src="/images/Icon/Fish3.png" alt="untangle bird pic"/>
+            <img className='iconFish2' src="/images/Icon/Fish4.png" alt="untangle bird pic"/>
+            <img className='iconFish' src="/images/Icon/Fish2.png" alt="untangle bird pic"/>
+            <img className='iconFish2' src="/images/Icon/Fish3.png" alt="untangle bird pic"/>
+            
+            </div>
               <Router>
               <div className="vertical-list">
                 <Link to='/' className="">
@@ -77,7 +91,7 @@ function App (props) {
           <Route path="/addBoat" component={AddBoat} />
           <Route path="/obs" component={Obs} />
           <Route path="/addObs" component={AddObs} />
-          <Route path="/addcatch" component={Catch} />
+          <Route path="/addCatch" component={Catch} />
        
           <Route path="/foundbird" component={BirdForm} />
           <Route path="/addbird" component={AddBird} />

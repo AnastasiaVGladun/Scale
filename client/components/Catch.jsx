@@ -67,25 +67,25 @@ function Catch (props) {
     }
 
     return (
-      <div className="add-listing-contanier">
+      <div className="form-container">
            <h1> Log My Catch</h1>
-        <form className="add-listing-form"  onSubmit={handleUpload}>
+        <form className="form"  onSubmit={handleUpload}>
     
           
        <div className="field">
         <label className="label"> Fish:</label>
         <div className="control">
-            <select name="fish_id" value={formData.name} onChange={(e) => changeHandler(e)} >
+            <select name="fish_id" value={formData.name} onChange={(e) => changeHandler(e)}  className="input">
                 <option >Select Fish Species:</option>
                 {props.fish.map(fish=> {return <option key={fish.id} value={fish.id}>{fish.name}</option>})}
             </select>
         </div>
         </div>
-         
+
         <div className="field">
         <label className="label"> Region:</label>
         <div className="control">
-            <select name="region_id" value={formData.location} onChange={(e) => changeHandler(e)} >
+            <select name="region_id" value={formData.location} onChange={(e) => changeHandler(e)} className="input">
                 <option >Select Region</option>
                 {props.locations.map (location => { return <option value={location.id}>{location.location}</option> })}               
             </select>
@@ -95,7 +95,7 @@ function Catch (props) {
         <div className="field">
         <label className="label"> Method:</label>
         <div className="control">
-            <select name="method_id" value={formData.method} onChange={(e) => changeHandler(e)} >
+            <select name="method_id" value={formData.method} onChange={(e) => changeHandler(e)} className="input">
                 <option >Select method</option>
                 {props.methods.map (method => { return <option value={method.id}>{method.method}</option> })}               
             </select>
@@ -108,24 +108,29 @@ function Catch (props) {
         </label> */}
         
         <div className="field">
-        <label className="label"> Grams: </label>
+        <label className="label"> Time spent fishing: </label>
         <div className="control">
-        <input type="number" name="weight" value={formData.weight} onChange={(e) => changeHandler(e)} required></input>
+        <input type="number" name="time" value={formData.time} onChange={(e) => changeHandler(e)} required className="input"></input>
         </div>
         </div>
 
+        <div className="field">
+        <label className="label"> Notes: </label>
+        <div className="control">
+        <input type="text" name="diary" value={formData.diary} onChange={(e) => changeHandler(e)} required className="input"></input>
+        </div>
+        </div>
 
         <div className="field">
         <label className="label" htmlFor="fish_img"> </label>
         <div className="control">
             <span className="form__label-title">Fish Image: </span>
-            <input type="file" name="fish_img" onChange={onChangeFile} />
+            <input type="file" name="fish_img" onChange={onChangeFile}/>
           </div>
           </div>
 
-          <div className="control">
-        <button className="buttonItem" type="submit" className="btn">Submit</button>
-        </div>
+        <button className="buttonItem" type="submit">Submit</button>
+
         </form>
     </div>
  )

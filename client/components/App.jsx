@@ -77,7 +77,7 @@ function App (props) {
           <Route path="/addBoat" component={AddBoat} />
           <Route path="/obs" component={Obs} />
           <Route path="/addObs" component={AddObs} />
-          <Route path="/addcatch" component={Catch} />
+          <Route path="/addCatch" component={Catch} />
        
           <Route path="/foundbird" component={BirdForm} />
           <Route path="/addbird" component={AddBird} />

@@ -2,7 +2,7 @@
 Team: Scale  
 Karen, Anastasia, Silvia, James, Saula, Yousuf
 
-Recreational Fishing App - collecting data for good!
+Recreational Fishing App - Fishing (Collecting data) for good!
 
 ## Team Organisation 
 * Scrum and Vibes Lead - Silvia
@@ -32,28 +32,29 @@ Recreational Fishing App - collecting data for good!
 **Morning**
 * Mindfulness - 5 mins
 * Team check-ins - how are you feeling today
-* Standup - what you did (if done anything in the evening), what you will do, what blockages
+* Standup - what did you do (if done anything in the evening/over the weekend), what will you do today, what blockages
 
 **Afternoon**
-* Standup - what you did, what you will do, what blockages
+* Standup - what did you do, what will you do, what blockages
 
 **Evening**
-* Standup - what you did, what you will do, what blockages
-* Retro/check ins - what you learned, what went well today, what didnt go well, what would make tomorrow better
+* Standup - what did you do, what will you do, what blockages
+* Retro/check ins - what have you learned, what went well today, what didn't go well, what changes are required to make tomorrow's experience better
 
 **Approach to work**
-* People over product
+* People over product : )
 * Pick of kanban board
 * Pair as needed / review when solo
 * If stuck - leave no longer than 15 mins - Ask for help
-* Check in on each other as needed - if recognised group is stressed - all just go out for a walk/coffee
+* Check in on each other as needed - if somebody/group is stressed - go out for a walk/coffee
 
 **Stress**
-* Individual - red wine, go for a walk, exercise, talk fast
+* Individual - red wine, go for a walk, exercise, talk fast (have talked about each others stress profile)
 
 **Well-being/Team**
-* Let each other know if you need anything, if you have any issues - communicate it. There are plenty opportunities during team get togethers but also just go for it anytime int the day.
-* Shared lunch one day.
+* Let each other know if you need anything, if you have any issues - make sure to communicate it. There are plenty opportunities during team get togethers but also just go for it anytime during the day.
+* Snacks 
+* Shared lunch on Thursday.
 
 
 ## The Tech

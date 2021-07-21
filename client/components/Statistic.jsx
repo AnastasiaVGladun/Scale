@@ -23,9 +23,9 @@ function Stats (props) {
     return (
         <div className='stat'>
         <h1 className= "headerStyle">Statistics</h1>
-        <h5>Hi New Zealand! Here’s how we are tracking with our fish catch.<br />
-        Look around to see what type of fish is being caught in each region.</h5><br />
-        <p>Choose your region</p>
+        <p>Hi New Zealand! Here’s how we are tracking with our fish catch.<br />
+        Look around to see what type of fish is being caught in each region.</p><br />
+        <h5>Choose your region</h5>
         
         
             <select className='dropMenu'onChange={onSelect}>

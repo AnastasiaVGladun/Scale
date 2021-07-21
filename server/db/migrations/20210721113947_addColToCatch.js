@@ -11,7 +11,7 @@ exports.up = function(knex) {
     //   table.integer('time')
     //   table.timestamps(true,true)
       table.date('date')
-      table.string('description')
+      table.string('diary')
     })
   };
   

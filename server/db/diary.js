@@ -13,18 +13,21 @@ function getAllCatchById(id, db = connection) {
 
 // Add a catch 
 function addCatch(fishcatch, userId, db = connection) {
-  const newFishcatch = {	
-    quantity: fishcatch.quantity,
-    user_id: userId
-  }
+  // const newFishcatch = {	
+    
+  //   user_id: userId,
+  //   quantity: fishcatch.quantity,
+  //   fish_id: fishcatch.fish_id,
+  //   region_id: fishcatch.region_id,
+  //   method_id: fishcatch.method_id,
+  //   photo: fishcatch.photo,
+  //   weight: fishcatch.weight,
+  //   time: fishcatch.time
 
 // console.log(newFishcatch)
   
   return db('catch')
-    .insert(newFishcatch )
-    .then( ()=> { // returning new catch Id
-      return  getAllCatchById(userId) //This needs the user catch_id
-    })
+    .insert(fishcatch )
 }
 
 

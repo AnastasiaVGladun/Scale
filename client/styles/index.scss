@@ -1,11 +1,8 @@
 @charset "utf-8";
-
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
 // // Import custom variables and Bulma overides
 @import "./variables.scss";
-
 // Import only what you need from Bulma
 @import "bulma/sass/utilities/_all.sass";
 @import "bulma/sass/base/_all.sass";
@@ -16,15 +13,20 @@
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/layout/hero.sass";
 @import "bulma/sass/layout/section.sass";
-
 //setting up Gallery for birds
+<<<<<<< HEAD
+//   .bird-img {
+||||||| dcaaab4
+//   .bird-img {
 
+=======
+
+>>>>>>> 74056f64b8c97ccadeffeb8727fd1f6797da69fb
 // div.gallery img {
 //   margin: 5px;
 //   float: left;
 //   width: 180px;
 // }
-
 // div.gallery img {
 //   width: 100%;
 //   height: auto;
@@ -32,11 +34,8 @@
 // div.desc {
 //   padding: 15px
 // }
-
-
 body {
-    font-family: 'Roboto', sans-serif; 
-    
+    font-family: 'Roboto', sans-serif;
   }
 .buttonItem {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -47,7 +46,13 @@ body {
     color: white;
     border-color: #006373;
     background-color: #006373;
+<<<<<<< HEAD
+    box-shadow: 2px 2px #03404A;
+||||||| dcaaab4
+    box-shadow: 2px 2px #03404a;
+=======
     box-shadow: 1px 1px 3px 1px #024841;
+>>>>>>> 74056f64b8c97ccadeffeb8727fd1f6797da69fb
     border-radius: 4px;
 }
 h1 {
@@ -55,7 +60,7 @@ h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     margin-bottom: 30px;
-    color: #03404a;
+    color: #03404A;
 }
 h2 {
     font-size: 40px;
@@ -107,7 +112,6 @@ p {
     font-size: 20px;
     color: white;
     padding: 10px;
-    
     // font-weight: 800;
 }
 .RegisterForm{
@@ -122,13 +126,17 @@ p {
     flex-direction: column;
     align-items: center;
 }
-
 .myCatch{
     padding-left: 20px;
     display: flex;
     align-items: center;
+<<<<<<< HEAD
+||||||| dcaaab4
+
+=======
     justify-content: space-between;
 
+>>>>>>> 74056f64b8c97ccadeffeb8727fd1f6797da69fb
 }
 .myCatch p {
     font-family: 'Roboto';
@@ -160,7 +168,6 @@ p {
     padding-right: 30px;
 }
 .darkBlue {
-    
     width: 260px;
     background-color: #006373;
 }
@@ -189,13 +196,12 @@ p {
     width: auto;
 }
 .vertical-list {
-    display: flex; 
-    background-color: #76e0c7;
+    display: flex;
+    background-color: #76E0C7;
     flex-direction: column;
     width: 200px;
     flex-direction: column;
-} 
-
+}
 .myNav {
     width: 100%;
     align-items: center;
@@ -203,7 +209,6 @@ p {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-
 }
 .formCatch {
     display: flex;
@@ -216,7 +221,6 @@ width: 960px;
     width: 900px;
     margin-left: 40px;
 }
-
 .fish-info {
     margin: 10px;
     padding: 20px;
@@ -255,7 +259,6 @@ width: 960px;
     box-shadow: 1px 1px 3px 1px #024841;
     border-radius: 4px;
 }
-
 .userWrap {
     display: flex;
     flex-direction: column;
@@ -265,22 +268,25 @@ width: 960px;
 .boatInfo {
     padding-left: 20px;
 }
-
 .boatData {
     text-align: center;
     display: flex;
     margin: auto;
     flex-direction: row;
 }
+<<<<<<< HEAD
+||||||| dcaaab4
+
+=======
 
 .boatData p {
     color: #fff;}
 
+>>>>>>> 74056f64b8c97ccadeffeb8727fd1f6797da69fb
 .boatName {
     font-size: 20px;
     color: #006373;
 }
-
 .boatListings {
     width: 60%;
     margin: 20px;
@@ -308,7 +314,6 @@ width: 960px;
     margin-left: 20px;
     border-bottom: solid 1px grey;
 }
-
 .entryList {
     margin-top: 40px;
     display: flex;
@@ -317,14 +322,12 @@ width: 960px;
     align-items: center;
     justify-content: space-evenly;
 }
-
 .latestAchiv {
     padding: 20px;
     margin-top: 20px;
     margin-left: 20px;
     border-bottom: solid 1px grey;
 }
-
 .achivList {
     margin-top: 20px;
     flex-direction: column;
@@ -346,7 +349,6 @@ width: 960px;
     align-items: center;
     width: 990px;
 }
-
 .achievementWrap img {
     padding: 20px;
     height: auto;
@@ -361,7 +363,6 @@ width: 960px;
     display: flex;
     text-align: center;
 }
-
 .achievementListItem {
     width: 400px;
     display: flex;
@@ -373,7 +374,6 @@ width: 960px;
     margin-left: 20px;
     border-bottom: solid 1px grey;
 }
-
 .helpList {
     display: flex;
     flex-direction: column;
@@ -398,33 +398,60 @@ width: 960px;
     color: white;
     border-color: #006373;
     background-color: #006373;
-    box-shadow: 2px 2px #03404a;
+    box-shadow: 2px 2px #03404A;
     // margin-bottom: 50px;
     margin-left: 20px;
     width: 200px;
 }
 .dropMenu option {
-    background-color: #03404a;
+    background-color: #03404A;
 }
+<<<<<<< HEAD
+// .bird-info {
+//     margin: 10px;
+//     padding: 20px;
+// }
+// .bird-info p {
+//     font-weight: bold;
+//     font-size: 30px;
+// }
+// .bird-image {
+//     width: 150px;
+// }
+||||||| dcaaab4
+// .bird-info {
+//     margin: 10px;
+//     padding: 20px;
+// }
 
+// .bird-info p {
+//     font-weight: bold;
+//     font-size: 30px;
+// }
+
+// .bird-image {
+//     width: 150px;
+    
+// }
+
+=======
+
+>>>>>>> 74056f64b8c97ccadeffeb8727fd1f6797da69fb
 .rules-info a {
     color: #13505A;
 }
 .rules-info a:hover {
     color: #777;
   }
-
 .rules-info {
     font-weight: bold;
     font-size: 25px
 }
-
 .footerStyle {
 font-weight: bold;
 font-size: 10px;
 text-align: center;
 }
-
 .headerStyle {
     font-size: 50px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -441,7 +468,6 @@ text-align: center;
 #app {
     min-height: 100vh;
 }
-
 .footer {
     background-color: #13505A;
     color: #fff;
@@ -452,13 +478,11 @@ text-align: center;
     font-size: 18px;
     padding: 10px;
 }
-
 .add-listing {
     margin: 20px auto;
     cursor: pointer;
     text-align: center;
 }
-
 .add-listing button {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
@@ -471,17 +495,14 @@ text-align: center;
     box-shadow: 1px 1px 3px 1px #024841;
     border-radius: 4px;
 }
-
 .marketplace-body {
     position: relative;
     width: 900px;
 }
-
 .marketplace-heading {
     font-size: 45px;
     text-align: center;
 }
-
 .listing {
     display: flex;
     width: 60%;
@@ -493,11 +514,20 @@ text-align: center;
     flex-direction: column;
     align-items: center;
 }
-
 .listing p {
     margin: 15px;
     color: #fff;
 }
+<<<<<<< HEAD
+.wrapper {
+    margin-top: 40px;
+    margin-left: 50px;
+||||||| dcaaab4
+
+.wrapper {
+    margin-top: 40px;
+    margin-left: 50px;
+=======
 
 .birdWrap{
     display: flex;
@@ -515,8 +545,8 @@ text-align: center;
 .bird-img {
     width: 450px;
     margin-top: 30px;
+>>>>>>> 74056f64b8c97ccadeffeb8727fd1f6797da69fb
 }
-
 .stat {
     display: flex;
     width: 950px;
@@ -532,7 +562,6 @@ text-align: center;
     margin-left: 50px;
     align-content: space-around;
 }
-
 .stat p {
     font-size: 15pt;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -552,33 +581,39 @@ text-align: center;
     color: #13505A;
     margin-right: 60px;
 }
-
 .statNum {
     font-size: 30px;
     font-weight: 700;
     color: #13505A;
     margin-left: 60px;
 }
-
-
 .poacher-form {
     width: 50vw;
     margin: 10px auto;
 }
+<<<<<<< HEAD
+// ==================================
+.poacher-container, .add-listing-container, .obs-container, .add-boat-conatiner {
+||||||| dcaaab4
+
+// ==================================
+.poacher-container, .add-listing-container, .obs-container, .add-boat-conatiner  {
+=======
 .obs-body {
     width: 900px;
 }
 
 .poacher-container, .add-listing-container, .obs-container, .add-boat-conatiner  {
+>>>>>>> 74056f64b8c97ccadeffeb8727fd1f6797da69fb
     margin: 20px auto;
 }
-
 .label {
     color: #006373;
 }
-
-
 .add-listing-form  {
     width: 50vw;
     margin: 10px auto;
+}
+.add-bird-container {
+    border: 2px red solid;
 }

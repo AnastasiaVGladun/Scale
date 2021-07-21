@@ -15,11 +15,12 @@ const setDiary = (diary) => {
        return dispatch => {
          return fetchDiary()
            .then(data => {
-            //  console.log(data)
              return dispatch(setDiary(data))
            })
        }
      }
+
+     
 
      export function pushCatch (fishCatch) {
       return {
@@ -29,21 +30,25 @@ const setDiary = (diary) => {
     }
       
 
-      export function addCatch (formImage, formData) {
+      export function addCatch (formData) {
         return dispatch => {
-          return addFishImg(formImage)
-            .then(fileUrl => {
-              formData.image = fileUrl
+          // return addFishImg(formImage)
+          //   .then(fileUrl => {
+          //     formData.image = fileUrl
               return addCatchData(formData)
                 .then(catchId => {
-                  formData.id = catchId
-                  dispatch(pushCatch(formData))
+                  console.log(catchId)
+                  catchId.id = catchId
+                  dispatch(pushCatch(catchId))
                   return null
                 })
-            })
+            
             .catch(err => {
               console.log('error in actions: ', err.message)
             })
-        }
+        
       }
-      
+    }
+  
+
+

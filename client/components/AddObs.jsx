@@ -1,33 +1,57 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { createObsListing } from '../actions/obs'
+import { storage } from './Firebase'
 
 const AddListing = (props) => {
-    const { dispatch, history } = props
-    console.log (history)
-    const [formData, setFormData] = useState({date:'21-02-2021', title:'', description:'' })
+    const { dispatch } = props
+    const [formData, setFormData] = useState({date:'', title:'', description:'', image: '' })
+    const [img, setImg] = useState(null) 
 
-    // Onchange Handler 
+ 
+
+
     const changeHandler = (event) => {
         setFormData({
-            ...formData,
-            [event.target.name]: event.target.value
+          ...formData,
+          [event.target.name]: event.target.value
         })
-    }
-
-    // Submit Handler 
-    const submitHandler = (event) => {
-        event.preventDefault()
-        dispatch(createObsListing(formData))
-        setFormData({date:'21-02-2021', title:'', description:''})
-        history.push("/obs")
-    }
+      }
+        
+        const onChangeFile = (e) => {
+            if (e.target.files[0]){
+                setImg(e.target.files[0])
+        }
+        }
+    
+        const handleUpload = (e) => {
+            e.preventDefault()
+            const image = img
+            const uploadTask = storage.ref(`images/${image.name}`).put(image)
+            uploadTask.on(
+                "state_changed",
+                snapshot => {},
+                error => {
+                    console.log(error)
+                },
+                () => {
+                storage
+                    .ref('images')
+                    .child(image.name)
+                    .getDownloadURL()
+                    .then(url => {
+                        formData.image = url
+                        props.dispatch(createObsListing(formData))
+                    })
+                } 
+            )
+        }
 
 
     return (
         <div className="obs-container">
             <h1 className="obs-heading">Add Observations</h1>
-            <form className="poacher-form" onSubmit={(e) => submitHandler(e)} autoComplete="off">
+            <form className="poacher-form" onSubmit={handleUpload} autoComplete="off">
                 {/* Date */}
                 <div className="field">
                     <label className="label">Date</label>
@@ -51,6 +75,11 @@ const AddListing = (props) => {
                         <input name="description" type="text" id="description" value={formData.description} onChange={(e) => changeHandler(e)} className="input" placeholder="Description" />
                     </div>
                 </div>
+
+                <label className="label" htmlFor="fish_img">
+            <span className="form__label-title">Image: </span>
+            <input type="file" name="image" onChange={onChangeFile} />
+  </label>
 
                 {/* Submit Button */}
                 <div className="control">

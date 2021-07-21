@@ -9,7 +9,6 @@ styles.css.map
 .env
 coverage
 server/public/styles.css*
-=======
 .DS_Store
 
->>>>>>> ef7e2cce09eda67ea7706bd6d48cf66baa611a94
+

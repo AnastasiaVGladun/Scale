@@ -85,7 +85,7 @@ function App (props) {
 
           
         } 
-        <Route path='/' component={Footer}/> 
+        {/* <Route path='/' component={Footer}/>  */}
       
     
     </Router>

@@ -1,11 +1,8 @@
 @charset "utf-8";
-
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
-// Import custom variables and Bulma overides
-
-
+// // Import custom variables and Bulma overides
+@import "./variables.scss";
 // Import only what you need from Bulma
 @import "bulma/sass/utilities/_all.sass";
 @import "bulma/sass/base/_all.sass";
@@ -16,16 +13,13 @@
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/layout/hero.sass";
 @import "bulma/sass/layout/section.sass";
-
 //setting up Gallery for birds
 //   .bird-img {
-
 // div.gallery img {
 //   margin: 5px;
 //   float: left;
 //   width: 180px;
 // }
-
 // div.gallery img {
 //   width: 100%;
 //   height: auto;
@@ -33,11 +27,8 @@
 // div.desc {
 //   padding: 15px
 // }
-
-
 body {
-    font-family: 'Roboto', sans-serif; 
-    
+    font-family: 'Roboto', sans-serif;
   }
 .buttonItem {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -48,7 +39,7 @@ body {
     color: white;
     border-color: #006373;
     background-color: #006373;
-    box-shadow: 2px 2px #03404a;
+    box-shadow: 2px 2px #03404A;
     border-radius: 4px;
 }
 h1 {
@@ -56,7 +47,7 @@ h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     margin-bottom: 30px;
-    color: #03404a;
+    color: #03404A;
 }
 h2 {
     font-size: 30pt;
@@ -92,7 +83,6 @@ h5 {
     font-size: 20px;
     color: white;
     padding: 10px;
-    
     // font-weight: 800;
 }
 .RegisterForm{
@@ -107,11 +97,9 @@ h5 {
     flex-direction: column;
     align-items: center;
 }
-
 .myCatch{
     display: flex;
     align-items: center;
-
 }
 .diaryList {
     list-style-type: none;
@@ -122,7 +110,6 @@ h5 {
     padding-bottom: 55px;
 }
 .darkBlue {
-    
     width: 260px;
     background-color: #006373;
 }
@@ -151,20 +138,18 @@ h5 {
     width: auto;
 }
 .vertical-list {
-    display: flex; 
-    background-color: #76e0c7;
+    display: flex;
+    background-color: #76E0C7;
     flex-direction: column;
     width: 200px;
     flex-direction: column;
-} 
-
+}
 .myNav {
     align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-
 }
 .formCatch {
     display: flex;
@@ -177,7 +162,6 @@ width: 960px;
     width: 900px;
     margin-left: 40px;
 }
-
 .fish-info {
     margin: 10px;
     padding: 20px;
@@ -206,7 +190,6 @@ width: 960px;
     justify-content: space-between;
     margin-top: 50px;
 }
-
 .userWrap {
     display: flex;
     flex-direction: column;
@@ -216,19 +199,16 @@ width: 960px;
 .boatInfo {
     padding-left: 20px;
 }
-
 .boatData {
     text-align: center;
     display: flex;
     margin: auto;
     flex-direction: row;
 }
-
 .boatName {
     font-size: 20px;
     color: #006373;
 }
-
 .boatListings {
     width: 60%;
     margin: 20px;
@@ -249,7 +229,6 @@ width: 960px;
     margin-left: 20px;
     border-bottom: solid 1px grey;
 }
-
 .entryList {
     margin-top: 20px;
     display: flex;
@@ -258,14 +237,12 @@ width: 960px;
     align-items: center;
     justify-content: space-evenly;
 }
-
 .latestAchiv {
     padding: 20px;
     margin-top: 20px;
     margin-left: 20px;
     border-bottom: solid 1px grey;
 }
-
 .achivList {
     margin-top: 20px;
     flex-direction: column;
@@ -286,7 +263,6 @@ width: 960px;
     align-items: center;
     width: 990px;
 }
-
 .achievementWrap img {
     padding: 20px;
     height: auto;
@@ -300,7 +276,6 @@ width: 960px;
     display: flex;
     text-align: center;
 }
-
 .achievementListItem {
     width: 400px;
     display: flex;
@@ -312,7 +287,6 @@ width: 960px;
     margin-left: 20px;
     border-bottom: solid 1px grey;
 }
-
 .helpList {
     display: flex;
     flex-direction: column;
@@ -337,47 +311,40 @@ width: 960px;
     color: white;
     border-color: #006373;
     background-color: #006373;
-    box-shadow: 2px 2px #03404a;
+    box-shadow: 2px 2px #03404A;
     // margin-bottom: 50px;
     margin-left: 20px;
     width: 200px;
 }
 .dropMenu option {
-    background-color: #03404a;
+    background-color: #03404A;
 }
 // .bird-info {
 //     margin: 10px;
 //     padding: 20px;
 // }
-
 // .bird-info p {
 //     font-weight: bold;
 //     font-size: 30px;
 // }
-
 // .bird-image {
 //     width: 150px;
-    
 // }
-
 .rules-info a {
     color: #13505A;
 }
 .rules-info a:hover {
     color: #777;
   }
-
 .rules-info {
     font-weight: bold;
     font-size: 25px
 }
-
 .footerStyle {
 font-weight: bold;
 font-size: 10px;
 text-align: center;
 }
-
 .headerStyle {
     font-size: 50px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -394,7 +361,6 @@ text-align: center;
 #app {
     min-height: 100vh;
 }
-
 .footer {
     background-color: #13505A;
     color: #fff;
@@ -405,28 +371,23 @@ text-align: center;
     font-size: 18px;
     padding: 10px;
 }
-
 .add-listing {
     margin: 20px auto;
     cursor: pointer;
     text-align: center;
 }
-
 .add-listing button {
     cursor: pointer;
     height: 40px;
     width: 100px;
 }
-
 .marketplace-body {
     position: relative;
 }
-
 .marketplace-heading {
     font-size: 45px;
     text-align: center;
 }
-
 .listing {
     width: 60%;
     margin: 20px auto;
@@ -435,62 +396,13 @@ text-align: center;
     color: white;
     border-radius: 5px;
 }
-
 .listing p {
     margin: 15px;
 }
-
-  .headerStyle {
-  font-size: 50px;
-
-
-
-  margin-left: 30px;
-
-  margin-bottom: 50px;
-
-  }
-
-
-  body {
-    font-family: 'Roboto', sans-serif; 
-  }
-  
-  #horizontal-list {
-    display: flex; 
-  }
-  
-  #home-image {
-    display: flex; 
-  }
-  
-  #nav {
-    background-color: #8EC8B2; 
-    width: 390px;
-  }
-  
-  #logo-img {
-    display: flex; 
-    max-width: 100%;
-  }
-   
-  
-  #vertical-list {
-    display: flex; 
-    color:white;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  
-  #vertical-list li {
-    display: inline;
-  }
-
-  .wrapper {
+.wrapper {
     margin-top: 40px;
     margin-left: 50px;
 }
-
 .stat {
     display: flex;
     width: 950px;
@@ -505,7 +417,6 @@ text-align: center;
     margin-left: 50px;
     align-content: space-around;
 }
-
 .stat p {
     font-size: 15pt;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -524,31 +435,27 @@ text-align: center;
     color: #13505A;
     margin-right: 60px;
 }
-
 .statNum {
     font-size: 30px;
     font-weight: 700;
     color: #13505A;
     margin-left: 60px;
 }
-
-
 .poacher-form {
     width: 50vw;
     margin: 10px auto;
 }
-
 // ==================================
-.poacher-container, .add-listing-container, .obs-container, .add-boat-conatiner  {
+.poacher-container, .add-listing-container, .obs-container, .add-boat-conatiner {
     margin: 20px auto;
 }
-
 .label {
     color: #006373;
 }
-
-
 .add-listing-form  {
     width: 50vw;
     margin: 10px auto;
+}
+.add-bird-container {
+    border: 2px red solid;
 }

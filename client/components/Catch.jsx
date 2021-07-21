@@ -67,48 +67,67 @@ function Catch (props) {
     }
 
     return (
-      
-    <form className="poacher-form"  onSubmit={handleUpload}>
+      <div className="add-listing-contanier">
+           <h1> Log My Catch</h1>
+        <form className="add-listing-form"  onSubmit={handleUpload}>
     
-            <h1> Log My Catch</h1>
-
-        <label className="label"> Fish:
+          
+       <div className="field">
+        <label className="label"> Fish:</label>
+        <div className="control">
             <select name="fish_id" value={formData.name} onChange={(e) => changeHandler(e)} >
                 <option >Select Fish Species:</option>
                 {props.fish.map(fish=> {return <option key={fish.id} value={fish.id}>{fish.name}</option>})}
             </select>
-        </label>
-
-        <label className="label"> Region:
+        </div>
+        </div>
+         
+        <div className="field">
+        <label className="label"> Region:</label>
+        <div className="control">
             <select name="region_id" value={formData.location} onChange={(e) => changeHandler(e)} >
                 <option >Select Region</option>
                 {props.locations.map (location => { return <option value={location.id}>{location.location}</option> })}               
             </select>
-        </label>
-
-        <label className="label"> Method:
+        </div>
+        </div>
+        
+        <div className="field">
+        <label className="label"> Method:</label>
+        <div className="control">
             <select name="method_id" value={formData.method} onChange={(e) => changeHandler(e)} >
                 <option >Select method</option>
                 {props.methods.map (method => { return <option value={method.id}>{method.method}</option> })}               
             </select>
-        </label>
+        </div>
+        </div>
+
        {/* 
         <label className="label is-large has-text-centered">Time:
         <input type="time" name="time" value={formData.time} onChange={(e) => changeHandler(e)} id="appt" name="appt"  ></input>
         </label> */}
-
-        <label className="label"> Grams:
+        
+        <div className="field">
+        <label className="label"> Grams: </label>
+        <div className="control">
         <input type="number" name="weight" value={formData.weight} onChange={(e) => changeHandler(e)} required></input>
-        </label>
+        </div>
+        </div>
 
-        <label className="label" htmlFor="fish_img">
+
+        <div className="field">
+        <label className="label" htmlFor="fish_img"> </label>
+        <div className="control">
             <span className="form__label-title">Fish Image: </span>
             <input type="file" name="fish_img" onChange={onChangeFile} />
-          </label>
+          </div>
+          </div>
 
-        <button className="button is-large is-fullwidth is-success" type="submit" className="btn">Submit</button>
-
-    </form>
+          <div className="control">
+        <button className="buttonItem" type="submit" className="btn">Submit</button>
+        </div>
+        </form>
+    </div>
  )
 }
 

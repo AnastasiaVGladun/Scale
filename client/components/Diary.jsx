@@ -20,20 +20,12 @@ return (
                 <li className='diaryList'>
                 <h2>{entry.date}</h2>
                 <h3>{entry.location}</h3>
-                <p>My perfect fish skhfbvkfjbvdfvjdfvvjnnnnnrnnfdnvkhrbflkewhrgtkwrtbv.mrf bm.rwthbghwkjltb vmnfbgwjrtbgtm.fnbv s.rgbktrjbgv msfdvbmrtbgday</p>
+                <p>{entry.description}</p>//need to be changed to entry.diary
                 <div className="myCatch">
-                    <p>{entry.method}
-                    {/* <br />
-                    <a>method</a> */}
-                    </p>
-                    <p>{entry.name}
-                    
-                    </p>
+                    <p>{entry.method}</p>
+                    <p>{entry.name}</p>
                     <img src={`/images/Fish/${entry.image}@2x.png`} ></img>
-                    <h4>{entry.quantity}
-                    <br />
-                    {/* <a>quantity</a> */}
-                    </h4> 
+                    <h4>{entry.quantity}</h4> 
                     <img className='fishPhoto' src={`/images/Fishing people/${entry.photo}`} ></img>
                 </div>
                 </li>

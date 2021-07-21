@@ -3749,7 +3749,8 @@ p {
   border-radius: 5px; }
 
 .listing p {
-  margin: 15px; }
+  margin: 15px;
+  color: #fff; }
 
 .birdWrap {
   display: flex;

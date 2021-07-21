@@ -27,6 +27,8 @@ import SearchBox from './Search'
 import AddBoat from './AddBoat'
 import Obs from './Obs'
 import AddObs from './AddObs'
+import BirdForm from './BirdForm'
+import AddBird from './AddBird'
 
 function App (props) {
   const { auth, dispatch } = props
@@ -77,6 +79,8 @@ function App (props) {
           <Route path="/addObs" component={AddObs} />
           <Route path="/addcatch" component={Catch} />
        
+          <Route path="/foundbird" component={BirdForm} />
+          <Route path="/addbird" component={AddBird} />
           </>
 
           

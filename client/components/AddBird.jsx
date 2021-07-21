@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { createMarketplaceListing } from '../actions/marketplace'
+import { createBird_formListing } from '../actions/bird_form'
 import { storage} from './Firebase'
 
-const AddListing = (props) => {
-  console.log(props)
+const AddBird = (props) => {
   const {dispatch} = props
-  const [formData, setFormData] = useState({date: 21022021 ,name: '', email: '', phone: '', description: '', image: ''})
+  
+  const [formData, setFormData] = useState({title: '', date: 21022021 , name: '', description: '', image: '' })
   const [img, setImg] = useState(null) 
   // Onchange Handler 
+  
+
+ 
 
 
   const changeHandler = (event) => {
@@ -41,7 +44,7 @@ const AddListing = (props) => {
                 .getDownloadURL()
                 .then(url => {
                     formData.image = url
-                    props.dispatch(createMarketplaceListing(formData))
+                    props.dispatch(createBird_formListing(formData))
                 })
             } 
         )
@@ -49,12 +52,20 @@ const AddListing = (props) => {
 
   return (
     <div>
-  <form className="poacher-form" onSubmit= {handleUpload} autoComplete="off">
-        {/* Date */}
+  <form className="add-bird-form" onSubmit= {handleUpload} autoComplete="off">
+        {/* Title */}
         <div className="field">
-            <label className="label">Date</label>
+            <label className="label">Title</label>
               <div className="control">
-                <input name="date" type="date" id="date" value={formData.date} onChange={(e) => changeHandler(e)}/>
+                <input name="title" type="text" id="title" value={formData.title} onChange={(e) => changeHandler(e)}/>
+              </div>
+            </div>
+
+            {/* Date */}
+            <div className="field">
+              <label className="label">Date</label>
+              <div className="control">
+                <input name="date" type="date" id="date" value={formData.date} onChange={(e) => changeHandler(e)}  className="input" />
               </div>
             </div>
 
@@ -62,23 +73,7 @@ const AddListing = (props) => {
             <div className="field">
               <label className="label">Name</label>
               <div className="control">
-                <input name="name" type="text" id="name" value={formData.name} onChange={(e) => changeHandler(e)}  className="input" placeholder="Name"/>
-              </div>
-            </div>
-
-            {/* Email */}
-            <div className="field">
-              <label className="label">Email</label>
-              <div className="control">
-                <input name="email" type="text" id="email" value={formData.email} onChange={(e) => changeHandler(e)} className="input" placeholder="Email"/>
-              </div>
-            </div>
-
-            {/* Phone */}
-            <div className="field">
-              <label className="label">Phone</label>
-              <div className="control">
-                <input name="phone" type="text" id="phone" value={formData.phone} onChange={(e) => changeHandler(e)} className="input" placeholder="Phone"/>
+                <input name="name" type="text" id="name" value={formData.name} onChange={(e) => changeHandler(e)} className="input" placeholder="Name"/>
               </div>
             </div>
 
@@ -106,8 +101,8 @@ const AddListing = (props) => {
 
 const mapStateToProps = (globalState) => {
   return {
-    marketplace: globalState.marketplace
+    fish_form: globalState.fish_form
   }
 }
 
-export default connect(mapStateToProps)(AddListing) 
+export default connect(mapStateToProps)(AddBird) 

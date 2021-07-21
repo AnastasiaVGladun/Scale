@@ -24,8 +24,7 @@ function addCatch(fishcatch, userId, db = connection) {
   //   weight: fishcatch.weight,
   //   time: fishcatch.time
 
-  // }
-  
+// console.log(newFishcatch)
   
   return db('catch')
     .insert(fishcatch )

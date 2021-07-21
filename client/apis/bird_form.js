@@ -1,10 +1,10 @@
 import request from 'superagent'
 import { getAuthorizationHeader } from 'authenticare/client'
 
-const baseUrl = '/api/v1/boat'
+const baseUrl = '/api/v1/bird-form'
 const acceptJsonHeader = { Accept: 'application/json' }
 
-export const postBoatListing = (newListing) => {
+export const postBird_formListing = (newListing) => {
   return request.post(baseUrl)
     .set(acceptJsonHeader)
     .set(getAuthorizationHeader())
@@ -16,8 +16,8 @@ export const postBoatListing = (newListing) => {
       console.log(err.message)
     })
 }
- 
-export const fetchBoatListings = () => {
+
+export const fetchBird_formListings = () => {
   return request.get(baseUrl)
   .set(getAuthorizationHeader())
   .then(response => {

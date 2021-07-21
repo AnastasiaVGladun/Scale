@@ -13,8 +13,7 @@ function BirdInfo (props) {
           <div>
           <p>If a seabird is noticed on a line, stop the vessel to reduce drag on the line. When the bird is within reach, gently bring it on board by hand or using a net. Do not pull the bird up on the line as this may cause further injury. Do not handle birds by wingtips as it can break the wing. With one crew member holding the bird, another crew member can carefully detach the fishing gear from the animal.</p>
          </div> 
-        <Link to='/foundBirds'><button className='buttonItem'type="button">I've found an injured bird!</button></Link>
-        
+<a class="w3-button w3-black" href="#/foundbird"><button>I've found an injured bird!</button></a>
             <div>
                     <img className='bird-img' src="/images/Bird/step2.png" alt="untangle bird pic"/>
                     <img className='bird-img' src="/images/Bird/step3.png" alt="untan bird pic"/>

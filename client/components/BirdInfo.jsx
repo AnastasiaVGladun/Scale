@@ -26,7 +26,7 @@ function BirdInfo (props) {
                     <img className='bird-img' src="/images/Bird/step5.png" alt="unt bird pic"/>
 
                 </div>
-        <Link to='/addCatch'><button className='buttonItem'type="button">Add a New Catch</button></Link>
+        {/* <Link to='/addCatch'><button className='buttonItem'type="button">Add a New Catch</button></Link> */}
 
         </div>
 )

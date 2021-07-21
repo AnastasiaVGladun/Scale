@@ -3388,10 +3388,17 @@ h4 {
   color: #006373;
   font-weight: 700; }
 
+h5 {
+  font-size: 15pt;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-left: 25px;
+  color: #827d7d; }
+
 p {
   font-size: 15pt;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: auto;
+  text-align: center;
   color: #827d7d; }
 
 .homeName {
@@ -3729,24 +3736,35 @@ p {
   text-align: center; }
 
 .add-listing button {
-  cursor: pointer;
-  height: 40px;
-  width: 100px; }
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 30px;
+  padding: 8px;
+  color: white;
+  border-color: #006373;
+  background-color: #006373;
+  box-shadow: 1px 1px 3px 1px #024841;
+  border-radius: 4px; }
 
 .marketplace-body {
-  position: relative; }
+  position: relative;
+  width: 900px; }
 
 .marketplace-heading {
   font-size: 45px;
   text-align: center; }
 
 .listing {
+  display: flex;
   width: 60%;
   margin: 20px auto;
   padding: 20px;
   background-color: #13505A;
   color: white;
-  border-radius: 5px; }
+  border-radius: 5px;
+  flex-direction: column;
+  align-items: center; }
 
 .listing p {
   margin: 15px;
@@ -3786,7 +3804,7 @@ p {
 .stat p {
   font-size: 15pt;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin-left: 20px;
+  text-align: center;
   color: grey; }
 
 .statItem {
@@ -3808,6 +3826,19 @@ p {
   margin-left: 60px; }
 
 .poacher-form {
+  width: 50vw;
+  margin: 10px auto; }
+
+.obs-body {
+  width: 900px; }
+
+.poacher-container, .add-listing-container, .obs-container, .add-boat-conatiner {
+  margin: 20px auto; }
+
+.label {
+  color: #006373; }
+
+.add-listing-form {
   width: 50vw;
   margin: 10px auto; }
 

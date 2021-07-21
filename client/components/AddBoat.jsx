@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { getObsListings, createObsListing } from '../actions/obs'
+import { createBoatListing } from '../actions/boat'
+import { Link } from 'react-router-dom'
 
-const AddListing = (props) => {
+const AddBoat = (props) => {
   const {dispatch} = props
-  const [formData, setFormData] = useState({date: 21022021 ,name: '', email: '', phone: '', description: ''})
+  const [formData, setFormData] = useState({ 
+    boat_name: '',
+    boat_licence: '',
+    boat_licence_expiry: '',
+    Fish_licence: '',
+    Fish_licence_expiry: '',
+    Boat_WOF_licence: '',
+    Boat_WOF_licence_expiry: '',})
 
   // Onchange Handler 
   const changeHandler = (event) => {
@@ -17,57 +25,47 @@ const AddListing = (props) => {
   // Submit Handler 
   const submitHandler = (event) => {
     event.preventDefault()
-    dispatch(createObsListing(formData))
-    setFormData({date: 21022021, name: '', email: '', phone: '', description: ''})
+    dispatch(createBoatListing(formData))
+    setFormData({boat_name: '',
+    boat_licence: '',
+    boat_licence_expiry: '',
+    Fish_licence: '',
+    Fish_licence_expiry: '',
+    Boat_WOF_licence: '',
+    Boat_WOF_licence_expiry: ''})
+
   }
 
+
   return (
-    <div add-boat-conatiner>
-  <form className="poacher-form" onSubmit= {(e) => submitHandler(e)} autoComplete="off">
-        {/* Date */}
-        <div className="field">
-            <label className="label">Date</label>
-              <div className="control">
-                <input name="date" type="date" id="date" value={formData.date} onChange={(e) => changeHandler(e)}/>
-              </div>
-            </div>
-
-            {/* Name */}
-            <div className="field">
-              <label className="label">Name</label>
-              <div className="control">
-                <input name="name" type="text" id="name" value={formData.name} onChange={(e) => changeHandler(e)}  className="input" placeholder="Name"/>
-              </div>
-            </div>
-
-            {/* Email */}
-            <div className="field">
-              <label className="label">Email</label>
-              <div className="control">
-                <input name="email" type="text" id="email" value={formData.email} onChange={(e) => changeHandler(e)} className="input" placeholder="Email"/>
-              </div>
-            </div>
-
-            {/* Phone */}
-            <div className="field">
-              <label className="label">Phone</label>
-              <div className="control">
-                <input name="phone" type="text" id="phone" value={formData.phone} onChange={(e) => changeHandler(e)} className="input" placeholder="Phone"/>
-              </div>
-            </div>
-
-            {/* Description */}
-            <div className="field">
-              <label className="label">Description</label>
-              <div className="control">
-                <input name="description" type="text" id="description" value={formData.description} onChange={(e) => changeHandler(e)} className="input" placeholder="Description"/>
-              </div>
-            </div>
-            
-            {/* Submit Button */}
-            <div className="control">
-              <button className="buttonItem">Submit</button>
-            </div>
+    <div className="obs-container">
+      <form className="poacher-form" onSubmit= {(e) => submitHandler(e)}>
+        <h1>Add Your Details</h1>
+        <div className="field"></div>
+          <label htmlFor="boat_name">Boat Name</label>
+          <div className="control">
+          <input name="boat_name" type="text" id="boat_name" value={formData.boat_name} onChange={(e) => changeHandler(e)}/>
+          </div> 
+          
+          <label htmlFor="boat_licence">Boat Licence Number
+            <input name="boat_licence" type="text" id="boat_licence" value={formData.boat_licence} onChange={(e) => changeHandler(e)}/>
+          </label>
+          <label htmlFor="boat_licence_expiry">Boat Licence Expiry Date
+            <input name="boat_licence_expiry" type="text" id="boat_licence_expiry" value={formData.boat_licence_expiry} onChange={(e) => changeHandler(e)}/>
+          </label>
+          <label htmlFor="Fish_licence">Fish Licence Number
+            <input name="Fish_licence" type="text" id="Fish_licence" value={formData.Fish_licence} onChange={(e) => changeHandler(e)}/>
+          </label>
+          <label htmlFor="Fish_licence_expiry">Fish Licence Expiry Date
+            <input name="Fish_licence_expiry" type="text" id="Fish_licence_expiry" value={formData.Fish_licence_expiry} onChange={(e) => changeHandler(e)}/>
+          </label>
+          <label htmlFor="Boat_WOF_licence">Boat WOF Licence Number
+            <input name="Boat_WOF_licence" type="text" id="Boat_WOF_licence" value={formData.Boat_WOF_licence} onChange={(e) => changeHandler(e)}/>
+          </label>
+          <label htmlFor="Boat_WOF_licence_expiry">Boat WOF Licence Expiry Date
+            <input name="Boat_WOF_licence_expiry" type="text" id="Boat_WOF_licence_expiry" value={formData.Boat_WOF_licence_expiry} onChange={(e) => changeHandler(e)}/>
+          </label>
+         <button>Submit</button> 
       </form>
     </div>
   )
@@ -75,8 +73,8 @@ const AddListing = (props) => {
 
 const mapStateToProps = (globalState) => {
   return {
-    obs: globalState.obs
+    boat: globalState.boat
   }
 }
 
-export default connect(mapStateToProps)(AddListing) 
+export default connect(mapStateToProps)(AddBoat) 

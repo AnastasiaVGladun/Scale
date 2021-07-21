@@ -12,7 +12,7 @@ const Bird_form = (props) => {
   }, [])
 
   return (
-    <div className="bird_form-body">
+    <div className="poacher-form">
       <h1 className="bird_form-heading">COMMUNITY BIRD WATCH</h1>
       <div className="listing-container">
       <div ><Link to='/addbird'><button className="buttonItem">Add your Bird</button></Link></div>

@@ -3828,27 +3828,15 @@ p {
   color: #13505A;
   margin-left: 60px; }
 
-.poacher-form {
-  width: 50vw;
-  margin: 10px auto; }
-
 .obs-body {
   width: 900px; }
 
 .form-container {
   margin: 20px auto;
-  width: 50vw;
-  border: 3px blue solid; }
+  width: 50vw; }
 
 .label {
   color: #006373; }
-
-.add-listing-form {
-  width: 50vw;
-  margin: 10px auto; }
-
-.add-bird-container {
-  border: 2px red solid; }
 
 
 /*# sourceMappingURL=styles.css.map*/

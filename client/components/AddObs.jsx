@@ -56,7 +56,7 @@ const AddListing = (props) => {
                 <div className="field">
                     <label className="label">Date</label>
                     <div className="control">
-                        <input name="date" type="date" id="date" value={formData.date} onChange={(e) => changeHandler(e)} />
+                        <input name="date" type="date" id="date" value={formData.date} onChange={(e) => changeHandler(e)} className="input" placeholder="Name"/>
                     </div>
                 </div>
 

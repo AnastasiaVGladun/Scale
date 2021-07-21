@@ -52,12 +52,13 @@ const AddBird = (props) => {
 
   return (
     <div className="form-container">
+      <h1>Add a Bird</h1>
   <form className="form" onSubmit= {handleUpload} autoComplete="off">
         {/* Title */}
-        <div className="field">
-            <label className="label">Title</label>
+            <div className="field">
+              <label className="label">Title</label>
               <div className="control">
-                <input name="title" type="text" id="title" value={formData.title} onChange={(e) => changeHandler(e)}/>
+                <input name="title" type="text" id="title" value={formData.title} onChange={(e) => changeHandler(e)} className="input" placeholder="Title"/>
               </div>
             </div>
 

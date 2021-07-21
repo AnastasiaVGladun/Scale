@@ -51,6 +51,7 @@ const Poacher = (props) => {
 
   return (
     <div className="form-container">
+      <h1>Add a Poacher</h1>
 <form className="form" onSubmit= {handleUpload} autoComplete="off">
 
 {/* Name */}

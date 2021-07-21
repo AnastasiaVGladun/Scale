@@ -22,8 +22,9 @@ const Bird_form = (props) => {
             <p>{listing.title}</p>
             <p>{listing.date}</p>
             <p>{listing.name}</p>
+            <img src={listing.image}></img>
             <p>{listing.description}</p>
-            <p>{listing.image}</p>
+            
           </div>)
         })}
       </div>

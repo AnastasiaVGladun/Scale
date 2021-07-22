@@ -49,13 +49,14 @@ function Nav (props) {
                 )
               : (
                 <>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/'>HOME</Link>
+                  <Link onClick={toggleBurger} className="navbar-item" to='/home'>HOME</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/fish'>FISH INFO</Link>
                   {/* <Link onClick={toggleBurger} className="navbar-item" to='/bird'>BIRD INFO</Link> */}
                   <Link onClick={toggleBurger} className="navbar-item" to='/rules'>RULES</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/stats'>STATISTICS</Link>
                   <Link onClick={toggleBurger} className="navbar-item" to='/diary'>DIARY</Link>
-                  <Link onClick={toggleBurger} className="navbar-item" to='/user'>USER HOME</Link>
+                  {/* // delete this  */}
+                  {/* <Link onClick={toggleBurger} className="navbar-item" to='/user'>USER HOME</Link> */}
                   <Link onClick={toggleBurger} className="navbar-item" to='/achievements'>ACHIEVEMENTS</Link>
                   <Link to='/' id="logout" className="navbar-item" onClick={() => logout()}>LOGOUT</Link>
                 </>

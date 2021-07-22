@@ -51,7 +51,7 @@ function App (props) {
         <Route path='/rules' component={RulesInfo} />
         <Route path="/stats" component={Statistic} />
         
-        {auth.isAuthenticated && <Route path='/user' component={UserHome} />}
+        {auth.isAuthenticated && <Route path='/home' component={UserHome} />}
         {auth.isAuthenticated && <Route path="/diary" component={Diary} />}
         {auth.isAuthenticated && <Route path="/achievements" component={Achievements} />}  
         {auth.isAuthenticated && <Route path="/poacher" component={Poacher} />}  

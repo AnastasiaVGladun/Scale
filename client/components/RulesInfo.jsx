@@ -30,9 +30,9 @@ function RulesInfo (props) {
                 })}
               </ul>
             </div>
-            <div className="rules-map">
+            {/* <div className="rules-map">
               <img className='mapPhoto' src={'/images/icon/map.gif'} />
-            </div>
+            </div> */}
           </div>
       </div>
 

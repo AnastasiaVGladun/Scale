@@ -9,39 +9,35 @@ function Diary (props){
 
 return (
     <div className='diary'>
-        <h1>My Fishing Diary</h1>
+        <h1 className="title is-1">My Fishing Diary</h1>
+        <Link to='/addCatch'><button className="button is-light">New Catch</button></Link>
+        <div className="diary-container">
         {props.diary.map(entry => {
             console.log(entry)
             return (
-                <div className="diary-conatiner">
-                    <div className="diary-card">
-                    <div className="card-image">
+                <div className="card">
+                <div className="card-image">
                     <figure className="image is-4by3">
-                    <img src={`/images/Fishing people/${entry.photo}`} alt="fish catch image"/>
+                    <img src={`/images/Fishing-people/${entry.photo}`} alt="Placeholder image"/>
                     </figure>
-                    </div>
-                
-                    <div className="card-content">
+                </div>
+
+                <div className="card-content">
                     <div className="content">
-                        <p>Location: {entry.location}</p>
-                        <p>Cought {entry.method}</p>
-                        <p>Fish type: {entry.name}</p>
-                        <p>Quantity: {entry.quantity}</p> 
-                        <p>Description: {entry.description}</p> 
-                        <h2>{entry.time}</h2>
-                    </div>
+                        <p><strong>Location: </strong> {entry.location}</p>
+                        <p><strong>Cought: </strong> {entry.method}</p>
+                        <p><strong>Fish type: </strong> {entry.name}</p>
+                        <p><strong>Quantity: </strong>{entry.quantity}</p> 
+                        <time datetime="2016-1-1">{entry.time}</time>
                     </div>
                 </div>
                 </div>
             )
-        })}
-
-        
-        <Link to='/addCatch'><button type="button">New Catch</button></Link>
+        })} 
+        </div>
     </div>
 )
 }
-
 
 const mapStateToProps = (globalState) => {
     return {

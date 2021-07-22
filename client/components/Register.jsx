@@ -36,7 +36,7 @@ function Register (props) {
     if (confirm_password != password){
       dispatch(loginError("Passwords don't match"))
     } else {
-      const confirmSuccess = () => { props.history.push('/') }
+      const confirmSuccess = () => { props.history.push('/home') }
       const userInfo = { ...formData }
       delete userInfo.confirm_password
       dispatch(registerUserRequest(userInfo, confirmSuccess))

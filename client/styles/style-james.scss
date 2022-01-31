@@ -1,0 +1,36 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+  }
+  
+  #horizontal-list {
+    display: flex; 
+  }
+  
+  #home-image {
+    display: flex; 
+  }
+  
+  .navbar {
+    background-color: rgb(50, 56, 50);
+    width: 390px;
+  }
+  
+  #logo-img {
+    display: flex; 
+    max-width: 100%;
+  }
+   
+  
+  #vertical-list {
+    display: flex; 
+    color:white;
+    flex-direction: column;
+    margin-bottom: 10px;
+  } 
+  
+  #vertical-list li {
+    display: inline;
+  }
+
+  
+  

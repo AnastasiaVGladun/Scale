@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { createMarketplaceListing } from '../actions/marketplace'
 import { storage} from './Firebase'
+import {Link} from 'react-router-dom'
 
 const AddListing = (props) => {
   console.log(props)
   const {dispatch} = props
-  const [formData, setFormData] = useState({date: 21022021 ,name: '', email: '', phone: '', description: '', image: ''})
-  const [img, setImg] = useState(null) 
+  const [formData, setFormData] = useState({date: "" ,name: '', email: '', phone: '', description: ''})
+  // , image: ''}
+  
+  // const [img, setImg] = useState(null) 
   // Onchange Handler 
 
 
@@ -17,40 +20,46 @@ const AddListing = (props) => {
       [event.target.name]: event.target.value
     })
   }
-    
-    const onChangeFile = (e) => {
-        if (e.target.files[0]){
-            setImg(e.target.files[0])
-    }
-    }
+  const submitHandler = (event) => {
+    event.preventDefault()
+    dispatch(createMarketplaceListing(formData))
+    setFormData({date: "", name: '', email: '', phone: '', description: ''})
+  }
+    // const onChangeFile = (e) => {
+    //     if (e.target.files[0]){
+    //         setImg(e.target.files[0])
+    // }
+    // }
 
-    const handleUpload = (e) => {
-        e.preventDefault()
-        const image = img
-        const uploadTask = storage.ref(`images/${image.name}`).put(image)
-        uploadTask.on(
-            "state_changed",
-            snapshot => {},
-            error => {
-                console.log(error)
-            },
-            () => {
-            storage
-                .ref('images')
-                .child(image.name)
-                .getDownloadURL()
-                .then(url => {
-                    formData.image = url
-                    props.dispatch(createMarketplaceListing(formData))
-                })
-            } 
-        )
-    }
+    // const handleUpload = (e) => {
+    //     e.preventDefault()
+    //     const image = img
+    //     const uploadTask = storage.ref(`images/${image.name}`).put(image)
+    //     uploadTask.on(
+    //         "state_changed",
+    //         snapshot => {},
+    //         error => {
+    //             console.log(error)
+    //         },
+    //         () => {
+    //         storage
+    //             .ref('images')
+    //             .child(image.name)
+    //             .getDownloadURL()
+    //             .then(url => {
+    //                 formData.image = url
+    //                 props.dispatch(createMarketplaceListing(formData))
+    //             })
+    //         } 
+    //     )
+    // }
 
   return (
     <div className="form-container">
       <h1>Add Listing</h1>
-  <form className="form" onSubmit= {handleUpload} autoComplete="off">
+  <form className="form" onSubmit= {submitHandler}
+  // {handleUpload} 
+  autoComplete="off">
         {/* Date */}
           <div className="field">
             <label className="label">Date</label>
@@ -91,10 +100,10 @@ const AddListing = (props) => {
               </div>
             </div>
 
-            <label className="label" htmlFor="fish_img">
+            {/* <label className="label" htmlFor="fish_img">
             <span className="form__label-title">Image: </span>
             <input type="file" name="image" onChange={onChangeFile} />
-            </label>
+            </label> */}
             
             {/* Submit Button */}
             <div className="control">

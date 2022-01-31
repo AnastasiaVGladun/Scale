@@ -16,7 +16,7 @@
     "test": "jest",
     "test:watch": "jest --noStackTrace --watchAll",
 
-    "build": "webpack --mode=production && run-p build:client build:server",
+    "build": "run-p build:client build:server",
     "build:client": "npm run webpack -- --mode production",
     "build:server": "npm run knex -- migrate:latest",
     "webpack": "webpack --config ./client/webpack.config.js",

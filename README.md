@@ -4,14 +4,6 @@ Karen, Anastasia, Silvia, James, Saula, Yousuf
 
 Recreational Fishing App - collecting data for good!
 
-## Team Organisation 
-* Scrum and Vibes Lead - Silvia
-* Git Lead - Yousuf
-* Product Owner - Karen
-* Tech Lead - agile/shared team approach due to our small team.
-
-## Project Management
-![20210720_111008](https://user-images.githubusercontent.com/81403368/126238963-3912909d-c24e-458b-8900-5a495b3530a8.jpg)
 
 ![Screenshot_20210716-183709_Gallery](https://user-images.githubusercontent.com/81403368/125923101-e0a7d2c3-8166-4371-a30d-c09d8de974cf.jpg)
 

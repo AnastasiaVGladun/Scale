@@ -10,7 +10,7 @@ exports.up = function(knex) {
       table.integer('weight')
       table.integer('time')
       table.date('date')
-      table.string('diary')
+      table.string('diary', 1000)
     })
   };
   

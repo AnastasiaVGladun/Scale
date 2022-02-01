@@ -5,7 +5,6 @@ exports.up = function(knex) {
       table.string('name')
       table.string('badge_image')
       table.string('description')
-
     })
   };
   

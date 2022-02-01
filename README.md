@@ -84,7 +84,7 @@ Recreational Fishing App - collecting data for good!
   * Statistics - Add view by time 
 
   Registered User 
-  * Diary - add filter by location and time
+  * Diary - add filter by location and time 
   * User statistics - show users stats based on their diary info
   * Achievements - Gamefication - show user badges based on their own stats
   * Pot a Poacher (form) - upload images and info and share with fish cops to help build a trend/picture of suspicious behaviour

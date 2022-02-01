@@ -11,8 +11,9 @@ if (location_id === 'All'){
     // .whereBetween('catch.created_at', [start_time, end_time])
     
     .sum('catch.quantity as quantity')
-    .groupBy('fish.name')
-    .select('fish.name', 'fish.image')
+    .groupBy('fish.name', 'fish.image')
+    .select('fish.name', 'fish.image', 'quantity')
+    
 }
 
 else{
@@ -24,8 +25,8 @@ else{
     // .whereBetween('catch.created_at', [start_time, end_time])
     
     .sum('catch.quantity as quantity')
-    .groupBy('fish.name')
-    .select('fish.name', 'fish.image')
+    .groupBy('fish.name', 'fish.image')
+    .select('fish.name', 'fish.image', 'quantity')
     //.select();
     // .select('catch.id', 'catch.region_id', 'catch.fish_id', 'catch.quantity', 
     // 'location.location as location_name', 'fish.name as fish_name', 'method.method as method_type')

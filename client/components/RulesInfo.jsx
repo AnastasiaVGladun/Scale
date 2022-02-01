@@ -32,7 +32,7 @@ function RulesInfo (props) {
                                     </div>
                                 })}
                             </ul>
-                            <img className='mapPhoto' src="/images/icon/NZoutline.png" ></img>
+                            <img className='mapPhoto' src="/images/Icon/NZoutline.png" ></img>
                         </div>
                    
                 

@@ -8,7 +8,7 @@ if (location_id === 'All'){
     .join('location', 'catch.region_id', 'location.id')
     .join('fish', 'catch.fish_id', 'fish.id')
     .join('method', 'catch.method_id', 'method.id')
-    .whereBetween('catch.created_at', [start_time, end_time])
+    // .whereBetween('catch.created_at', [start_time, end_time])
     
     .sum('catch.quantity as quantity')
     .groupBy('fish.name')
@@ -21,7 +21,7 @@ else{
     .join('fish', 'catch.fish_id', 'fish.id')
     .join('method', 'catch.method_id', 'method.id')
     .where('catch.region_id', location_id)
-    .whereBetween('catch.created_at', [start_time, end_time])
+    // .whereBetween('catch.created_at', [start_time, end_time])
     
     .sum('catch.quantity as quantity')
     .groupBy('fish.name')

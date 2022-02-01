@@ -8,14 +8,20 @@ if (location_id === 'All') {
     return db('catch')
     .join('location', 'catch.region_id', 'location.id')
     .join('fish', 'catch.fish_id', 'fish.id')
-    .select('fish.name', 'fish.image', sum('catch.quantit'))
+    .groupBy('fish.name')
+    .groupBy('fish.image')
+    .sum('catch.quantity as quantity')
+    .select('fish.name', 'fish.image')
     
 } else {
-    return table('catch')
+    return db('catch')
     .join('location', 'catch.region_id', 'location.id')
     .join('fish', 'catch.fish_id', 'fish.id')
     .where('catch.region_id', location_id)
-    .select('fish.name', 'fish.image', sum('catch.quantity'))
+    .groupBy('fish.name')
+    .groupBy('fish.image')
+    .sum('catch.quantity as quantity')
+    .select('fish.name', 'fish.image')
     //.select();
     // .select('catch.id', 'catch.region_id', 'catch.fish_id', 'catch.quantity', 
     // 'location.location as location_name', 'fish.name as fish_name', 'method.method as method_type')

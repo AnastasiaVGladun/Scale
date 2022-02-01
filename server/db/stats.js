@@ -1,32 +1,21 @@
+const { table, sum } = require('./connection')
 const connection = require('./connection') 
 
 const getStatsByLocation = (location_id, start_time, end_time, db = connection) => {
 
     //return db.raw()
-if (location_id === 'All'){
+if (location_id === 'All') {
     return db('catch')
     .join('location', 'catch.region_id', 'location.id')
     .join('fish', 'catch.fish_id', 'fish.id')
-    .join('method', 'catch.method_id', 'method.id')
-    // .whereBetween('catch.created_at', [start_time, end_time])
+    .select('fish.name', 'fish.image', sum('catch.quantit'))
     
-    .sum('catch.quantity as quantity')
-    .groupBy('fish.name', 'fish.image')
-    .select('fish.name', 'fish.image', 'quantity')
-    
-}
-
-else{
-    return db('catch')
+} else {
+    return table('catch')
     .join('location', 'catch.region_id', 'location.id')
     .join('fish', 'catch.fish_id', 'fish.id')
-    .join('method', 'catch.method_id', 'method.id')
     .where('catch.region_id', location_id)
-    // .whereBetween('catch.created_at', [start_time, end_time])
-    
-    .sum('catch.quantity as quantity')
-    .groupBy('fish.name', 'fish.image')
-    .select('fish.name', 'fish.image', 'quantity')
+    .select('fish.name', 'fish.image', sum('catch.quantity'))
     //.select();
     // .select('catch.id', 'catch.region_id', 'catch.fish_id', 'catch.quantity', 
     // 'location.location as location_name', 'fish.name as fish_name', 'method.method as method_type')

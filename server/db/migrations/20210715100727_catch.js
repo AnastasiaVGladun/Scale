@@ -9,7 +9,8 @@ exports.up = function(knex) {
       table.string('photo')
       table.integer('weight')
       table.integer('time')
-      table.timestamps(true,true)
+      table.date('date')
+      table.string('diary')
     })
   };
   

@@ -19,7 +19,7 @@
     "build:client": "npm run webpack --mode=production",
     "build:server": "npm run knex --migrate:latest",
     "webpack": "webpack --config ./client/webpack.config.js",
-    "knex": "knex --knexfile ./server/db/knexfile.js migrate:latest && knex --knexfile ./server/db/knexfile.js seed:run",
+    "knex": "knex --knexfile ./server/db/knexfile.js migrate:latest seed:run",
     "lint": "eslint --ext .js,.jsx .",
     "h:deploy": "git push heroku main",
     "h:migrate": "heroku run npm run knex migrate:latest",

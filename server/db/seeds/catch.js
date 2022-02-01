@@ -13,7 +13,7 @@ exports.seed = function(knex) {
           quantity:3, 
           photo:'1.png',
           weight:'10',
-          time:2.5,
+          time:2,
           date:'2021-05-15',
           diary:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
@@ -61,7 +61,7 @@ exports.seed = function(knex) {
           quantity:6, 
           photo:'1.png',
           weight:'10',
-          time:3.5,
+          time:4,
           date:'2020-03-11',
           diary:'Wet and windy, the fish was not biting. The day Fred face planted at the parking lot'
         },
@@ -110,7 +110,7 @@ exports.seed = function(knex) {
           quantity:10, 
           photo:'2.png',
           weight:'10',
-          time:3.5,
+          time:4,
           date:'2021-06-10',
           diary:'Took the love of my life fishing. She\'s a keeper!'
         },

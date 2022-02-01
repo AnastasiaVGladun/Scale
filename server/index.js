@@ -6,10 +6,10 @@ if(!process.env.NODE_ENV || process.env.NODE_ENV == 'development') {
 const server = require('./server')
 // var PORT = process.env.PORT || 3000
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
 
-server.listen(PORT, function () {
-  console.log('Listening on port', PORT)
-})
+// server.listen(PORT, function () {
+//   console.log('Listening on port', PORT)
+// })

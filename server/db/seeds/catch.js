@@ -14,7 +14,7 @@ exports.seed = function(knex) {
           photo:'1.png',
           weight:'10',
           time:2.5,
-          date:'15-05-2021',
+          date:'2021-05-15',
           diary:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
         { id: 2, 
@@ -26,7 +26,7 @@ exports.seed = function(knex) {
           photo:'2.png',
           weight:'10',
           time:3,
-          date:'17-02-2021',
+          date:'2021-02-17',
           diary:'I took my son out fishing when he was five years old. After a while of catching some nice smallmouth, my son told me he needed to go "number two". So I told him to hold on while I reeled in my line. I looked over at him and he was already going "number two" in my rear livewell. We had brown trout and smallies that day. I wouldnt trade that memory for anything'
         },
         { id: 3, 
@@ -38,7 +38,7 @@ exports.seed = function(knex) {
           photo:'3.png',
           weight:'10',
           time:3,
-          date:'17-03-2021',
+          date:'2021-03-17',
           diary:'Went down to Oriental Parade for a well earned fishing trip. Lovely Winter weather, blistering wind and icy cold rain ! Caught a lot of seaweed and zero fish. Not a great start to my fishing diary.'
         },
         { id: 4, 
@@ -50,7 +50,7 @@ exports.seed = function(knex) {
           photo:'2.png',
           weight:'10',
           time:3,
-          date:'23-08-2020',
+          date:'2020-08-23',
           diary:'It was a particular calm day and visibility was great! Even spotted a pod of dolphins and a couple of seals.'
         },
         { id: 5, 
@@ -62,7 +62,7 @@ exports.seed = function(knex) {
           photo:'1.png',
           weight:'10',
           time:3.5,
-          date:'11-03-2020',
+          date:'2020-03-11',
           diary:'Wet and windy, the fish was not biting. The day Fred face planted at the parking lot'
         },
         { id: 6, 
@@ -74,7 +74,7 @@ exports.seed = function(knex) {
           photo:'3.png',
           weight:'10',
           time:3,
-          date:'18-04-2020',
+          date:'2020-04-18',
           diary:'Got attacked by a bunch of seals! It was the best day of my life'
         },
 
@@ -87,7 +87,7 @@ exports.seed = function(knex) {
           photo:'4.png',
           weight:'10',
           time:2,
-          date:'10-02-2021',
+          date:'2021-02-10',
           diary:'Caught way lots of fish, Tom and Fred caught lots of fishy!'
         },
         { id: 8, 
@@ -99,7 +99,7 @@ exports.seed = function(knex) {
           photo:'1.png',
           weight:'10',
           time:5,
-          date:'12-07-2021',
+          date:'2021-07-12',
           diary:'The day Sam moved into Edwyn\'s we decided to all go fishing as a flat. Caught heaps of fish for tea.'
         },
         { id: 9, 
@@ -111,7 +111,7 @@ exports.seed = function(knex) {
           photo:'2.png',
           weight:'10',
           time:3.5,
-          date:'10-06-2021',
+          date:'2021-06-10',
           diary:'Took the love of my life fishing. She\'s a keeper!'
         },
         { id: 10, 
@@ -123,7 +123,7 @@ exports.seed = function(knex) {
           photo:'3.png',
           weight:'10',
           time:3,
-          date:'10-05-2021',
+          date:'2021-05-10',
           diary:'Was planning to play some nintendo switch but went fishing instead. Should have just stayed home!'
         },
 

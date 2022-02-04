@@ -1,7 +1,7 @@
 const environments = {
-  development: 'https://scaleappforgood.herokuapp.com/api/v1',//'http://localhost:3000/api/v1',
+  development: '/api/v1',//'http://localhost:3000/api/v1',
   test: 'http://localhost:3333/api/v1',
-  production: 'https://scaleappforgood.herokuapp.com/api/v1',
+  production: '/api/v1', //'https://scaleappforgood.herokuapp.com/api/v1'
   integration: '',
   deployment: '',
   build: ''
